@@ -135,9 +135,9 @@ string ResourceManager::readLineStr(ifstream *p_file, int *p_line_number, const 
   discardCR(line);
 
   //Check if equal
-  if(line.compare(0, strlen(tag), tag) !=0){
-    return (string) "-ERROR-";
-  }
+  //if(line.compare(0, strlen(tag), tag) !=0){
+  //  return (string) "-ERROR-";
+  //}
 
   return line.substr(strlen(tag)+1);
 }
