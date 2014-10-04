@@ -1,0 +1,12 @@
+Eric Faust - ESFaust
+IMGD3000 - Project 2b
+
+
+The program is built with 'make' , and run with './game'
+
+The tests can be accessed by commenting or uncommenting lines of the main function in game.cpp
+Each function has an explanation on what it tests, and output of the function is found as visuals shown on screen, or as part of the dragonfly log file.
+
+The program must be made after each uncommenting. Uncommenting all at once will only result in the final command being shown in the log file.
+
+This program was created on the CCC linux machines, and builds on those machines.
