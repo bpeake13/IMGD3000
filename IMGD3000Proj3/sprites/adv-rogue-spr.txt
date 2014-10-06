@@ -1,0 +1,15 @@
+frames 2
+width 5
+height 4
+color green
+ _ _ 
+(`.`)
+(|v|v
+ \ \ 
+end
+ _ _ 
+(`.`)
+v|v|)
+ / / 
+end
+eof

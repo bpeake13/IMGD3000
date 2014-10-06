@@ -1,0 +1,15 @@
+frames 2
+width 6
+height 4
+color blue
+ /_\  
+(~.~) 
+<|w|-i
+ / \  
+end
+ /_\  
+(~.~) 
+<|w|-i
+ / \  
+end
+eof

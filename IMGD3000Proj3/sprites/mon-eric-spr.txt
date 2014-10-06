@@ -1,0 +1,10 @@
+frames 1
+width 5
+height 4
+color blue
+ ,,, 
+[o-o]
+/(E)\
+ | | 
+end
+eof

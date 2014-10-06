@@ -1,0 +1,10 @@
+frames 1
+width 7
+height 4
+color gray
+   ^ ^ 
+  (oWo)
+\_|-|- 
+   ) ) 
+end
+eof
