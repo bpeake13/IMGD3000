@@ -1,7 +1,7 @@
 var searchData=
 [
   ['inputmanager',['InputManager',['../class_input_manager.html',1,'']]],
-  ['iscentered',['isCentered',['../class_object.html#a517454b636773a14b7710b78734056f3',1,'Object']]],
+  ['iscentered',['isCentered',['../class_sprite_object.html#a945f4ca943003fc34b8bb36e42d77510',1,'SpriteObject']]],
   ['iscollidable',['isCollidable',['../class_object.html#a0d2e685ed20b49ec1b7feeba4c0f1cc9',1,'Object']]],
   ['iscollision',['isCollision',['../class_world_manager.html#ac658218a84a78dc0610890a5b486d70d',1,'WorldManager']]],
   ['isdone',['isDone',['../class_object_list_iterator.html#a7f433353b0cb9057f229a4df821b2238',1,'ObjectListIterator']]],

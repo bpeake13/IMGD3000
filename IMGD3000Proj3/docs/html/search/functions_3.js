@@ -1,7 +1,7 @@
 var searchData=
 [
   ['delta',['delta',['../class_clock.html#aea7f35ddf512b9d4ac0e73879cdecb3f',1,'Clock']]],
-  ['draw',['draw',['../class_object.html#a821f5b25b450fa1acdb3f9c0b5962592',1,'Object::draw()'],['../class_view_object.html#aae76e90e25d65e34d80e468b41af95da',1,'ViewObject::draw()'],['../class_world_manager.html#a0e2c21775041c6943d3cbcbf88601fe7',1,'WorldManager::draw()'],['../class_tester_object.html#a89ca89d9a75a1aa07f7de7fdd3a3eab7',1,'TesterObject::draw()'],['../class_test_object_soft.html#ab08f5c7bf248ff21e4fcffe3b4a053e9',1,'TestObjectSoft::draw()'],['../class_test_object_solid.html#a4a4bbaa86d29b0294134b89a6e4d77be',1,'TestObjectSolid::draw()']]],
+  ['draw',['draw',['../class_object.html#a821f5b25b450fa1acdb3f9c0b5962592',1,'Object::draw()'],['../class_sprite_object.html#ae847b803fc182b7ff0136d902b80819a',1,'SpriteObject::draw()'],['../class_view_object.html#aae76e90e25d65e34d80e468b41af95da',1,'ViewObject::draw()'],['../class_world_manager.html#a0e2c21775041c6943d3cbcbf88601fe7',1,'WorldManager::draw()']]],
   ['drawch',['drawCh',['../class_graphics_manager.html#a99cd53145eebabc3cb707bb8717a8529',1,'GraphicsManager']]],
   ['drawframe',['drawFrame',['../class_graphics_manager.html#a46fdb7da074537ca39b8b0e91ec9f95a',1,'GraphicsManager']]],
   ['drawstring',['drawString',['../class_graphics_manager.html#ab7925ff75e907e644199ed042f4d35e1',1,'GraphicsManager']]],

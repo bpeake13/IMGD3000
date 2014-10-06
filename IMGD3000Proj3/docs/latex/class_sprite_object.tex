@@ -1,0 +1,160 @@
+\hypertarget{class_sprite_object}{\section{Sprite\+Object Class Reference}
+\label{class_sprite_object}\index{Sprite\+Object@{Sprite\+Object}}
+}
+
+
+{\ttfamily \#include $<$Sprite\+Object.\+h$>$}
+
+Inheritance diagram for Sprite\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sprite_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sprite_object_a2f087f058dc5fcbee302a8f55c20e056}{Sprite\+Object} ()
+\item 
+virtual void \hyperlink{class_sprite_object_ae847b803fc182b7ff0136d902b80819a}{draw} ()
+\item 
+\hyperlink{class_sprite}{Sprite} $\ast$ \hyperlink{class_sprite_object_a6e08d86800af64b64f418675ee6e453c}{get\+Sprite} () const 
+\item 
+void \hyperlink{class_sprite_object_a5898d37e753a73122c7b4364acd1586d}{set\+Sprite} (\hyperlink{class_sprite}{Sprite} $\ast$sprite, bool set\+Box=true)
+\item 
+bool \hyperlink{class_sprite_object_a945f4ca943003fc34b8bb36e42d77510}{is\+Centered} () const 
+\item 
+void \hyperlink{class_sprite_object_aa27b75d323d453069433dbaa39e5df85}{set\+Centered} (bool centered)
+\item 
+void \hyperlink{class_sprite_object_a2d43271a2ab04e28a358b7e13d8f9d17}{set\+Frame\+Index} (int frame)
+\item 
+int \hyperlink{class_sprite_object_a67fdbbec2ebbabe75274143e2d05c86b}{get\+Frame\+Index} () const 
+\item 
+void \hyperlink{class_sprite_object_a4a128cde5497bc293b301d9faeffe4f6}{set\+Slowdown} (int slowdown)
+\item 
+int \hyperlink{class_sprite_object_af815a869de3942821121c7c8369037b2}{get\+Slowdown} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_object}{Object} that can display a sprite to the screen 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sprite_object_a2f087f058dc5fcbee302a8f55c20e056}{\index{Sprite\+Object@{Sprite\+Object}!Sprite\+Object@{Sprite\+Object}}
+\index{Sprite\+Object@{Sprite\+Object}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{Sprite\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Sprite\+Object\+::\+Sprite\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_object_a2f087f058dc5fcbee302a8f55c20e056}
+Creates a default sprite object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sprite_object_ae847b803fc182b7ff0136d902b80819a}{\index{Sprite\+Object@{Sprite\+Object}!draw@{draw}}
+\index{draw@{draw}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+Object\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_sprite_object_ae847b803fc182b7ff0136d902b80819a}
+Called once per frame to draw the object 
+
+Reimplemented from \hyperlink{class_object_a821f5b25b450fa1acdb3f9c0b5962592}{Object}.
+
+\hypertarget{class_sprite_object_a67fdbbec2ebbabe75274143e2d05c86b}{\index{Sprite\+Object@{Sprite\+Object}!get\+Frame\+Index@{get\+Frame\+Index}}
+\index{get\+Frame\+Index@{get\+Frame\+Index}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{get\+Frame\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int Sprite\+Object\+::get\+Frame\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_object_a67fdbbec2ebbabe75274143e2d05c86b}
+Gets the index of the current frame of the sprite \begin{DoxyReturn}{Returns}
+The index of the current frame 
+\end{DoxyReturn}
+\hypertarget{class_sprite_object_af815a869de3942821121c7c8369037b2}{\index{Sprite\+Object@{Sprite\+Object}!get\+Slowdown@{get\+Slowdown}}
+\index{get\+Slowdown@{get\+Slowdown}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{get\+Slowdown}]{\setlength{\rightskip}{0pt plus 5cm}int Sprite\+Object\+::get\+Slowdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_object_af815a869de3942821121c7c8369037b2}
+Gets the slowdown for the animation \begin{DoxyReturn}{Returns}
+The number of frames to wait before drawing the next frame 
+\end{DoxyReturn}
+\hypertarget{class_sprite_object_a6e08d86800af64b64f418675ee6e453c}{\index{Sprite\+Object@{Sprite\+Object}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{get\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sprite} $\ast$ Sprite\+Object\+::get\+Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_object_a6e08d86800af64b64f418675ee6e453c}
+Gets the sprite that this object uses \begin{DoxyReturn}{Returns}
+The sprite this object uses or N\+U\+L\+L if there is none 
+\end{DoxyReturn}
+\hypertarget{class_sprite_object_a945f4ca943003fc34b8bb36e42d77510}{\index{Sprite\+Object@{Sprite\+Object}!is\+Centered@{is\+Centered}}
+\index{is\+Centered@{is\+Centered}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{is\+Centered}]{\setlength{\rightskip}{0pt plus 5cm}bool Sprite\+Object\+::is\+Centered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_object_a945f4ca943003fc34b8bb36e42d77510}
+Checks to see if this object is centered on its position \begin{DoxyReturn}{Returns}
+True if it is centered, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_sprite_object_aa27b75d323d453069433dbaa39e5df85}{\index{Sprite\+Object@{Sprite\+Object}!set\+Centered@{set\+Centered}}
+\index{set\+Centered@{set\+Centered}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{set\+Centered}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+Object\+::set\+Centered (
+\begin{DoxyParamCaption}
+\item[{bool}]{centered}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_object_aa27b75d323d453069433dbaa39e5df85}
+Sets if this object should be centered on its world position or not 
+\begin{DoxyParams}{Parameters}
+{\em centered} & If true the object will be centered, if false the object will not \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sprite_object_a2d43271a2ab04e28a358b7e13d8f9d17}{\index{Sprite\+Object@{Sprite\+Object}!set\+Frame\+Index@{set\+Frame\+Index}}
+\index{set\+Frame\+Index@{set\+Frame\+Index}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{set\+Frame\+Index}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+Object\+::set\+Frame\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{frame}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_object_a2d43271a2ab04e28a358b7e13d8f9d17}
+Sets the current frame that the object should render 
+\begin{DoxyParams}{Parameters}
+{\em frame} & The index of the frame in the sprite, if this number is out of bounds it will be wrapped around to fit \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sprite_object_a4a128cde5497bc293b301d9faeffe4f6}{\index{Sprite\+Object@{Sprite\+Object}!set\+Slowdown@{set\+Slowdown}}
+\index{set\+Slowdown@{set\+Slowdown}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{set\+Slowdown}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+Object\+::set\+Slowdown (
+\begin{DoxyParamCaption}
+\item[{int}]{slowdown}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_object_a4a128cde5497bc293b301d9faeffe4f6}
+Sets the slowdown on the animation 
+\begin{DoxyParams}{Parameters}
+{\em slowdown} & The number of frames to wait before drawing the next frame \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sprite_object_a5898d37e753a73122c7b4364acd1586d}{\index{Sprite\+Object@{Sprite\+Object}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Sprite\+Object@{Sprite\+Object}}
+\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+Object\+::set\+Sprite (
+\begin{DoxyParamCaption}
+\item[{{\bf Sprite} $\ast$}]{sprite, }
+\item[{bool}]{set\+Box = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_object_a5898d37e753a73122c7b4364acd1586d}
+Sets the sprite for this object 
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The sprite that this object should use \\
+\hline
+{\em set\+Box} & If true then the bounding box for this object will be set to fit this sprite \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Sprite\+Object.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Object/Sprite\+Object.\+cpp\end{DoxyCompactItemize}
