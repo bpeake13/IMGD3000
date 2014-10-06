@@ -1,0 +1,205 @@
+\hypertarget{class_i_vector}{\section{I\+Vector Class Reference}
+\label{class_i_vector}\index{I\+Vector@{I\+Vector}}
+}
+
+
+{\ttfamily \#include $<$I\+Vector.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i_vector_adeabc4b0f4932cda5b4c8040da2dfc62}{I\+Vector} (int x, int y)
+\item 
+\hyperlink{class_i_vector_a28fc0ca78c5f7d7b241a5225396f8da5}{I\+Vector} (\hyperlink{class_f_vector}{F\+Vector} \&fvec)
+\item 
+void \hyperlink{class_i_vector_a6dce9a639a609e28bb0f814c1e2cf82e}{set} (int x, int y)
+\item 
+void \hyperlink{class_i_vector_a2256218449a4ff6df57cdb41fb09877f}{set\+X} (int x)
+\item 
+void \hyperlink{class_i_vector_a7e70cc0470077112cac352086f8ab500}{set\+Y} (int y)
+\item 
+int \hyperlink{class_i_vector_a255464399d9901bc2efc3b197b380b0e}{get\+X} () const 
+\item 
+int \hyperlink{class_i_vector_a2bf064a07ecf6912cf9e7bd44ad12073}{get\+Y} () const 
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_i_vector_a6700c03ecc1e857a78b2066f39a018d5}{operator+} (const \hyperlink{class_i_vector}{I\+Vector} \&b) const 
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_i_vector_a275b2a8da268c5df8f74f36c950c1236}{operator-\/} (const \hyperlink{class_i_vector}{I\+Vector} \&b) const 
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_i_vector_a0115772afbf7ab7e986881353539759d}{operator-\/} () const 
+\item 
+bool \hyperlink{class_i_vector_a8cf7d091e70efc188b3f04e1aa9ab439}{operator==} (const \hyperlink{class_i_vector}{I\+Vector} \&b) const 
+\item 
+bool \hyperlink{class_i_vector_ab29fc9f9cd118682d086110f30273cf5}{operator!=} (const \hyperlink{class_i_vector}{I\+Vector} \&b) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A 2d integer vector 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_i_vector_adeabc4b0f4932cda5b4c8040da2dfc62}{\index{I\+Vector@{I\+Vector}!I\+Vector@{I\+Vector}}
+\index{I\+Vector@{I\+Vector}!I\+Vector@{I\+Vector}}
+\subsubsection[{I\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}I\+Vector\+::\+I\+Vector (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_i_vector_adeabc4b0f4932cda5b4c8040da2dfc62}
+Creates a new \hyperlink{class_i_vector}{I\+Vector} 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the \hyperlink{class_i_vector}{I\+Vector} \\
+\hline
+{\em y} & The y coordinate of the \hyperlink{class_i_vector}{I\+Vector} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_i_vector_a28fc0ca78c5f7d7b241a5225396f8da5}{\index{I\+Vector@{I\+Vector}!I\+Vector@{I\+Vector}}
+\index{I\+Vector@{I\+Vector}!I\+Vector@{I\+Vector}}
+\subsubsection[{I\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}I\+Vector\+::\+I\+Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Vector} \&}]{fvec}
+\end{DoxyParamCaption}
+)}}\label{class_i_vector_a28fc0ca78c5f7d7b241a5225396f8da5}
+Creates a new \hyperlink{class_i_vector}{I\+Vector} from an \hyperlink{class_f_vector}{F\+Vector} 
+\begin{DoxyParams}{Parameters}
+{\em fvec} & A reference to the \hyperlink{class_f_vector}{F\+Vector} to create the \hyperlink{class_i_vector}{I\+Vector} from \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_vector_a255464399d9901bc2efc3b197b380b0e}{\index{I\+Vector@{I\+Vector}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!I\+Vector@{I\+Vector}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}int I\+Vector\+::get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_i_vector_a255464399d9901bc2efc3b197b380b0e}
+Gets the x value of this vector \begin{DoxyReturn}{Returns}
+The x value as an int 
+\end{DoxyReturn}
+\hypertarget{class_i_vector_a2bf064a07ecf6912cf9e7bd44ad12073}{\index{I\+Vector@{I\+Vector}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!I\+Vector@{I\+Vector}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int I\+Vector\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_i_vector_a2bf064a07ecf6912cf9e7bd44ad12073}
+Gets the y value of this vector \begin{DoxyReturn}{Returns}
+The y value as an int 
+\end{DoxyReturn}
+\hypertarget{class_i_vector_ab29fc9f9cd118682d086110f30273cf5}{\index{I\+Vector@{I\+Vector}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!I\+Vector@{I\+Vector}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}bool I\+Vector\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Vector} \&}]{b}
+\end{DoxyParamCaption}
+) const}}\label{class_i_vector_ab29fc9f9cd118682d086110f30273cf5}
+Not Comparison operator for a!=b 
+\begin{DoxyParams}{Parameters}
+{\em b} & The other vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two vectors are not equal 
+\end{DoxyReturn}
+\hypertarget{class_i_vector_a6700c03ecc1e857a78b2066f39a018d5}{\index{I\+Vector@{I\+Vector}!operator+@{operator+}}
+\index{operator+@{operator+}!I\+Vector@{I\+Vector}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} I\+Vector\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Vector} \&}]{b}
+\end{DoxyParamCaption}
+) const}}\label{class_i_vector_a6700c03ecc1e857a78b2066f39a018d5}
+Addition operator for vectors (a+b) 
+\begin{DoxyParams}{Parameters}
+{\em b} & the b vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new vector 
+\end{DoxyReturn}
+\hypertarget{class_i_vector_a275b2a8da268c5df8f74f36c950c1236}{\index{I\+Vector@{I\+Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!I\+Vector@{I\+Vector}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} I\+Vector\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Vector} \&}]{b}
+\end{DoxyParamCaption}
+) const}}\label{class_i_vector_a275b2a8da268c5df8f74f36c950c1236}
+Subtraction operator for vectors (a-\/b) 
+\begin{DoxyParams}{Parameters}
+{\em b} & The b vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new vector 
+\end{DoxyReturn}
+\hypertarget{class_i_vector_a0115772afbf7ab7e986881353539759d}{\index{I\+Vector@{I\+Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!I\+Vector@{I\+Vector}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} I\+Vector\+::operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_i_vector_a0115772afbf7ab7e986881353539759d}
+Negation operator for vector (-\/a) \begin{DoxyReturn}{Returns}
+The negated version of the vector 
+\end{DoxyReturn}
+\hypertarget{class_i_vector_a8cf7d091e70efc188b3f04e1aa9ab439}{\index{I\+Vector@{I\+Vector}!operator==@{operator==}}
+\index{operator==@{operator==}!I\+Vector@{I\+Vector}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool I\+Vector\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Vector} \&}]{b}
+\end{DoxyParamCaption}
+) const}}\label{class_i_vector_a8cf7d091e70efc188b3f04e1aa9ab439}
+Comparison operator for a==b 
+\begin{DoxyParams}{Parameters}
+{\em b} & The other vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two vectors are equal 
+\end{DoxyReturn}
+\hypertarget{class_i_vector_a6dce9a639a609e28bb0f814c1e2cf82e}{\index{I\+Vector@{I\+Vector}!set@{set}}
+\index{set@{set}!I\+Vector@{I\+Vector}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void I\+Vector\+::set (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_i_vector_a6dce9a639a609e28bb0f814c1e2cf82e}
+Change the value of the vector 
+\begin{DoxyParams}{Parameters}
+{\em x} & the new x value \\
+\hline
+{\em y} & the new y value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_i_vector_a2256218449a4ff6df57cdb41fb09877f}{\index{I\+Vector@{I\+Vector}!set\+X@{set\+X}}
+\index{set\+X@{set\+X}!I\+Vector@{I\+Vector}}
+\subsubsection[{set\+X}]{\setlength{\rightskip}{0pt plus 5cm}void I\+Vector\+::set\+X (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_i_vector_a2256218449a4ff6df57cdb41fb09877f}
+Change the x value of the vector 
+\begin{DoxyParams}{Parameters}
+{\em x} & the new x value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_i_vector_a7e70cc0470077112cac352086f8ab500}{\index{I\+Vector@{I\+Vector}!set\+Y@{set\+Y}}
+\index{set\+Y@{set\+Y}!I\+Vector@{I\+Vector}}
+\subsubsection[{set\+Y}]{\setlength{\rightskip}{0pt plus 5cm}void I\+Vector\+::set\+Y (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_i_vector_a7e70cc0470077112cac352086f8ab500}
+Change the y value of the vector 
+\begin{DoxyParams}{Parameters}
+{\em y} & the new y value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/I\+Vector.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Core/I\+Vector.\+cpp\end{DoxyCompactItemize}

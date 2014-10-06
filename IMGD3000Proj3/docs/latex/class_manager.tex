@@ -1,0 +1,90 @@
+\hypertarget{class_manager}{\section{Manager Class Reference}
+\label{class_manager}\index{Manager@{Manager}}
+}
+
+
+{\ttfamily \#include $<$Manager.\+h$>$}
+
+Inheritance diagram for Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.493333cm]{class_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}{start\+Up} ()
+\item 
+virtual void \hyperlink{class_manager_a09f0aaf6012be52b75a12fac25370f61}{shut\+Down} ()
+\item 
+bool \hyperlink{class_manager_aa5b4c6cc66d0bb5e803d9fab953a1b39}{has\+Started} () const 
+\item 
+virtual int \hyperlink{class_manager_abfdbe16dc74a246b70a183351e100989}{on\+Event} (\hyperlink{class_event}{Event} $\ast$e) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all managers in the engine 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_manager_aa5b4c6cc66d0bb5e803d9fab953a1b39}{\index{Manager@{Manager}!has\+Started@{has\+Started}}
+\index{has\+Started@{has\+Started}!Manager@{Manager}}
+\subsubsection[{has\+Started}]{\setlength{\rightskip}{0pt plus 5cm}bool Manager\+::has\+Started (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_manager_aa5b4c6cc66d0bb5e803d9fab953a1b39}
+Indicates whether the manager has been started or not \begin{DoxyReturn}{Returns}
+True if this manager has been started, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_manager_abfdbe16dc74a246b70a183351e100989}{\index{Manager@{Manager}!on\+Event@{on\+Event}}
+\index{on\+Event@{on\+Event}!Manager@{Manager}}
+\subsubsection[{on\+Event}]{\setlength{\rightskip}{0pt plus 5cm}int Manager\+::on\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Event} $\ast$}]{e}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_manager_abfdbe16dc74a246b70a183351e100989}
+Used to pass events to a manager 
+\begin{DoxyParams}{Parameters}
+{\em e} & The event to pass \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the event was able to be passed, 0 otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_world_manager_a72462c64fa931378504f18a2966c303d}{World\+Manager}.
+
+\hypertarget{class_manager_a09f0aaf6012be52b75a12fac25370f61}{\index{Manager@{Manager}!shut\+Down@{shut\+Down}}
+\index{shut\+Down@{shut\+Down}!Manager@{Manager}}
+\subsubsection[{shut\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Manager\+::shut\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_manager_a09f0aaf6012be52b75a12fac25370f61}
+Shuts down the manager 
+
+Reimplemented in \hyperlink{class_world_manager_a94c6c0dae961c535b6f2f543e029d6b6}{World\+Manager}, \hyperlink{class_graphics_manager_a5d850ef5d3a6792eb270fa22b784b3e6}{Graphics\+Manager}, \hyperlink{class_game_manager_a6cbd6266472fb9c0b08a4c2f7f8813af}{Game\+Manager}, \hyperlink{class_log_manager_a60520b802277e79880e78444d92dae93}{Log\+Manager}, \hyperlink{class_input_manager_ad9ae425dbb849fda4616484e7156600e}{Input\+Manager}, and \hyperlink{class_resource_manager_a6db779a2721e927cffb9f0c7ab31495c}{Resource\+Manager}.
+
+\hypertarget{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}{\index{Manager@{Manager}!start\+Up@{start\+Up}}
+\index{start\+Up@{start\+Up}!Manager@{Manager}}
+\subsubsection[{start\+Up}]{\setlength{\rightskip}{0pt plus 5cm}int Manager\+::start\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}
+Called to start the manager \begin{DoxyReturn}{Returns}
+0 if ok, a number $<$ 0 if an error occurred 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_world_manager_a7ad9c0bf4968b08b82d7d7daa159943a}{World\+Manager}, \hyperlink{class_graphics_manager_ac1961e1b4985a41a6eb233736d5d3191}{Graphics\+Manager}, \hyperlink{class_game_manager_a6626dd9f245039379b3416e2a28bb71c}{Game\+Manager}, \hyperlink{class_log_manager_a61c2443f3923240ba6e7b74f89c4a50f}{Log\+Manager}, \hyperlink{class_input_manager_a210997e45748bae7d0901ac3ede788c6}{Input\+Manager}, and \hyperlink{class_resource_manager_a53bf358b029e050a285725bc70a8550a}{Resource\+Manager}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Manager.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Core/Manager.\+cpp\end{DoxyCompactItemize}

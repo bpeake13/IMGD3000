@@ -1,0 +1,160 @@
+\hypertarget{class_dynamic_ptr_array}{\section{Dynamic\+Ptr\+Array Class Reference}
+\label{class_dynamic_ptr_array}\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+}
+
+
+{\ttfamily \#include $<$Dynamic\+Ptr\+Array.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dynamic_ptr_array_a57b0166ab9e49562247106cbaca00eb1}{Dynamic\+Ptr\+Array} (size\+\_\+t cell\+Size=D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+E\+L\+L\+\_\+\+S\+I\+Z\+E)
+\item 
+\hyperlink{class_dynamic_ptr_array_a73f3b88933927871159cf56ea9c68d39}{Dynamic\+Ptr\+Array} (const \hyperlink{class_dynamic_ptr_array}{Dynamic\+Ptr\+Array} \&cpy)
+\item 
+virtual \hyperlink{class_dynamic_ptr_array_a075c62d5548fc344033a2a401e5593e0}{$\sim$\+Dynamic\+Ptr\+Array} ()
+\item 
+bool \hyperlink{class_dynamic_ptr_array_a10474d69e5e4d916c217f2cb4f1fdf79}{add} (void $\ast$data)
+\item 
+bool \hyperlink{class_dynamic_ptr_array_a1da46005c26dd7d4723ed1535a73d62f}{remove} (void $\ast$data)
+\item 
+bool \hyperlink{class_dynamic_ptr_array_af7d232f327b4bbd2ec3a9d886edc2907}{remove} (int i)
+\item 
+bool \hyperlink{class_dynamic_ptr_array_ad08021e4d8bfdc8235499e7b0948b2f0}{clear} ()
+\item 
+void $\ast$ \hyperlink{class_dynamic_ptr_array_a7e8eca98f7a6400614c6e2296735a956}{get} (int i)
+\item 
+size\+\_\+t \hyperlink{class_dynamic_ptr_array_a57608e634402b3e16048ad2c1c26e74e}{get\+Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_dynamic_ptr_array_a42b96309e3e1ad24f130cb1cd87f8c61}{class {\bfseries Dynamic\+Ptr\+Array\+Cell}}\label{class_dynamic_ptr_array_a42b96309e3e1ad24f130cb1cd87f8c61}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a class that can expand as new items are added 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_dynamic_ptr_array_a57b0166ab9e49562247106cbaca00eb1}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{Dynamic\+Ptr\+Array}]{\setlength{\rightskip}{0pt plus 5cm}Dynamic\+Ptr\+Array\+::\+Dynamic\+Ptr\+Array (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{cell\+Size = {\ttfamily DEFAULT\+\_\+CELL\+\_\+SIZE}}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_a57b0166ab9e49562247106cbaca00eb1}
+Creates a new array that can be dynamically allocated 
+\begin{DoxyParams}{Parameters}
+{\em cell\+Size} & The size of each cell \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_dynamic_ptr_array_a73f3b88933927871159cf56ea9c68d39}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{Dynamic\+Ptr\+Array}]{\setlength{\rightskip}{0pt plus 5cm}Dynamic\+Ptr\+Array\+::\+Dynamic\+Ptr\+Array (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dynamic\+Ptr\+Array} \&}]{cpy}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_a73f3b88933927871159cf56ea9c68d39}
+Creates a deep copy of another dynamic ptr array 
+\begin{DoxyParams}{Parameters}
+{\em cpy} & The array to copy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_dynamic_ptr_array_a075c62d5548fc344033a2a401e5593e0}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!````~Dynamic\+Ptr\+Array@{$\sim$\+Dynamic\+Ptr\+Array}}
+\index{````~Dynamic\+Ptr\+Array@{$\sim$\+Dynamic\+Ptr\+Array}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{$\sim$\+Dynamic\+Ptr\+Array}]{\setlength{\rightskip}{0pt plus 5cm}Dynamic\+Ptr\+Array\+::$\sim$\+Dynamic\+Ptr\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_dynamic_ptr_array_a075c62d5548fc344033a2a401e5593e0}
+Called when the dynamic array is deleted 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_dynamic_ptr_array_a10474d69e5e4d916c217f2cb4f1fdf79}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!add@{add}}
+\index{add@{add}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Ptr\+Array\+::add (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_a10474d69e5e4d916c217f2cb4f1fdf79}
+Adds a piece of data to the array 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was able to be added, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_dynamic_ptr_array_ad08021e4d8bfdc8235499e7b0948b2f0}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!clear@{clear}}
+\index{clear@{clear}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Ptr\+Array\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_ad08021e4d8bfdc8235499e7b0948b2f0}
+Clears the array \begin{DoxyReturn}{Returns}
+True if items could be cleared otherwise false 
+\end{DoxyReturn}
+\hypertarget{class_dynamic_ptr_array_a7e8eca98f7a6400614c6e2296735a956}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!get@{get}}
+\index{get@{get}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Dynamic\+Ptr\+Array\+::get (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_a7e8eca98f7a6400614c6e2296735a956}
+Get the element at the ith index 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index to get the element at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+When the index is out of range or invalid, N\+U\+L\+L will be returned 
+\end{DoxyRemark}
+\hypertarget{class_dynamic_ptr_array_a57608e634402b3e16048ad2c1c26e74e}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Dynamic\+Ptr\+Array\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_a57608e634402b3e16048ad2c1c26e74e}
+Gets the size of this cell \begin{DoxyReturn}{Returns}
+An integer representation of the size size 
+\end{DoxyReturn}
+\hypertarget{class_dynamic_ptr_array_a1da46005c26dd7d4723ed1535a73d62f}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!remove@{remove}}
+\index{remove@{remove}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Ptr\+Array\+::remove (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_a1da46005c26dd7d4723ed1535a73d62f}
+Removes a piece of data from the array 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data could be removed 
+\end{DoxyReturn}
+\hypertarget{class_dynamic_ptr_array_af7d232f327b4bbd2ec3a9d886edc2907}{\index{Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}!remove@{remove}}
+\index{remove@{remove}!Dynamic\+Ptr\+Array@{Dynamic\+Ptr\+Array}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Ptr\+Array\+::remove (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_dynamic_ptr_array_af7d232f327b4bbd2ec3a9d886edc2907}
+Removes an element at the ith index 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the element to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the element was removed, otherwise false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Dynamic\+Ptr\+Array.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Core/Dynamic\+Ptr\+Array.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{class_game_manager}{\section{Game\+Manager Class Reference}
+\label{class_game_manager}\index{Game\+Manager@{Game\+Manager}}
+}
+
+
+{\ttfamily \#include $<$Game\+Manager.\+h$>$}
+
+Inheritance diagram for Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_game_manager_a6626dd9f245039379b3416e2a28bb71c}{start\+Up} ()
+\item 
+void \hyperlink{class_game_manager_a6cbd6266472fb9c0b08a4c2f7f8813af}{shut\+Down} ()
+\item 
+void \hyperlink{class_game_manager_a3d5daf583c259edaf29c4b66ac20e480}{run} (unsigned int frame\+Time=D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+I\+M\+E)
+\item 
+void \hyperlink{class_game_manager_a18b1e6e63207f3fb71b4c3ce771bf704}{set\+Game\+Over} (bool game\+Over=true)
+\item 
+bool \hyperlink{class_game_manager_a5025aec4010d2c30631c0be20e94efee}{is\+Game\+Over} () const 
+\item 
+unsigned int \hyperlink{class_game_manager_a40be71508d2e97a080c6eb1acf5b8624}{get\+Frame\+Time} () const 
+\item 
+\hypertarget{class_game_manager_a821bef9440389f456a296a145ad30884}{unsigned int {\bfseries get\+Tick\+Count} () const }\label{class_game_manager_a821bef9440389f456a296a145ad30884}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_game_manager}{Game\+Manager} \& \hyperlink{class_game_manager_a62c0bd2e38276cc3805fb38a85890d42}{get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles game management 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_manager_a40be71508d2e97a080c6eb1acf5b8624}{\index{Game\+Manager@{Game\+Manager}!get\+Frame\+Time@{get\+Frame\+Time}}
+\index{get\+Frame\+Time@{get\+Frame\+Time}!Game\+Manager@{Game\+Manager}}
+\subsubsection[{get\+Frame\+Time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Game\+Manager\+::get\+Frame\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_game_manager_a40be71508d2e97a080c6eb1acf5b8624}
+Gets the time between frames \begin{DoxyReturn}{Returns}
+An unsigned integer showing the time between frames in milliseconds 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a62c0bd2e38276cc3805fb38a85890d42}{\index{Game\+Manager@{Game\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Game\+Manager@{Game\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Manager} \& Game\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_game_manager_a62c0bd2e38276cc3805fb38a85890d42}
+Gets the game manager instance \begin{DoxyReturn}{Returns}
+A reference to the game manager instance 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a5025aec4010d2c30631c0be20e94efee}{\index{Game\+Manager@{Game\+Manager}!is\+Game\+Over@{is\+Game\+Over}}
+\index{is\+Game\+Over@{is\+Game\+Over}!Game\+Manager@{Game\+Manager}}
+\subsubsection[{is\+Game\+Over}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Manager\+::is\+Game\+Over (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_game_manager_a5025aec4010d2c30631c0be20e94efee}
+Gets the value of the game over flag \begin{DoxyReturn}{Returns}
+The value of the game over flag 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a3d5daf583c259edaf29c4b66ac20e480}{\index{Game\+Manager@{Game\+Manager}!run@{run}}
+\index{run@{run}!Game\+Manager@{Game\+Manager}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Manager\+::run (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{frame\+Time = {\ttfamily DEFAULT\+\_\+FRAME\+\_\+TIME}}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a3d5daf583c259edaf29c4b66ac20e480}
+Runs the main game loop 
+\begin{DoxyParams}{Parameters}
+{\em frame\+Time} & The fixed time to have between frames \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_a18b1e6e63207f3fb71b4c3ce771bf704}{\index{Game\+Manager@{Game\+Manager}!set\+Game\+Over@{set\+Game\+Over}}
+\index{set\+Game\+Over@{set\+Game\+Over}!Game\+Manager@{Game\+Manager}}
+\subsubsection[{set\+Game\+Over}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Manager\+::set\+Game\+Over (
+\begin{DoxyParamCaption}
+\item[{bool}]{game\+Over = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a18b1e6e63207f3fb71b4c3ce771bf704}
+Set the game over flag in the game 
+\begin{DoxyParams}{Parameters}
+{\em game\+Over} & The value to set the game over flag to \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_a6cbd6266472fb9c0b08a4c2f7f8813af}{\index{Game\+Manager@{Game\+Manager}!shut\+Down@{shut\+Down}}
+\index{shut\+Down@{shut\+Down}!Game\+Manager@{Game\+Manager}}
+\subsubsection[{shut\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Manager\+::shut\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_manager_a6cbd6266472fb9c0b08a4c2f7f8813af}
+Called when the game manager shuts down 
+
+Reimplemented from \hyperlink{class_manager_a09f0aaf6012be52b75a12fac25370f61}{Manager}.
+
+\hypertarget{class_game_manager_a6626dd9f245039379b3416e2a28bb71c}{\index{Game\+Manager@{Game\+Manager}!start\+Up@{start\+Up}}
+\index{start\+Up@{start\+Up}!Game\+Manager@{Game\+Manager}}
+\subsubsection[{start\+Up}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+Manager\+::start\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_manager_a6626dd9f245039379b3416e2a28bb71c}
+Called when the game manager is started \begin{DoxyReturn}{Returns}
+0 when no errors occur, $<$ 0 when an error does occur 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}{Manager}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Game\+Manager.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Game/Game\+Manager.\+cpp\end{DoxyCompactItemize}

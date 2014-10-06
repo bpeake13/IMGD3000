@@ -1,0 +1,2 @@
+doxygen.exe -h
+pause

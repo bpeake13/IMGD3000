@@ -1,0 +1,176 @@
+\hypertarget{class_sprite}{\section{Sprite Class Reference}
+\label{class_sprite}\index{Sprite@{Sprite}}
+}
+
+
+{\ttfamily \#include $<$Sprite.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sprite_a613e3ce159a3a9c74a3b3ad4f94d503c}{Sprite} (string label, int frame\+Count)
+\item 
+string \hyperlink{class_sprite_a814ee6ee24dfefdaaa203f45c18983df}{get\+Label} () const 
+\item 
+int \hyperlink{class_sprite_ab9e792dcb7560a6d1af2e102bee229d6}{get\+Color} () const 
+\item 
+void \hyperlink{class_sprite_aa5d55e89c7e2e44122faf464987fd7a4}{set\+Color} (int color)
+\item 
+int \hyperlink{class_sprite_a0d3e7e4fc3123fde8bba195061c66732}{get\+Width} () const 
+\item 
+void \hyperlink{class_sprite_abe146a7be9978735c74b6057326e5b83}{set\+Width} (int width)
+\item 
+int \hyperlink{class_sprite_a526cf9f08dd1b9e39b695f224efa462f}{get\+Height} () const 
+\item 
+void \hyperlink{class_sprite_ac94ab494261f9e6fdb725476c8e7bf99}{set\+Height} (int height)
+\item 
+\hyperlink{class_frame}{Frame} $\ast$ \hyperlink{class_sprite_a37dff103a01f4820a199111039349481}{get\+Frame} (int index) const 
+\item 
+size\+\_\+t \hyperlink{class_sprite_a6c3c7f9caa3410f79d4711e197a159e5}{get\+Frame\+Count} () const 
+\item 
+bool \hyperlink{class_sprite_aa7afadb031e0c14cbd42863e445f2f9d}{add\+Frame} (\hyperlink{class_frame}{Frame} $\ast$frame)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A sprite made out of characters 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sprite_a613e3ce159a3a9c74a3b3ad4f94d503c}{\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\subsubsection[{Sprite}]{\setlength{\rightskip}{0pt plus 5cm}Sprite\+::\+Sprite (
+\begin{DoxyParamCaption}
+\item[{string}]{label, }
+\item[{int}]{frame\+Count}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_a613e3ce159a3a9c74a3b3ad4f94d503c}
+Creates a new sprite 
+\begin{DoxyParams}{Parameters}
+{\em frame\+Count} & The number of frames in this sprite \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sprite_aa7afadb031e0c14cbd42863e445f2f9d}{\index{Sprite@{Sprite}!add\+Frame@{add\+Frame}}
+\index{add\+Frame@{add\+Frame}!Sprite@{Sprite}}
+\subsubsection[{add\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}bool Sprite\+::add\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_aa7afadb031e0c14cbd42863e445f2f9d}
+Adds a frame to the sprite 
+\begin{DoxyParams}{Parameters}
+{\em frame} & The new frame to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the frame was added, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_sprite_ab9e792dcb7560a6d1af2e102bee229d6}{\index{Sprite@{Sprite}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Sprite@{Sprite}}
+\subsubsection[{get\+Color}]{\setlength{\rightskip}{0pt plus 5cm}int Sprite\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_ab9e792dcb7560a6d1af2e102bee229d6}
+Gets the color of the sprite \begin{DoxyReturn}{Returns}
+The color of the sprite 
+\end{DoxyReturn}
+\hypertarget{class_sprite_a37dff103a01f4820a199111039349481}{\index{Sprite@{Sprite}!get\+Frame@{get\+Frame}}
+\index{get\+Frame@{get\+Frame}!Sprite@{Sprite}}
+\subsubsection[{get\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Frame} $\ast$ Sprite\+::get\+Frame (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_a37dff103a01f4820a199111039349481}
+Get a frame in the sprite 
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the frame to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The frame at index, or N\+U\+L\+L if it is not found 
+\end{DoxyReturn}
+\hypertarget{class_sprite_a6c3c7f9caa3410f79d4711e197a159e5}{\index{Sprite@{Sprite}!get\+Frame\+Count@{get\+Frame\+Count}}
+\index{get\+Frame\+Count@{get\+Frame\+Count}!Sprite@{Sprite}}
+\subsubsection[{get\+Frame\+Count}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Sprite\+::get\+Frame\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_a6c3c7f9caa3410f79d4711e197a159e5}
+Gets the number of frames in this sprite \begin{DoxyReturn}{Returns}
+The number of frames in this sprite 
+\end{DoxyReturn}
+\hypertarget{class_sprite_a526cf9f08dd1b9e39b695f224efa462f}{\index{Sprite@{Sprite}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Sprite@{Sprite}}
+\subsubsection[{get\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Sprite\+::get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_a526cf9f08dd1b9e39b695f224efa462f}
+Sets the height of the sprite \begin{DoxyReturn}{Returns}
+The height of the sprite in characters 
+\end{DoxyReturn}
+\hypertarget{class_sprite_a814ee6ee24dfefdaaa203f45c18983df}{\index{Sprite@{Sprite}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!Sprite@{Sprite}}
+\subsubsection[{get\+Label}]{\setlength{\rightskip}{0pt plus 5cm}string Sprite\+::get\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_a814ee6ee24dfefdaaa203f45c18983df}
+Gets the sprites label that it is referenced by in the resource manager \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_sprite_a0d3e7e4fc3123fde8bba195061c66732}{\index{Sprite@{Sprite}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Sprite@{Sprite}}
+\subsubsection[{get\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Sprite\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sprite_a0d3e7e4fc3123fde8bba195061c66732}
+Gets the width of the sprite \begin{DoxyReturn}{Returns}
+The width of the sprite in characters 
+\end{DoxyReturn}
+\hypertarget{class_sprite_aa5d55e89c7e2e44122faf464987fd7a4}{\index{Sprite@{Sprite}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Sprite@{Sprite}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_aa5d55e89c7e2e44122faf464987fd7a4}
+Sets the color of the sprite 
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color for the sprite \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sprite_ac94ab494261f9e6fdb725476c8e7bf99}{\index{Sprite@{Sprite}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!Sprite@{Sprite}}
+\subsubsection[{set\+Height}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+::set\+Height (
+\begin{DoxyParamCaption}
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_ac94ab494261f9e6fdb725476c8e7bf99}
+Sets the height of the sprite 
+\begin{DoxyParams}{Parameters}
+{\em height} & The new height of the sprite in characters \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sprite_abe146a7be9978735c74b6057326e5b83}{\index{Sprite@{Sprite}!set\+Width@{set\+Width}}
+\index{set\+Width@{set\+Width}!Sprite@{Sprite}}
+\subsubsection[{set\+Width}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\+::set\+Width (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}}\label{class_sprite_abe146a7be9978735c74b6057326e5b83}
+Sets the width of the sprite 
+\begin{DoxyParams}{Parameters}
+{\em width} & The new width of the sprite in characters \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Sprite.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Resources/Sprite.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{class_object_list_iterator}{\section{Object\+List\+Iterator Class Reference}
+\label{class_object_list_iterator}\index{Object\+List\+Iterator@{Object\+List\+Iterator}}
+}
+
+
+{\ttfamily \#include $<$Object\+List\+Iterator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_object_list_iterator_a9ed73abe689d8f16c57e98bf1da3a03a}{Object\+List\+Iterator} (const \hyperlink{class_object_list}{Object\+List} $\ast$list)
+\item 
+void \hyperlink{class_object_list_iterator_a4cb98d9caf04259412e2f33004f55c51}{first} ()
+\item 
+void \hyperlink{class_object_list_iterator_a3d211dbe4a187fe741a4627a8625cb3f}{next} ()
+\item 
+bool \hyperlink{class_object_list_iterator_a7f433353b0cb9057f229a4df821b2238}{is\+Done} () const 
+\item 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{class_object_list_iterator_ac2e4a1e38c98df330121d8541d532e0f}{get\+Current} () const 
+\item 
+\hyperlink{class_object_list_iterator}{Object\+List\+Iterator} \& \hyperlink{class_object_list_iterator_a5978aeb613bb36a3f2a7e832ff7fa159}{operator=} (const \hyperlink{class_object_list_iterator}{Object\+List\+Iterator} \&rhs)
+\item 
+void \hyperlink{class_object_list_iterator_a50eceb2bfa254c1d935170107b9289e8}{set\+List} (const \hyperlink{class_object_list}{Object\+List} $\ast$list)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to iterate through an object list 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_object_list_iterator_a9ed73abe689d8f16c57e98bf1da3a03a}{\index{Object\+List\+Iterator@{Object\+List\+Iterator}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\index{Object\+List\+Iterator@{Object\+List\+Iterator}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\subsubsection[{Object\+List\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Object\+List\+Iterator\+::\+Object\+List\+Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\+List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_iterator_a9ed73abe689d8f16c57e98bf1da3a03a}
+Creates a new iterator for a list 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to create this iterator for \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_object_list_iterator_a4cb98d9caf04259412e2f33004f55c51}{\index{Object\+List\+Iterator@{Object\+List\+Iterator}!first@{first}}
+\index{first@{first}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\subsubsection[{first}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+List\+Iterator\+::first (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_iterator_a4cb98d9caf04259412e2f33004f55c51}
+Moves the iterator to the first element in the list \hypertarget{class_object_list_iterator_ac2e4a1e38c98df330121d8541d532e0f}{\index{Object\+List\+Iterator@{Object\+List\+Iterator}!get\+Current@{get\+Current}}
+\index{get\+Current@{get\+Current}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\subsubsection[{get\+Current}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} $\ast$ Object\+List\+Iterator\+::get\+Current (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_object_list_iterator_ac2e4a1e38c98df330121d8541d532e0f}
+Gets the current element this iterator is on \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_object_list_iterator_a7f433353b0cb9057f229a4df821b2238}{\index{Object\+List\+Iterator@{Object\+List\+Iterator}!is\+Done@{is\+Done}}
+\index{is\+Done@{is\+Done}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\subsubsection[{is\+Done}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+List\+Iterator\+::is\+Done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_object_list_iterator_a7f433353b0cb9057f229a4df821b2238}
+Checks to see if this iterator has been through the entire list \begin{DoxyReturn}{Returns}
+True if it has, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_object_list_iterator_a3d211dbe4a187fe741a4627a8625cb3f}{\index{Object\+List\+Iterator@{Object\+List\+Iterator}!next@{next}}
+\index{next@{next}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+List\+Iterator\+::next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_iterator_a3d211dbe4a187fe741a4627a8625cb3f}
+Moves the iterator to the next element in the list \hypertarget{class_object_list_iterator_a5978aeb613bb36a3f2a7e832ff7fa159}{\index{Object\+List\+Iterator@{Object\+List\+Iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object\+List\+Iterator} \& Object\+List\+Iterator\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\+List\+Iterator} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_iterator_a5978aeb613bb36a3f2a7e832ff7fa159}
+Sets one iterator equal to another 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The iterator to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This 
+\end{DoxyReturn}
+\hypertarget{class_object_list_iterator_a50eceb2bfa254c1d935170107b9289e8}{\index{Object\+List\+Iterator@{Object\+List\+Iterator}!set\+List@{set\+List}}
+\index{set\+List@{set\+List}!Object\+List\+Iterator@{Object\+List\+Iterator}}
+\subsubsection[{set\+List}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+List\+Iterator\+::set\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\+List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_iterator_a50eceb2bfa254c1d935170107b9289e8}
+Set the list this iterator uses 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list this iterator uses \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Object\+List\+Iterator.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Object/Object\+List\+Iterator.\+cpp\end{DoxyCompactItemize}

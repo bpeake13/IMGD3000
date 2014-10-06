@@ -1,0 +1,224 @@
+\hypertarget{class_object_list}{\section{Object\+List Class Reference}
+\label{class_object_list}\index{Object\+List@{Object\+List}}
+}
+
+
+{\ttfamily \#include $<$Object\+List.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_object_list_ac22dc46c3b92c27106561eeb030329a2}{Object\+List} ()
+\item 
+\hyperlink{class_object_list_aea40931e016a9cc4391bb64f8182b81f}{Object\+List} (int max\+Size)
+\item 
+virtual \hyperlink{class_object_list_ac8d809647b3ac18b2369e827c3d56c19}{$\sim$\+Object\+List} ()
+\item 
+\hyperlink{class_object_list_a50d7d94ae804eb3010e44114bced2ab3}{Object\+List} (const \hyperlink{class_object_list}{Object\+List} \&other)
+\item 
+\hyperlink{class_object_list}{Object\+List} \& \hyperlink{class_object_list_a0abd0c5690e3fb72855df1df58390b6c}{operator=} (const \hyperlink{class_object_list}{Object\+List} \&rhs)
+\item 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{class_object_list_a214a707275b65f63efb80f05a10088e7}{operator\mbox{[}$\,$\mbox{]}} (int index) const 
+\item 
+int \hyperlink{class_object_list_a6be2936d67a42c0f7cce43f872b7234b}{add} (\hyperlink{class_object}{Object} $\ast$obj)
+\item 
+int \hyperlink{class_object_list_a57f7b3a7e7b78321ffe40c76cb6d12cb}{remove} (\hyperlink{class_object}{Object} $\ast$obj)
+\item 
+void \hyperlink{class_object_list_a0bd14ec3951fbd4a26760457848375ca}{clear} ()
+\item 
+int \hyperlink{class_object_list_a50674b1e0ffd4a87755e6debcd49d2d0}{get\+Count} () const 
+\item 
+bool \hyperlink{class_object_list_aa93162f07fc1bc3785cda41699beb37d}{is\+Empty} () const 
+\item 
+bool \hyperlink{class_object_list_a1ee2b0c6a6a2acb35f4c85e7b0c987e8}{is\+Full} () const 
+\item 
+bool \hyperlink{class_object_list_a6ac7d373e89715c761de1de41002d032}{contains} (\hyperlink{class_object}{Object} $\ast$obj) const 
+\item 
+\hyperlink{class_object_list}{Object\+List} \hyperlink{class_object_list_afb4ffe5ef4170a84eab8f5b819424dc4}{operator+} (\hyperlink{class_object_list}{Object\+List} $\ast$other)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_object_list_aa604e07e1b616ae586cbc01bcca073c9}{class {\bfseries Object\+List\+Iterator}}\label{class_object_list_aa604e07e1b616ae586cbc01bcca073c9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains a list of objects 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_object_list_ac22dc46c3b92c27106561eeb030329a2}{\index{Object\+List@{Object\+List}!Object\+List@{Object\+List}}
+\index{Object\+List@{Object\+List}!Object\+List@{Object\+List}}
+\subsubsection[{Object\+List}]{\setlength{\rightskip}{0pt plus 5cm}Object\+List\+::\+Object\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_ac22dc46c3b92c27106561eeb030329a2}
+Creates an empty list with 0 size \hypertarget{class_object_list_aea40931e016a9cc4391bb64f8182b81f}{\index{Object\+List@{Object\+List}!Object\+List@{Object\+List}}
+\index{Object\+List@{Object\+List}!Object\+List@{Object\+List}}
+\subsubsection[{Object\+List}]{\setlength{\rightskip}{0pt plus 5cm}Object\+List\+::\+Object\+List (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+Size}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_aea40931e016a9cc4391bb64f8182b81f}
+Creates a list 
+\begin{DoxyParams}{Parameters}
+{\em max\+Size} & The max number of elements that can be held \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_object_list_ac8d809647b3ac18b2369e827c3d56c19}{\index{Object\+List@{Object\+List}!````~Object\+List@{$\sim$\+Object\+List}}
+\index{````~Object\+List@{$\sim$\+Object\+List}!Object\+List@{Object\+List}}
+\subsubsection[{$\sim$\+Object\+List}]{\setlength{\rightskip}{0pt plus 5cm}Object\+List\+::$\sim$\+Object\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_object_list_ac8d809647b3ac18b2369e827c3d56c19}
+Called when the list is destroyed \hypertarget{class_object_list_a50d7d94ae804eb3010e44114bced2ab3}{\index{Object\+List@{Object\+List}!Object\+List@{Object\+List}}
+\index{Object\+List@{Object\+List}!Object\+List@{Object\+List}}
+\subsubsection[{Object\+List}]{\setlength{\rightskip}{0pt plus 5cm}Object\+List\+::\+Object\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\+List} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_a50d7d94ae804eb3010e44114bced2ab3}
+Copies one list to another 
+\begin{DoxyParams}{Parameters}
+{\em other} & The other list to copy to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_object_list_a6be2936d67a42c0f7cce43f872b7234b}{\index{Object\+List@{Object\+List}!add@{add}}
+\index{add@{add}!Object\+List@{Object\+List}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+List\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_a6be2936d67a42c0f7cce43f872b7234b}
+Adds an object to the list 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the object was added, 0 otherwise 
+\end{DoxyReturn}
+\hypertarget{class_object_list_a0bd14ec3951fbd4a26760457848375ca}{\index{Object\+List@{Object\+List}!clear@{clear}}
+\index{clear@{clear}!Object\+List@{Object\+List}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+List\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_a0bd14ec3951fbd4a26760457848375ca}
+Clears all elements out of the array \hypertarget{class_object_list_a6ac7d373e89715c761de1de41002d032}{\index{Object\+List@{Object\+List}!contains@{contains}}
+\index{contains@{contains}!Object\+List@{Object\+List}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+List\+::contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+) const}}\label{class_object_list_a6ac7d373e89715c761de1de41002d032}
+Checks to see if the list contains an object 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to check for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True when the list contains obj, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_object_list_a50674b1e0ffd4a87755e6debcd49d2d0}{\index{Object\+List@{Object\+List}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!Object\+List@{Object\+List}}
+\subsubsection[{get\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+List\+::get\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_object_list_a50674b1e0ffd4a87755e6debcd49d2d0}
+Gets the number of elements in the array \begin{DoxyReturn}{Returns}
+The count of elements in the list 
+\end{DoxyReturn}
+\hypertarget{class_object_list_aa93162f07fc1bc3785cda41699beb37d}{\index{Object\+List@{Object\+List}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Object\+List@{Object\+List}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+List\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_object_list_aa93162f07fc1bc3785cda41699beb37d}
+Checks to see if the list is empty \begin{DoxyReturn}{Returns}
+True on empty, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_object_list_a1ee2b0c6a6a2acb35f4c85e7b0c987e8}{\index{Object\+List@{Object\+List}!is\+Full@{is\+Full}}
+\index{is\+Full@{is\+Full}!Object\+List@{Object\+List}}
+\subsubsection[{is\+Full}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+List\+::is\+Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_object_list_a1ee2b0c6a6a2acb35f4c85e7b0c987e8}
+Checks to see if the list is full \begin{DoxyReturn}{Returns}
+True on full, flase otherwise 
+\end{DoxyReturn}
+\hypertarget{class_object_list_afb4ffe5ef4170a84eab8f5b819424dc4}{\index{Object\+List@{Object\+List}!operator+@{operator+}}
+\index{operator+@{operator+}!Object\+List@{Object\+List}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object\+List} Object\+List\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Object\+List} $\ast$}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_afb4ffe5ef4170a84eab8f5b819424dc4}
+Appends two lists toghether 
+\begin{DoxyParams}{Parameters}
+{\em other} & The list to add to the end of us \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new appended list 
+\end{DoxyReturn}
+\hypertarget{class_object_list_a0abd0c5690e3fb72855df1df58390b6c}{\index{Object\+List@{Object\+List}!operator=@{operator=}}
+\index{operator=@{operator=}!Object\+List@{Object\+List}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object\+List} \& Object\+List\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\+List} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_a0abd0c5690e3fb72855df1df58390b6c}
+Sets one list equal to another 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The list we are setting ourselves to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This 
+\end{DoxyReturn}
+\hypertarget{class_object_list_a214a707275b65f63efb80f05a10088e7}{\index{Object\+List@{Object\+List}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Object\+List@{Object\+List}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} $\ast$ Object\+List\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_object_list_a214a707275b65f63efb80f05a10088e7}
+Gets the ith element in the array 
+\begin{DoxyParams}{Parameters}
+{\em index} & The index in the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the ith element 
+\end{DoxyReturn}
+\hypertarget{class_object_list_a57f7b3a7e7b78321ffe40c76cb6d12cb}{\index{Object\+List@{Object\+List}!remove@{remove}}
+\index{remove@{remove}!Object\+List@{Object\+List}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+List\+::remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{class_object_list_a57f7b3a7e7b78321ffe40c76cb6d12cb}
+Removes an object from the list 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the object was removed, 0 otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Object\+List.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Object/Object\+List.\+cpp\end{DoxyCompactItemize}

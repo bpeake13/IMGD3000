@@ -1,0 +1,81 @@
+\hypertarget{class_input_manager}{\section{Input\+Manager Class Reference}
+\label{class_input_manager}\index{Input\+Manager@{Input\+Manager}}
+}
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
+Inheritance diagram for Input\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_input_manager_a210997e45748bae7d0901ac3ede788c6}{start\+Up} ()
+\item 
+void \hyperlink{class_input_manager_ad9ae425dbb849fda4616484e7156600e}{shut\+Down} ()
+\item 
+void \hyperlink{class_input_manager_a3701626b38fab73b47561fa961a2739e}{get\+Input} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_input_manager}{Input\+Manager} \& \hyperlink{class_input_manager_a4e1058b89c07e2f3ec1097b843c19fc8}{get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A singleton class that handles ionput 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_input_manager_a3701626b38fab73b47561fa961a2739e}{\index{Input\+Manager@{Input\+Manager}!get\+Input@{get\+Input}}
+\index{get\+Input@{get\+Input}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{get\+Input}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::get\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_input_manager_a3701626b38fab73b47561fa961a2739e}
+Called once per frame to check the input device for events \hypertarget{class_input_manager_a4e1058b89c07e2f3ec1097b843c19fc8}{\index{Input\+Manager@{Input\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\+Manager} \& Input\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_input_manager_a4e1058b89c07e2f3ec1097b843c19fc8}
+Get the static instance of this object \begin{DoxyReturn}{Returns}
+A reference to the input manager 
+\end{DoxyReturn}
+\hypertarget{class_input_manager_ad9ae425dbb849fda4616484e7156600e}{\index{Input\+Manager@{Input\+Manager}!shut\+Down@{shut\+Down}}
+\index{shut\+Down@{shut\+Down}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{shut\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::shut\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_input_manager_ad9ae425dbb849fda4616484e7156600e}
+Called when the input manager is shutdown 
+
+Reimplemented from \hyperlink{class_manager_a09f0aaf6012be52b75a12fac25370f61}{Manager}.
+
+\hypertarget{class_input_manager_a210997e45748bae7d0901ac3ede788c6}{\index{Input\+Manager@{Input\+Manager}!start\+Up@{start\+Up}}
+\index{start\+Up@{start\+Up}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{start\+Up}]{\setlength{\rightskip}{0pt plus 5cm}int Input\+Manager\+::start\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_input_manager_a210997e45748bae7d0901ac3ede788c6}
+Called when the input manager is started \begin{DoxyReturn}{Returns}
+0 if ok, otherwise -\/1 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}{Manager}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Input\+Manager.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Input/Input\+Manager.\+cpp\end{DoxyCompactItemize}

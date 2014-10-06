@@ -1,0 +1,382 @@
+\hypertarget{class_world_manager}{\section{World\+Manager Class Reference}
+\label{class_world_manager}\index{World\+Manager@{World\+Manager}}
+}
+
+
+{\ttfamily \#include $<$World\+Manager.\+h$>$}
+
+Inheritance diagram for World\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_world_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_box}{Box} \hyperlink{class_world_manager_a035099ac90a1f8cf0feb1650e02b3b7a}{get\+Bounds} () const 
+\item 
+void \hyperlink{class_world_manager_a4e39ad0a294f62d834a7e58f676fe5e6}{set\+Bounds} (\hyperlink{class_box}{Box} bounds)
+\item 
+\hyperlink{class_box}{Box} \hyperlink{class_world_manager_a54a25642fa5f666c7e6b8e3d668e13b3}{get\+View} () const 
+\item 
+void \hyperlink{class_world_manager_a2513ce622a4fbb25c3dd3139a9445fec}{set\+View} (\hyperlink{class_box}{Box} view)
+\item 
+void \hyperlink{class_world_manager_adb4eb19ce21ccad04c60e845f4c508a9}{set\+View\+Position} (const \hyperlink{class_i_vector}{I\+Vector} \&position)
+\item 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{class_world_manager_aca77cd8dd87db0e454817668b2d0e8ab}{get\+Following} () const 
+\item 
+void \hyperlink{class_world_manager_a0d29ce2f7ad696283e80e3fd13b5b077}{set\+Following} (\hyperlink{class_object}{Object} $\ast$follow)
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_world_manager_adb6dd142eb66b01eb5104ab496c9517a}{world\+To\+View} (\hyperlink{class_i_vector}{I\+Vector} \&world\+Pos) const 
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_world_manager_abdffd332d31f310f192a3b017d0940ca}{view\+To\+World} (\hyperlink{class_i_vector}{I\+Vector} \&view\+Pos) const 
+\item 
+int \hyperlink{class_world_manager_a7ad9c0bf4968b08b82d7d7daa159943a}{start\+Up} ()
+\item 
+void \hyperlink{class_world_manager_a94c6c0dae961c535b6f2f543e029d6b6}{shut\+Down} ()
+\item 
+int \hyperlink{class_world_manager_aa578d092a54953c07ff31908239db4ba}{add\+Object} (\hyperlink{class_object}{Object} $\ast$obj)
+\item 
+int \hyperlink{class_world_manager_a31f902aa5a2ece9e2213d9ca9612e783}{remove\+Object} (\hyperlink{class_object}{Object} $\ast$obj)
+\item 
+int \hyperlink{class_world_manager_a9dfc6db89285c0ff0191e80f238968c4}{add\+To\+Layer\+Pool} (\hyperlink{class_object}{Object} $\ast$obj)
+\item 
+int \hyperlink{class_world_manager_a36b651e832cb1d874b1412576843259f}{remove\+From\+Pool} (\hyperlink{class_object}{Object} $\ast$obj)
+\item 
+int \hyperlink{class_world_manager_a00279b75512da5e81ea5d13828b6f912}{mark\+For\+Delete} (\hyperlink{class_object}{Object} $\ast$object)
+\item 
+bool \hyperlink{class_world_manager_ad5cbaffc272fbf2ad79a7ea6cfbd3cf6}{move\+Object} (\hyperlink{class_object}{Object} $\ast$obj, \hyperlink{class_i_vector}{I\+Vector} position)
+\item 
+\hyperlink{class_object_list}{Object\+List} \hyperlink{class_world_manager_a07ba6788c3fece725cbb9d4917fb9682}{get\+All\+Objects} (bool inactive=false) const 
+\item 
+bool \hyperlink{class_world_manager_ac658218a84a78dc0610890a5b486d70d}{is\+Collision} (\hyperlink{class_object}{Object} $\ast$obj, \hyperlink{class_i_vector}{I\+Vector} position, \hyperlink{class_object_list}{Object\+List} $\ast$out\+List)
+\item 
+int \hyperlink{class_world_manager_a72462c64fa931378504f18a2966c303d}{on\+Event} (\hyperlink{class_event}{Event} $\ast$e) const 
+\item 
+void \hyperlink{class_world_manager_a0ef5e1e476a80ef7715227c6f3a9b6ec}{update} ()
+\item 
+void \hyperlink{class_world_manager_a0e2c21775041c6943d3cbcbf88601fe7}{draw} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_world_manager}{World\+Manager} \& \hyperlink{class_world_manager_a911e3c4d33b006b21f15f41e90d192d8}{get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_manager}{Manager} class for the world 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_world_manager_aa578d092a54953c07ff31908239db4ba}{\index{World\+Manager@{World\+Manager}!add\+Object@{add\+Object}}
+\index{add\+Object@{add\+Object}!World\+Manager@{World\+Manager}}
+\subsubsection[{add\+Object}]{\setlength{\rightskip}{0pt plus 5cm}int World\+Manager\+::add\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_aa578d092a54953c07ff31908239db4ba}
+Adds an object to the world 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the object was added, 0 if not 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a9dfc6db89285c0ff0191e80f238968c4}{\index{World\+Manager@{World\+Manager}!add\+To\+Layer\+Pool@{add\+To\+Layer\+Pool}}
+\index{add\+To\+Layer\+Pool@{add\+To\+Layer\+Pool}!World\+Manager@{World\+Manager}}
+\subsubsection[{add\+To\+Layer\+Pool}]{\setlength{\rightskip}{0pt plus 5cm}int World\+Manager\+::add\+To\+Layer\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a9dfc6db89285c0ff0191e80f238968c4}
+Adds the object to the current layer pool that it has been assigned 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to add to a layer pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the object was added, 0 otherwise 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a0e2c21775041c6943d3cbcbf88601fe7}{\index{World\+Manager@{World\+Manager}!draw@{draw}}
+\index{draw@{draw}!World\+Manager@{World\+Manager}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Manager\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a0e2c21775041c6943d3cbcbf88601fe7}
+Called once every frame to draw \hypertarget{class_world_manager_a07ba6788c3fece725cbb9d4917fb9682}{\index{World\+Manager@{World\+Manager}!get\+All\+Objects@{get\+All\+Objects}}
+\index{get\+All\+Objects@{get\+All\+Objects}!World\+Manager@{World\+Manager}}
+\subsubsection[{get\+All\+Objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object\+List} World\+Manager\+::get\+All\+Objects (
+\begin{DoxyParamCaption}
+\item[{bool}]{inactive = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{class_world_manager_a07ba6788c3fece725cbb9d4917fb9682}
+Gets a list of all objects in the world 
+\begin{DoxyParams}{Parameters}
+{\em inactive} & If true, then also include objects that are inactive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of the objects 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a035099ac90a1f8cf0feb1650e02b3b7a}{\index{World\+Manager@{World\+Manager}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!World\+Manager@{World\+Manager}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Box} World\+Manager\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_world_manager_a035099ac90a1f8cf0feb1650e02b3b7a}
+Gets the worlds boundary \begin{DoxyReturn}{Returns}
+The world boundary 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_aca77cd8dd87db0e454817668b2d0e8ab}{\index{World\+Manager@{World\+Manager}!get\+Following@{get\+Following}}
+\index{get\+Following@{get\+Following}!World\+Manager@{World\+Manager}}
+\subsubsection[{get\+Following}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} $\ast$ World\+Manager\+::get\+Following (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_world_manager_aca77cd8dd87db0e454817668b2d0e8ab}
+Gets what object the view should follow \begin{DoxyReturn}{Returns}
+A pointer to the object that we are following or N\+U\+L\+L if there is none 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a911e3c4d33b006b21f15f41e90d192d8}{\index{World\+Manager@{World\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!World\+Manager@{World\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+Manager} \& World\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_world_manager_a911e3c4d33b006b21f15f41e90d192d8}
+Get the singleton instance of this object \begin{DoxyReturn}{Returns}
+A reference to the instance of this object 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a54a25642fa5f666c7e6b8e3d668e13b3}{\index{World\+Manager@{World\+Manager}!get\+View@{get\+View}}
+\index{get\+View@{get\+View}!World\+Manager@{World\+Manager}}
+\subsubsection[{get\+View}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Box} World\+Manager\+::get\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_world_manager_a54a25642fa5f666c7e6b8e3d668e13b3}
+Gets the viewport in the world \begin{DoxyReturn}{Returns}
+the world view 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_ac658218a84a78dc0610890a5b486d70d}{\index{World\+Manager@{World\+Manager}!is\+Collision@{is\+Collision}}
+\index{is\+Collision@{is\+Collision}!World\+Manager@{World\+Manager}}
+\subsubsection[{is\+Collision}]{\setlength{\rightskip}{0pt plus 5cm}bool World\+Manager\+::is\+Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf I\+Vector}}]{position, }
+\item[{{\bf Object\+List} $\ast$}]{out\+List}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_ac658218a84a78dc0610890a5b486d70d}
+Gets a list of all objects that an object collides with when placed at a position 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to test collision with \\
+\hline
+{\em position} & The position to place the object at \\
+\hline
+{\em out\+List} & A list to fill with the objects that obj collised with, if N\+U\+L\+L the function will ignore it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there are any collisions otherwise false 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a00279b75512da5e81ea5d13828b6f912}{\index{World\+Manager@{World\+Manager}!mark\+For\+Delete@{mark\+For\+Delete}}
+\index{mark\+For\+Delete@{mark\+For\+Delete}!World\+Manager@{World\+Manager}}
+\subsubsection[{mark\+For\+Delete}]{\setlength{\rightskip}{0pt plus 5cm}int World\+Manager\+::mark\+For\+Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a00279b75512da5e81ea5d13828b6f912}
+Marks an object for deletion when it is safe 
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if ok, 0 if not 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_ad5cbaffc272fbf2ad79a7ea6cfbd3cf6}{\index{World\+Manager@{World\+Manager}!move\+Object@{move\+Object}}
+\index{move\+Object@{move\+Object}!World\+Manager@{World\+Manager}}
+\subsubsection[{move\+Object}]{\setlength{\rightskip}{0pt plus 5cm}bool World\+Manager\+::move\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj, }
+\item[{{\bf I\+Vector}}]{position}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_ad5cbaffc272fbf2ad79a7ea6cfbd3cf6}
+Attempts to move an object to a location based on its collision model 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to try and move \\
+\hline
+{\em position} & The position to move it to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object was moved, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a72462c64fa931378504f18a2966c303d}{\index{World\+Manager@{World\+Manager}!on\+Event@{on\+Event}}
+\index{on\+Event@{on\+Event}!World\+Manager@{World\+Manager}}
+\subsubsection[{on\+Event}]{\setlength{\rightskip}{0pt plus 5cm}int World\+Manager\+::on\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Event} $\ast$}]{e}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_world_manager_a72462c64fa931378504f18a2966c303d}
+Passes an event to all objects in the world 
+\begin{DoxyParams}{Parameters}
+{\em e} & The event to pass \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if any objects ate the event, 0 otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_manager_abfdbe16dc74a246b70a183351e100989}{Manager}.
+
+\hypertarget{class_world_manager_a36b651e832cb1d874b1412576843259f}{\index{World\+Manager@{World\+Manager}!remove\+From\+Pool@{remove\+From\+Pool}}
+\index{remove\+From\+Pool@{remove\+From\+Pool}!World\+Manager@{World\+Manager}}
+\subsubsection[{remove\+From\+Pool}]{\setlength{\rightskip}{0pt plus 5cm}int World\+Manager\+::remove\+From\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a36b651e832cb1d874b1412576843259f}
+Removes the object from its current layer pool 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the object was removed, 0 otherwise 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a31f902aa5a2ece9e2213d9ca9612e783}{\index{World\+Manager@{World\+Manager}!remove\+Object@{remove\+Object}}
+\index{remove\+Object@{remove\+Object}!World\+Manager@{World\+Manager}}
+\subsubsection[{remove\+Object}]{\setlength{\rightskip}{0pt plus 5cm}int World\+Manager\+::remove\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a31f902aa5a2ece9e2213d9ca9612e783}
+Removes the object from the world 
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the object was removed, 0 otherwise 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_a4e39ad0a294f62d834a7e58f676fe5e6}{\index{World\+Manager@{World\+Manager}!set\+Bounds@{set\+Bounds}}
+\index{set\+Bounds@{set\+Bounds}!World\+Manager@{World\+Manager}}
+\subsubsection[{set\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Manager\+::set\+Bounds (
+\begin{DoxyParamCaption}
+\item[{{\bf Box}}]{bounds}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a4e39ad0a294f62d834a7e58f676fe5e6}
+Sets the world boundary 
+\begin{DoxyParams}{Parameters}
+{\em bounds} & The new boundary to use for the world \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_world_manager_a0d29ce2f7ad696283e80e3fd13b5b077}{\index{World\+Manager@{World\+Manager}!set\+Following@{set\+Following}}
+\index{set\+Following@{set\+Following}!World\+Manager@{World\+Manager}}
+\subsubsection[{set\+Following}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Manager\+::set\+Following (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{follow}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a0d29ce2f7ad696283e80e3fd13b5b077}
+Sets the object that the view should follow 
+\begin{DoxyParams}{Parameters}
+{\em follow} & A pointer to the object that we should follow, or N\+U\+L\+L if no object should be followed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_world_manager_a2513ce622a4fbb25c3dd3139a9445fec}{\index{World\+Manager@{World\+Manager}!set\+View@{set\+View}}
+\index{set\+View@{set\+View}!World\+Manager@{World\+Manager}}
+\subsubsection[{set\+View}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Manager\+::set\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf Box}}]{view}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a2513ce622a4fbb25c3dd3139a9445fec}
+Sets the viewport in the world 
+\begin{DoxyParams}{Parameters}
+{\em view} & The new viewport \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_world_manager_adb4eb19ce21ccad04c60e845f4c508a9}{\index{World\+Manager@{World\+Manager}!set\+View\+Position@{set\+View\+Position}}
+\index{set\+View\+Position@{set\+View\+Position}!World\+Manager@{World\+Manager}}
+\subsubsection[{set\+View\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Manager\+::set\+View\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Vector} \&}]{position}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_adb4eb19ce21ccad04c60e845f4c508a9}
+Sets the position of the viewport 
+\begin{DoxyParams}{Parameters}
+{\em position} & The new position for the viewport \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_world_manager_a94c6c0dae961c535b6f2f543e029d6b6}{\index{World\+Manager@{World\+Manager}!shut\+Down@{shut\+Down}}
+\index{shut\+Down@{shut\+Down}!World\+Manager@{World\+Manager}}
+\subsubsection[{shut\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Manager\+::shut\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_world_manager_a94c6c0dae961c535b6f2f543e029d6b6}
+Called to shut down the world manager, this will clean up all objects 
+
+Reimplemented from \hyperlink{class_manager_a09f0aaf6012be52b75a12fac25370f61}{Manager}.
+
+\hypertarget{class_world_manager_a7ad9c0bf4968b08b82d7d7daa159943a}{\index{World\+Manager@{World\+Manager}!start\+Up@{start\+Up}}
+\index{start\+Up@{start\+Up}!World\+Manager@{World\+Manager}}
+\subsubsection[{start\+Up}]{\setlength{\rightskip}{0pt plus 5cm}int World\+Manager\+::start\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_world_manager_a7ad9c0bf4968b08b82d7d7daa159943a}
+Called when the world manager is started \begin{DoxyReturn}{Returns}
+0 when no errors occurred, $<$ 0 if errors did occur 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}{Manager}.
+
+\hypertarget{class_world_manager_a0ef5e1e476a80ef7715227c6f3a9b6ec}{\index{World\+Manager@{World\+Manager}!update@{update}}
+\index{update@{update}!World\+Manager@{World\+Manager}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void World\+Manager\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_world_manager_a0ef5e1e476a80ef7715227c6f3a9b6ec}
+Called once every frame to update objects \hypertarget{class_world_manager_abdffd332d31f310f192a3b017d0940ca}{\index{World\+Manager@{World\+Manager}!view\+To\+World@{view\+To\+World}}
+\index{view\+To\+World@{view\+To\+World}!World\+Manager@{World\+Manager}}
+\subsubsection[{view\+To\+World}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} World\+Manager\+::view\+To\+World (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector} \&}]{view\+Pos}
+\end{DoxyParamCaption}
+) const}}\label{class_world_manager_abdffd332d31f310f192a3b017d0940ca}
+Converts a view coordinate to a world coordinate 
+\begin{DoxyParams}{Parameters}
+{\em view\+Pos} & The view coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The world coordinates 
+\end{DoxyReturn}
+\hypertarget{class_world_manager_adb6dd142eb66b01eb5104ab496c9517a}{\index{World\+Manager@{World\+Manager}!world\+To\+View@{world\+To\+View}}
+\index{world\+To\+View@{world\+To\+View}!World\+Manager@{World\+Manager}}
+\subsubsection[{world\+To\+View}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} World\+Manager\+::world\+To\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector} \&}]{world\+Pos}
+\end{DoxyParamCaption}
+) const}}\label{class_world_manager_adb6dd142eb66b01eb5104ab496c9517a}
+Converts a world coordinate to a view coordinate 
+\begin{DoxyParams}{Parameters}
+{\em world\+Pos} & The world coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The view coordinate 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/World\+Manager.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Game/World\+Manager.\+cpp\end{DoxyCompactItemize}

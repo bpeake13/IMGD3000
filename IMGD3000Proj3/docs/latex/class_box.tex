@@ -1,0 +1,173 @@
+\hypertarget{class_box}{\section{Box Class Reference}
+\label{class_box}\index{Box@{Box}}
+}
+
+
+{\ttfamily \#include $<$Box.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_box_aebf2dc1ce4038ddc90d951c45a540eb8}{Box} (\hyperlink{class_i_vector}{I\+Vector} init\+\_\+corner, int horizontal, int vertical)
+\item 
+\hyperlink{class_box_aaa0135bed67525224f69b261a6aed814}{Box} (\hyperlink{class_i_vector}{I\+Vector} min\+Corner, \hyperlink{class_i_vector}{I\+Vector} max\+Corner)
+\item 
+\hyperlink{class_box_aca78d7db44972bfa78d46b7bbc8796f6}{Box} ()
+\item 
+void \hyperlink{class_box_a86aefb1c5a6fa0df2cd1dd5a4977e48f}{set\+Corner} (\hyperlink{class_i_vector}{I\+Vector} new\+Corner)
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_box_a6c1847429306010f8aa73b0e1eada797}{get\+Corner} () const 
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_box_a3d563f696482a8b25e9ce239384ce14a}{get\+Max\+Corner} () const 
+\item 
+void \hyperlink{class_box_a92c69d5bb53cb167a6b51707738b12aa}{set\+Horizontal} (int new\+Horizontal)
+\item 
+int \hyperlink{class_box_a53f17f94650385c7fd770e93b531a5ab}{get\+Horizontal} () const 
+\item 
+void \hyperlink{class_box_ae45c7ed4dba774e88b96ddf28b1ace16}{set\+Vertical} (int new\+Vertical)
+\item 
+int \hyperlink{class_box_ab522f2c5403c6d846c3f66413fe31b30}{get\+Vertical} () const 
+\item 
+\hypertarget{class_box_a1af8da64e7d0c5363ebb47c31364ed4c}{bool {\bfseries contains} (\hyperlink{class_i_vector}{I\+Vector} point) const }\label{class_box_a1af8da64e7d0c5363ebb47c31364ed4c}
+
+\item 
+\hypertarget{class_box_a70768bab9f94277222ce5ea23a0c27b4}{bool {\bfseries intersects} (const \hyperlink{class_box}{Box} \&box) const }\label{class_box_a70768bab9f94277222ce5ea23a0c27b4}
+
+\item 
+\hypertarget{class_box_a7c8e97a121dbcd13979d2b88c69d5c96}{bool {\bfseries operator==} (\hyperlink{class_box}{Box} \&other) const }\label{class_box_a7c8e97a121dbcd13979d2b88c69d5c96}
+
+\item 
+\hypertarget{class_box_aefd421e75c7ae21707c7ac71579f7079}{bool {\bfseries operator!=} (\hyperlink{class_box}{Box} \&other) const }\label{class_box_aefd421e75c7ae21707c7ac71579f7079}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a box 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_box_aebf2dc1ce4038ddc90d951c45a540eb8}{\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\subsubsection[{Box}]{\setlength{\rightskip}{0pt plus 5cm}Box\+::\+Box (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector}}]{init\+\_\+corner, }
+\item[{int}]{horizontal, }
+\item[{int}]{vertical}
+\end{DoxyParamCaption}
+)}}\label{class_box_aebf2dc1ce4038ddc90d951c45a540eb8}
+Creates a new box 
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+corner} & The starting corner of the box \\
+\hline
+{\em horizontal} & The width of the box \\
+\hline
+{\em vertical} & The height of the box \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_box_aaa0135bed67525224f69b261a6aed814}{\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\subsubsection[{Box}]{\setlength{\rightskip}{0pt plus 5cm}Box\+::\+Box (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector}}]{min\+Corner, }
+\item[{{\bf I\+Vector}}]{max\+Corner}
+\end{DoxyParamCaption}
+)}}\label{class_box_aaa0135bed67525224f69b261a6aed814}
+Creates a new box 
+\begin{DoxyParams}{Parameters}
+{\em min\+Corner} & The upper left corner \\
+\hline
+{\em max\+Corner} & The lower right corner \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_box_aca78d7db44972bfa78d46b7bbc8796f6}{\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\subsubsection[{Box}]{\setlength{\rightskip}{0pt plus 5cm}Box\+::\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_box_aca78d7db44972bfa78d46b7bbc8796f6}
+Creates a default box (0, 0, 0, 0) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_box_a6c1847429306010f8aa73b0e1eada797}{\index{Box@{Box}!get\+Corner@{get\+Corner}}
+\index{get\+Corner@{get\+Corner}!Box@{Box}}
+\subsubsection[{get\+Corner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} Box\+::get\+Corner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_box_a6c1847429306010f8aa73b0e1eada797}
+Gets the current corner of the box \begin{DoxyReturn}{Returns}
+The current corner of the box 
+\end{DoxyReturn}
+\hypertarget{class_box_a53f17f94650385c7fd770e93b531a5ab}{\index{Box@{Box}!get\+Horizontal@{get\+Horizontal}}
+\index{get\+Horizontal@{get\+Horizontal}!Box@{Box}}
+\subsubsection[{get\+Horizontal}]{\setlength{\rightskip}{0pt plus 5cm}int Box\+::get\+Horizontal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_box_a53f17f94650385c7fd770e93b531a5ab}
+Gets the current horizontal size of the box \begin{DoxyReturn}{Returns}
+The current horizontal size of the box 
+\end{DoxyReturn}
+\hypertarget{class_box_a3d563f696482a8b25e9ce239384ce14a}{\index{Box@{Box}!get\+Max\+Corner@{get\+Max\+Corner}}
+\index{get\+Max\+Corner@{get\+Max\+Corner}!Box@{Box}}
+\subsubsection[{get\+Max\+Corner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} Box\+::get\+Max\+Corner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_box_a3d563f696482a8b25e9ce239384ce14a}
+Gets the far corner of the box \begin{DoxyReturn}{Returns}
+The far corner of the box 
+\end{DoxyReturn}
+\hypertarget{class_box_ab522f2c5403c6d846c3f66413fe31b30}{\index{Box@{Box}!get\+Vertical@{get\+Vertical}}
+\index{get\+Vertical@{get\+Vertical}!Box@{Box}}
+\subsubsection[{get\+Vertical}]{\setlength{\rightskip}{0pt plus 5cm}int Box\+::get\+Vertical (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_box_ab522f2c5403c6d846c3f66413fe31b30}
+Get the current vertical size of the box \begin{DoxyReturn}{Returns}
+The current vertical size of the box 
+\end{DoxyReturn}
+\hypertarget{class_box_a86aefb1c5a6fa0df2cd1dd5a4977e48f}{\index{Box@{Box}!set\+Corner@{set\+Corner}}
+\index{set\+Corner@{set\+Corner}!Box@{Box}}
+\subsubsection[{set\+Corner}]{\setlength{\rightskip}{0pt plus 5cm}void Box\+::set\+Corner (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector}}]{new\+Corner}
+\end{DoxyParamCaption}
+)}}\label{class_box_a86aefb1c5a6fa0df2cd1dd5a4977e48f}
+Changes the corner of the box 
+\begin{DoxyParams}{Parameters}
+{\em new\+Corner} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_box_a92c69d5bb53cb167a6b51707738b12aa}{\index{Box@{Box}!set\+Horizontal@{set\+Horizontal}}
+\index{set\+Horizontal@{set\+Horizontal}!Box@{Box}}
+\subsubsection[{set\+Horizontal}]{\setlength{\rightskip}{0pt plus 5cm}void Box\+::set\+Horizontal (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Horizontal}
+\end{DoxyParamCaption}
+)}}\label{class_box_a92c69d5bb53cb167a6b51707738b12aa}
+Sets a new horizontal for this box 
+\begin{DoxyParams}{Parameters}
+{\em new\+Horizontal} & The new horizontal value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_box_ae45c7ed4dba774e88b96ddf28b1ace16}{\index{Box@{Box}!set\+Vertical@{set\+Vertical}}
+\index{set\+Vertical@{set\+Vertical}!Box@{Box}}
+\subsubsection[{set\+Vertical}]{\setlength{\rightskip}{0pt plus 5cm}void Box\+::set\+Vertical (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Vertical}
+\end{DoxyParamCaption}
+)}}\label{class_box_ae45c7ed4dba774e88b96ddf28b1ace16}
+Sets a new vertical for this box 
+\begin{DoxyParams}{Parameters}
+{\em new\+Vertical} & The new vertical value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Box.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Core/Box.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\hypertarget{class_event_view}{\section{Event\+View Class Reference}
+\label{class_event_view}\index{Event\+View@{Event\+View}}
+}
+
+
+{\ttfamily \#include $<$Event\+View.\+h$>$}
+
+Inheritance diagram for Event\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_view}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_event_view_a6c8e67589e2b938db9139dcb6eaeabd6}{Event\+View} (string tag, int value, bool delta=true)
+\item 
+string \hyperlink{class_event_view_a5f737dfd3a000cb45192aa56113afd59}{get\+Tag} () const 
+\item 
+int \hyperlink{class_event_view_a5e7381f571d0cc269df58b1de2db5620}{get\+Value} () const 
+\item 
+bool \hyperlink{class_event_view_af72a798337d18edbaa8c366b1e353b85}{get\+Delta} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An event used to modify U\+I elements 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_event_view_a6c8e67589e2b938db9139dcb6eaeabd6}{\index{Event\+View@{Event\+View}!Event\+View@{Event\+View}}
+\index{Event\+View@{Event\+View}!Event\+View@{Event\+View}}
+\subsubsection[{Event\+View}]{\setlength{\rightskip}{0pt plus 5cm}Event\+View\+::\+Event\+View (
+\begin{DoxyParamCaption}
+\item[{string}]{tag, }
+\item[{int}]{value, }
+\item[{bool}]{delta = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_event_view_a6c8e67589e2b938db9139dcb6eaeabd6}
+Creates a new view event 
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag on the U\+I element that this event should apply to \\
+\hline
+{\em value} & The value to modify the tag with \\
+\hline
+{\em delta} & If true then we will add value to the current value of the U\+I element, if false then we will just set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_event_view_af72a798337d18edbaa8c366b1e353b85}{\index{Event\+View@{Event\+View}!get\+Delta@{get\+Delta}}
+\index{get\+Delta@{get\+Delta}!Event\+View@{Event\+View}}
+\subsubsection[{get\+Delta}]{\setlength{\rightskip}{0pt plus 5cm}bool Event\+View\+::get\+Delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_event_view_af72a798337d18edbaa8c366b1e353b85}
+Check to see if this event should only increment the value of the U\+I element \begin{DoxyReturn}{Returns}
+If true then we will only increment the value, otherwise we will set it 
+\end{DoxyReturn}
+\hypertarget{class_event_view_a5f737dfd3a000cb45192aa56113afd59}{\index{Event\+View@{Event\+View}!get\+Tag@{get\+Tag}}
+\index{get\+Tag@{get\+Tag}!Event\+View@{Event\+View}}
+\subsubsection[{get\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}string Event\+View\+::get\+Tag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_event_view_a5f737dfd3a000cb45192aa56113afd59}
+Get the tag on this event \begin{DoxyReturn}{Returns}
+The tag of the U\+I object that this event applies to 
+\end{DoxyReturn}
+\hypertarget{class_event_view_a5e7381f571d0cc269df58b1de2db5620}{\index{Event\+View@{Event\+View}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Event\+View@{Event\+View}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}int Event\+View\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_event_view_a5e7381f571d0cc269df58b1de2db5620}
+Get the value stored in this event \begin{DoxyReturn}{Returns}
+The value to modify the U\+I element with 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Event\+View.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Object/Event\+View.\+cpp\end{DoxyCompactItemize}

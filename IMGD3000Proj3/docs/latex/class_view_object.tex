@@ -1,0 +1,185 @@
+\hypertarget{class_view_object}{\section{View\+Object Class Reference}
+\label{class_view_object}\index{View\+Object@{View\+Object}}
+}
+Inheritance diagram for View\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_view_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_view_object_aae06f1481afddf829a97b045a0c60bb7}{event\+Handler} (\hyperlink{class_event}{Event} $\ast$e)
+\item 
+virtual void \hyperlink{class_view_object_aae76e90e25d65e34d80e468b41af95da}{draw} ()
+\item 
+string \hyperlink{class_view_object_aca2716919c8e5cad80898a7f9962ddcc}{get\+View\+String} () const 
+\item 
+void \hyperlink{class_view_object_adae1f08a437032a52db37a6b7e84d046}{set\+View\+String} (string view\+String)
+\item 
+int \hyperlink{class_view_object_a87877b05cb9a8d44a77dc173b7738d62}{get\+Value} () const 
+\item 
+void \hyperlink{class_view_object_a7b6c99fea863c7eac45cbe8fcff03d96}{set\+Value} (int value)
+\item 
+bool \hyperlink{class_view_object_a2ba768ed1d2301a8cc06531854462078}{get\+Draw\+Border} () const 
+\item 
+void \hyperlink{class_view_object_a19e870c7720b8174e8293a8287d111a2}{set\+Draw\+Border} (bool draw\+Border)
+\item 
+Justification \hyperlink{class_view_object_a02a8ccd6e642e1f3274f1c8523c992d4}{get\+Justification} () const 
+\item 
+void \hyperlink{class_view_object_a48b915f41e561fd210ea5e22d690aa10}{set\+Justification} (Justification justification)
+\item 
+View\+Object\+Location \hyperlink{class_view_object_ac0672505b7a72ec0a4be8f261bcffe5c}{get\+View\+Object\+Location} () const 
+\item 
+void \hyperlink{class_view_object_a2a3ae5cb263ecc0597d1b0cc85c0300e}{set\+View\+Object\+Location} (View\+Object\+Location)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_view_object_aae76e90e25d65e34d80e468b41af95da}{\index{View\+Object@{View\+Object}!draw@{draw}}
+\index{draw@{draw}!View\+Object@{View\+Object}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void View\+Object\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_view_object_aae76e90e25d65e34d80e468b41af95da}
+Called every frame when the view object is drawn 
+
+Reimplemented from \hyperlink{class_object_a821f5b25b450fa1acdb3f9c0b5962592}{Object}.
+
+\hypertarget{class_view_object_aae06f1481afddf829a97b045a0c60bb7}{\index{View\+Object@{View\+Object}!event\+Handler@{event\+Handler}}
+\index{event\+Handler@{event\+Handler}!View\+Object@{View\+Object}}
+\subsubsection[{event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}int View\+Object\+::event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf Event} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_view_object_aae06f1481afddf829a97b045a0c60bb7}
+Handles events given to this object 
+\begin{DoxyParams}{Parameters}
+{\em e} & A pointer to the event data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a non-\/zero number if this object does consume the event, otherwise 0 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_object_aef5d6ac71c5184a72e7101584d377998}{Object}.
+
+\hypertarget{class_view_object_a2ba768ed1d2301a8cc06531854462078}{\index{View\+Object@{View\+Object}!get\+Draw\+Border@{get\+Draw\+Border}}
+\index{get\+Draw\+Border@{get\+Draw\+Border}!View\+Object@{View\+Object}}
+\subsubsection[{get\+Draw\+Border}]{\setlength{\rightskip}{0pt plus 5cm}bool View\+Object\+::get\+Draw\+Border (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_view_object_a2ba768ed1d2301a8cc06531854462078}
+Gets if we are drawing a border on this object \begin{DoxyReturn}{Returns}
+True if we are drawing a border, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_view_object_a02a8ccd6e642e1f3274f1c8523c992d4}{\index{View\+Object@{View\+Object}!get\+Justification@{get\+Justification}}
+\index{get\+Justification@{get\+Justification}!View\+Object@{View\+Object}}
+\subsubsection[{get\+Justification}]{\setlength{\rightskip}{0pt plus 5cm}Justification View\+Object\+::get\+Justification (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_view_object_a02a8ccd6e642e1f3274f1c8523c992d4}
+Gets the justification on the string that is going to be drawn \begin{DoxyReturn}{Returns}
+The justification on the string 
+\end{DoxyReturn}
+\hypertarget{class_view_object_a87877b05cb9a8d44a77dc173b7738d62}{\index{View\+Object@{View\+Object}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!View\+Object@{View\+Object}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}int View\+Object\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_view_object_a87877b05cb9a8d44a77dc173b7738d62}
+Get the value to display \begin{DoxyReturn}{Returns}
+The value to display 
+\end{DoxyReturn}
+\hypertarget{class_view_object_ac0672505b7a72ec0a4be8f261bcffe5c}{\index{View\+Object@{View\+Object}!get\+View\+Object\+Location@{get\+View\+Object\+Location}}
+\index{get\+View\+Object\+Location@{get\+View\+Object\+Location}!View\+Object@{View\+Object}}
+\subsubsection[{get\+View\+Object\+Location}]{\setlength{\rightskip}{0pt plus 5cm}View\+Object\+Location View\+Object\+::get\+View\+Object\+Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_view_object_ac0672505b7a72ec0a4be8f261bcffe5c}
+Gets the view objects relative location on screen \begin{DoxyReturn}{Returns}
+The view objects relative location on screen 
+\end{DoxyReturn}
+\hypertarget{class_view_object_aca2716919c8e5cad80898a7f9962ddcc}{\index{View\+Object@{View\+Object}!get\+View\+String@{get\+View\+String}}
+\index{get\+View\+String@{get\+View\+String}!View\+Object@{View\+Object}}
+\subsubsection[{get\+View\+String}]{\setlength{\rightskip}{0pt plus 5cm}string View\+Object\+::get\+View\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_view_object_aca2716919c8e5cad80898a7f9962ddcc}
+Get the string to display \begin{DoxyReturn}{Returns}
+The string that will be displayed next to the value 
+\end{DoxyReturn}
+\hypertarget{class_view_object_a19e870c7720b8174e8293a8287d111a2}{\index{View\+Object@{View\+Object}!set\+Draw\+Border@{set\+Draw\+Border}}
+\index{set\+Draw\+Border@{set\+Draw\+Border}!View\+Object@{View\+Object}}
+\subsubsection[{set\+Draw\+Border}]{\setlength{\rightskip}{0pt plus 5cm}void View\+Object\+::set\+Draw\+Border (
+\begin{DoxyParamCaption}
+\item[{bool}]{draw\+Border}
+\end{DoxyParamCaption}
+)}}\label{class_view_object_a19e870c7720b8174e8293a8287d111a2}
+Sets if we are drawing a border on this object 
+\begin{DoxyParams}{Parameters}
+{\em draw\+Border} & If true then a border will be draw, otherwise a border will not be drawn \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_object_a48b915f41e561fd210ea5e22d690aa10}{\index{View\+Object@{View\+Object}!set\+Justification@{set\+Justification}}
+\index{set\+Justification@{set\+Justification}!View\+Object@{View\+Object}}
+\subsubsection[{set\+Justification}]{\setlength{\rightskip}{0pt plus 5cm}void View\+Object\+::set\+Justification (
+\begin{DoxyParamCaption}
+\item[{Justification}]{justification}
+\end{DoxyParamCaption}
+)}}\label{class_view_object_a48b915f41e561fd210ea5e22d690aa10}
+Sets the justification on the string that is being drawn 
+\begin{DoxyParams}{Parameters}
+{\em justification} & The justification on the string being drawn \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_object_a7b6c99fea863c7eac45cbe8fcff03d96}{\index{View\+Object@{View\+Object}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!View\+Object@{View\+Object}}
+\subsubsection[{set\+Value}]{\setlength{\rightskip}{0pt plus 5cm}void View\+Object\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_view_object_a7b6c99fea863c7eac45cbe8fcff03d96}
+Set the value to display 
+\begin{DoxyParams}{Parameters}
+{\em value} & The new value to display \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_object_a2a3ae5cb263ecc0597d1b0cc85c0300e}{\index{View\+Object@{View\+Object}!set\+View\+Object\+Location@{set\+View\+Object\+Location}}
+\index{set\+View\+Object\+Location@{set\+View\+Object\+Location}!View\+Object@{View\+Object}}
+\subsubsection[{set\+View\+Object\+Location}]{\setlength{\rightskip}{0pt plus 5cm}void View\+Object\+::set\+View\+Object\+Location (
+\begin{DoxyParamCaption}
+\item[{View\+Object\+Location}]{enum\+View\+Object\+Location}
+\end{DoxyParamCaption}
+)}}\label{class_view_object_a2a3ae5cb263ecc0597d1b0cc85c0300e}
+The view objects relative location on screen 
+\begin{DoxyParams}{Parameters}
+{\em The} & view objects relative location on screen \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_object_adae1f08a437032a52db37a6b7e84d046}{\index{View\+Object@{View\+Object}!set\+View\+String@{set\+View\+String}}
+\index{set\+View\+String@{set\+View\+String}!View\+Object@{View\+Object}}
+\subsubsection[{set\+View\+String}]{\setlength{\rightskip}{0pt plus 5cm}void View\+Object\+::set\+View\+String (
+\begin{DoxyParamCaption}
+\item[{string}]{view\+String}
+\end{DoxyParamCaption}
+)}}\label{class_view_object_adae1f08a437032a52db37a6b7e84d046}
+Sets the string to display 
+\begin{DoxyParams}{Parameters}
+{\em view\+String} & The new string to display next to the value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/View\+Object.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Object/View\+Object.\+cpp\end{DoxyCompactItemize}

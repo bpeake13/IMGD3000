@@ -1,0 +1,212 @@
+\hypertarget{class_graphics_manager}{\section{Graphics\+Manager Class Reference}
+\label{class_graphics_manager}\index{Graphics\+Manager@{Graphics\+Manager}}
+}
+
+
+{\ttfamily \#include $<$Graphics\+Manager.\+h$>$}
+
+Inheritance diagram for Graphics\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphics_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_graphics_manager_ac1961e1b4985a41a6eb233736d5d3191}{start\+Up} ()
+\item 
+void \hyperlink{class_graphics_manager_a5d850ef5d3a6792eb270fa22b784b3e6}{shut\+Down} ()
+\item 
+int \hyperlink{class_graphics_manager_a18954a6304591268760d2eab5804d7b3}{swap\+Buffer} (bool clear=true)
+\item 
+int \hyperlink{class_graphics_manager_a4d727210ad9f36755f961f1ef95a9edb}{get\+Horizontal} () const 
+\item 
+int \hyperlink{class_graphics_manager_a8285df9ae37927930fac787293041517}{get\+Vertical} () const 
+\item 
+int \hyperlink{class_graphics_manager_a99cd53145eebabc3cb707bb8717a8529}{draw\+Ch} (\hyperlink{class_i_vector}{I\+Vector} world\+Pos, char c, int color=D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R) const 
+\item 
+int \hyperlink{class_graphics_manager_ab7925ff75e907e644199ed042f4d35e1}{draw\+String} (\hyperlink{class_i_vector}{I\+Vector} world\+Pos, Justification justification, string str, int color=D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R) const 
+\item 
+int \hyperlink{class_graphics_manager_a46fdb7da074537ca39b8b0e91ec9f95a}{draw\+Frame} (\hyperlink{class_i_vector}{I\+Vector} world\+Pos, const \hyperlink{class_frame}{Frame} $\ast$frame, bool centered, int color=D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R) const 
+\item 
+W\+I\+N\+D\+O\+W $\ast$ \hyperlink{class_graphics_manager_a5387f69913132a6e572fa1018961640f}{get\+Back\+Buffer} () const 
+\item 
+W\+I\+N\+D\+O\+W $\ast$ \hyperlink{class_graphics_manager_a0c6b0d00061ca962eeefbe813879ceb4}{get\+Front\+Buffer} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_graphics_manager}{Graphics\+Manager} \& \hyperlink{class_graphics_manager_acd82b9108141b60d9f4b38d104b8165a}{get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages drawing and rendering to the screen 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphics_manager_a99cd53145eebabc3cb707bb8717a8529}{\index{Graphics\+Manager@{Graphics\+Manager}!draw\+Ch@{draw\+Ch}}
+\index{draw\+Ch@{draw\+Ch}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{draw\+Ch}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\+Manager\+::draw\+Ch (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector}}]{world\+Pos, }
+\item[{char}]{c, }
+\item[{int}]{color = {\ttfamily DF\+\_\+DEFAULT\+\_\+COLOR}}
+\end{DoxyParamCaption}
+) const}}\label{class_graphics_manager_a99cd53145eebabc3cb707bb8717a8529}
+Draws a character at the world position 
+\begin{DoxyParams}{Parameters}
+{\em world\+Pos} & The world position to draw the character at \\
+\hline
+{\em c} & The character to draw \\
+\hline
+{\em color} & The color to draw the character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if ok, -\/1 if not 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_a46fdb7da074537ca39b8b0e91ec9f95a}{\index{Graphics\+Manager@{Graphics\+Manager}!draw\+Frame@{draw\+Frame}}
+\index{draw\+Frame@{draw\+Frame}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{draw\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\+Manager\+::draw\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector}}]{world\+Pos, }
+\item[{const {\bf Frame} $\ast$}]{frame, }
+\item[{bool}]{centered, }
+\item[{int}]{color = {\ttfamily DF\+\_\+DEFAULT\+\_\+COLOR}}
+\end{DoxyParamCaption}
+) const}}\label{class_graphics_manager_a46fdb7da074537ca39b8b0e91ec9f95a}
+Draws a frame of characters 
+\begin{DoxyParams}{Parameters}
+{\em world\+Pos} & The world position to draw the frame at \\
+\hline
+{\em frame} & The frame to draw \\
+\hline
+{\em centered} & If true, then we should consider the draw point the center of the frame \\
+\hline
+{\em color} & The color to draw the frame with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on ok , -\/1 on fail 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_ab7925ff75e907e644199ed042f4d35e1}{\index{Graphics\+Manager@{Graphics\+Manager}!draw\+String@{draw\+String}}
+\index{draw\+String@{draw\+String}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{draw\+String}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\+Manager\+::draw\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector}}]{world\+Pos, }
+\item[{Justification}]{justification, }
+\item[{string}]{str, }
+\item[{int}]{color = {\ttfamily DF\+\_\+DEFAULT\+\_\+COLOR}}
+\end{DoxyParamCaption}
+) const}}\label{class_graphics_manager_ab7925ff75e907e644199ed042f4d35e1}
+Draws a string at the world position 
+\begin{DoxyParams}{Parameters}
+{\em world\+Pos} & The world position to draw the string at \\
+\hline
+{\em justification} & The justification to draw the string at \\
+\hline
+{\em str} & The string to draw \\
+\hline
+{\em color} & The color to draw the string with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on ok, -\/1 to on fail 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_a5387f69913132a6e572fa1018961640f}{\index{Graphics\+Manager@{Graphics\+Manager}!get\+Back\+Buffer@{get\+Back\+Buffer}}
+\index{get\+Back\+Buffer@{get\+Back\+Buffer}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{get\+Back\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}W\+I\+N\+D\+O\+W $\ast$ Graphics\+Manager\+::get\+Back\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_graphics_manager_a5387f69913132a6e572fa1018961640f}
+Gets the current buffer we are rendering to \begin{DoxyReturn}{Returns}
+A pointer to the back buffer 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_a0c6b0d00061ca962eeefbe813879ceb4}{\index{Graphics\+Manager@{Graphics\+Manager}!get\+Front\+Buffer@{get\+Front\+Buffer}}
+\index{get\+Front\+Buffer@{get\+Front\+Buffer}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{get\+Front\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}W\+I\+N\+D\+O\+W $\ast$ Graphics\+Manager\+::get\+Front\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_graphics_manager_a0c6b0d00061ca962eeefbe813879ceb4}
+Gets the current buffer we are displaying \begin{DoxyReturn}{Returns}
+A pointer to the front buffer 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_a4d727210ad9f36755f961f1ef95a9edb}{\index{Graphics\+Manager@{Graphics\+Manager}!get\+Horizontal@{get\+Horizontal}}
+\index{get\+Horizontal@{get\+Horizontal}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{get\+Horizontal}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\+Manager\+::get\+Horizontal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_graphics_manager_a4d727210ad9f36755f961f1ef95a9edb}
+Gets the horizontal size of the terminal in characters \begin{DoxyReturn}{Returns}
+An integer showing how many characters across the terminal is 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_acd82b9108141b60d9f4b38d104b8165a}{\index{Graphics\+Manager@{Graphics\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphics\+Manager} \& Graphics\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_graphics_manager_acd82b9108141b60d9f4b38d104b8165a}
+Get the graphics manager instance \begin{DoxyReturn}{Returns}
+A reference to the graphics manager instance 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_a8285df9ae37927930fac787293041517}{\index{Graphics\+Manager@{Graphics\+Manager}!get\+Vertical@{get\+Vertical}}
+\index{get\+Vertical@{get\+Vertical}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{get\+Vertical}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\+Manager\+::get\+Vertical (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_graphics_manager_a8285df9ae37927930fac787293041517}
+Gets the vertical size of the terminal in characters \begin{DoxyReturn}{Returns}
+An integer showing how many characters across the terminal is 
+\end{DoxyReturn}
+\hypertarget{class_graphics_manager_a5d850ef5d3a6792eb270fa22b784b3e6}{\index{Graphics\+Manager@{Graphics\+Manager}!shut\+Down@{shut\+Down}}
+\index{shut\+Down@{shut\+Down}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{shut\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\+Manager\+::shut\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_graphics_manager_a5d850ef5d3a6792eb270fa22b784b3e6}
+Called when the graphics manager is shutdown 
+
+Reimplemented from \hyperlink{class_manager_a09f0aaf6012be52b75a12fac25370f61}{Manager}.
+
+\hypertarget{class_graphics_manager_ac1961e1b4985a41a6eb233736d5d3191}{\index{Graphics\+Manager@{Graphics\+Manager}!start\+Up@{start\+Up}}
+\index{start\+Up@{start\+Up}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{start\+Up}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\+Manager\+::start\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_graphics_manager_ac1961e1b4985a41a6eb233736d5d3191}
+Called when the graphics manager is started \begin{DoxyReturn}{Returns}
+0 if the graphics manager was started, otherwise returns $<$ 0 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}{Manager}.
+
+\hypertarget{class_graphics_manager_a18954a6304591268760d2eab5804d7b3}{\index{Graphics\+Manager@{Graphics\+Manager}!swap\+Buffer@{swap\+Buffer}}
+\index{swap\+Buffer@{swap\+Buffer}!Graphics\+Manager@{Graphics\+Manager}}
+\subsubsection[{swap\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\+Manager\+::swap\+Buffer (
+\begin{DoxyParamCaption}
+\item[{bool}]{clear = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_manager_a18954a6304591268760d2eab5804d7b3}
+Swaps the front and back buffer 
+\begin{DoxyParams}{Parameters}
+{\em clear} & If true, clears the new back buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 when the swap worked, -\/1 if not 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Graphics\+Manager.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Rendering/Graphics\+Manager.\+cpp\end{DoxyCompactItemize}

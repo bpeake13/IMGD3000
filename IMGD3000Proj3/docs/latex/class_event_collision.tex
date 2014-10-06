@@ -1,0 +1,87 @@
+\hypertarget{class_event_collision}{\section{Event\+Collision Class Reference}
+\label{class_event_collision}\index{Event\+Collision@{Event\+Collision}}
+}
+
+
+{\ttfamily \#include $<$Event\+Collision.\+h$>$}
+
+Inheritance diagram for Event\+Collision\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_collision}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_event_collision_a7351501bd297d82811deed639c3c6d3d}{Event\+Collision} (\hyperlink{class_i_vector}{I\+Vector} position, \hyperlink{class_object}{Object} $\ast$obj1, \hyperlink{class_object}{Object} $\ast$obj2)
+\item 
+\hyperlink{class_i_vector}{I\+Vector} \hyperlink{class_event_collision_a9ed1a0fd9cc1006ef8a25574c5bb5a69}{get\+Position} ()
+\item 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{class_event_collision_a74ac21fbda77c2ffb080a0228178b5ae}{get\+Obj1} () const 
+\item 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{class_event_collision_a57b819fcb05e03b7b9ca41631881b909}{get\+Obj2} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An event that is fired whenever a collision happens This event is not global, it will only be fired on objects involved in the collision 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_event_collision_a7351501bd297d82811deed639c3c6d3d}{\index{Event\+Collision@{Event\+Collision}!Event\+Collision@{Event\+Collision}}
+\index{Event\+Collision@{Event\+Collision}!Event\+Collision@{Event\+Collision}}
+\subsubsection[{Event\+Collision}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Collision\+::\+Event\+Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Vector}}]{position, }
+\item[{{\bf Object} $\ast$}]{obj1, }
+\item[{{\bf Object} $\ast$}]{obj2}
+\end{DoxyParamCaption}
+)}}\label{class_event_collision_a7351501bd297d82811deed639c3c6d3d}
+Creates a new collision event 
+\begin{DoxyParams}{Parameters}
+{\em position} & The position that the collision was at \\
+\hline
+{\em obj1} & The first object in the collision \\
+\hline
+{\em obj2} & The second object in the collision \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_event_collision_a74ac21fbda77c2ffb080a0228178b5ae}{\index{Event\+Collision@{Event\+Collision}!get\+Obj1@{get\+Obj1}}
+\index{get\+Obj1@{get\+Obj1}!Event\+Collision@{Event\+Collision}}
+\subsubsection[{get\+Obj1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} $\ast$ Event\+Collision\+::get\+Obj1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_event_collision_a74ac21fbda77c2ffb080a0228178b5ae}
+Gets the first object involved in the collision \begin{DoxyReturn}{Returns}
+The first object involved in the collision 
+\end{DoxyReturn}
+\hypertarget{class_event_collision_a57b819fcb05e03b7b9ca41631881b909}{\index{Event\+Collision@{Event\+Collision}!get\+Obj2@{get\+Obj2}}
+\index{get\+Obj2@{get\+Obj2}!Event\+Collision@{Event\+Collision}}
+\subsubsection[{get\+Obj2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} $\ast$ Event\+Collision\+::get\+Obj2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_event_collision_a57b819fcb05e03b7b9ca41631881b909}
+Gets the second object involved in the collision \begin{DoxyReturn}{Returns}
+The second object involved in the collision 
+\end{DoxyReturn}
+\hypertarget{class_event_collision_a9ed1a0fd9cc1006ef8a25574c5bb5a69}{\index{Event\+Collision@{Event\+Collision}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Event\+Collision@{Event\+Collision}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Vector} Event\+Collision\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_event_collision_a9ed1a0fd9cc1006ef8a25574c5bb5a69}
+The position the collision was at \begin{DoxyReturn}{Returns}
+An \hyperlink{class_i_vector}{I\+Vector} that represents the world location that the collision was at 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Event\+Collision.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Physics/Event\+Collision.\+cpp\end{DoxyCompactItemize}

@@ -3,9 +3,9 @@ environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1851751859/append
 environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1851751859/appendContributed=true
 environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/CYGWIN_HOME/delimiter=;
 environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/CYGWIN_HOME/operation=replace
-environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/CYGWIN_HOME/value=C\:\\Programming\\Cygwin
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/CYGWIN_HOME/value=F\:\\cygwin\\bin
 environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/PATH/delimiter=;
 environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/PATH/operation=replace
-environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/PATH/value=C\:\\Programming\\Cygwin\\bin
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/PATH/value=F\:\\cygwin\\bin
 environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/append=true
 environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.269330430/appendContributed=true

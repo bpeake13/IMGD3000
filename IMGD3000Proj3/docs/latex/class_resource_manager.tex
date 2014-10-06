@@ -1,0 +1,126 @@
+\hypertarget{class_resource_manager}{\section{Resource\+Manager Class Reference}
+\label{class_resource_manager}\index{Resource\+Manager@{Resource\+Manager}}
+}
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+Inheritance diagram for Resource\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_resource_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_resource_manager_a53bf358b029e050a285725bc70a8550a}{start\+Up} ()
+\item 
+void \hyperlink{class_resource_manager_a6db779a2721e927cffb9f0c7ab31495c}{shut\+Down} ()
+\item 
+bool \hyperlink{class_resource_manager_aadd9ea4561168835c5c8eec0d7ff6f53}{load\+Sprite} (string file, string label)
+\item 
+bool \hyperlink{class_resource_manager_a6e7ab1b45dc7e6fa9abcbce827f5ddad}{unload\+Sprite} (string label)
+\item 
+\hyperlink{class_sprite}{Sprite} $\ast$ \hyperlink{class_resource_manager_a42c23fc9feb582cd7cc0987361ba4c6d}{get\+Sprite} (string label) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_resource_manager}{Resource\+Manager} \& \hyperlink{class_resource_manager_a37d0e97686c031cef9b22725ba4a6005}{get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles loading and unloading resources 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_resource_manager_a37d0e97686c031cef9b22725ba4a6005}{\index{Resource\+Manager@{Resource\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\+Manager} \& Resource\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_resource_manager_a37d0e97686c031cef9b22725ba4a6005}
+Gets the singleton instance of the resource manager \begin{DoxyReturn}{Returns}
+A reference to the resource manager 
+\end{DoxyReturn}
+\hypertarget{class_resource_manager_a42c23fc9feb582cd7cc0987361ba4c6d}{\index{Resource\+Manager@{Resource\+Manager}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{get\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sprite} $\ast$ Resource\+Manager\+::get\+Sprite (
+\begin{DoxyParamCaption}
+\item[{string}]{label}
+\end{DoxyParamCaption}
+) const}}\label{class_resource_manager_a42c23fc9feb582cd7cc0987361ba4c6d}
+Gets a sprite from the resource lookup table 
+\begin{DoxyParams}{Parameters}
+{\em label} & The label that the sprite was assigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A ptr to the sprite if the sprite was found, N\+U\+L\+L otherwise 
+\end{DoxyReturn}
+\hypertarget{class_resource_manager_aadd9ea4561168835c5c8eec0d7ff6f53}{\index{Resource\+Manager@{Resource\+Manager}!load\+Sprite@{load\+Sprite}}
+\index{load\+Sprite@{load\+Sprite}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{load\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}bool Resource\+Manager\+::load\+Sprite (
+\begin{DoxyParamCaption}
+\item[{string}]{file, }
+\item[{string}]{label}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_aadd9ea4561168835c5c8eec0d7ff6f53}
+Loads a sprite from file into memory 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to load from \\
+\hline
+{\em label} & The label to assign the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sprite could be loaded, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_resource_manager_a6db779a2721e927cffb9f0c7ab31495c}{\index{Resource\+Manager@{Resource\+Manager}!shut\+Down@{shut\+Down}}
+\index{shut\+Down@{shut\+Down}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{shut\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Resource\+Manager\+::shut\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_resource_manager_a6db779a2721e927cffb9f0c7ab31495c}
+Called when the resource manager is shut down 
+
+Reimplemented from \hyperlink{class_manager_a09f0aaf6012be52b75a12fac25370f61}{Manager}.
+
+\hypertarget{class_resource_manager_a53bf358b029e050a285725bc70a8550a}{\index{Resource\+Manager@{Resource\+Manager}!start\+Up@{start\+Up}}
+\index{start\+Up@{start\+Up}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{start\+Up}]{\setlength{\rightskip}{0pt plus 5cm}int Resource\+Manager\+::start\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_resource_manager_a53bf358b029e050a285725bc70a8550a}
+Called when the resource manager is started \begin{DoxyReturn}{Returns}
+0 on ok, -\/1 otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_manager_a2a0f0d6810a5a051afd707d83ff1ff36}{Manager}.
+
+\hypertarget{class_resource_manager_a6e7ab1b45dc7e6fa9abcbce827f5ddad}{\index{Resource\+Manager@{Resource\+Manager}!unload\+Sprite@{unload\+Sprite}}
+\index{unload\+Sprite@{unload\+Sprite}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{unload\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}bool Resource\+Manager\+::unload\+Sprite (
+\begin{DoxyParamCaption}
+\item[{string}]{label}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_a6e7ab1b45dc7e6fa9abcbce827f5ddad}
+Unloads a sprite from memory 
+\begin{DoxyParams}{Parameters}
+{\em label} & The label of the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sprite could be unloaded, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Resource\+Manager.\+h\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Resources/Resource\+Manager.\+cpp\end{DoxyCompactItemize}

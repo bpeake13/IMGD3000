@@ -1,0 +1,60 @@
+\hypertarget{class_clock}{\section{Clock Class Reference}
+\label{class_clock}\index{Clock@{Clock}}
+}
+
+
+{\ttfamily \#include $<$Clock.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_clock_adbc370eb6b5f8d01645cf440188160a8}{Clock} ()
+\item 
+long int \hyperlink{class_clock_aea7f35ddf512b9d4ac0e73879cdecb3f}{delta} ()
+\item 
+long int \hyperlink{class_clock_a348153d645bb6df7b57232cad436ef62}{split} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used for timing 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_clock_adbc370eb6b5f8d01645cf440188160a8}{\index{Clock@{Clock}!Clock@{Clock}}
+\index{Clock@{Clock}!Clock@{Clock}}
+\subsubsection[{Clock}]{\setlength{\rightskip}{0pt plus 5cm}Clock\+::\+Clock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_clock_adbc370eb6b5f8d01645cf440188160a8}
+Create a new clock for timing 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_clock_aea7f35ddf512b9d4ac0e73879cdecb3f}{\index{Clock@{Clock}!delta@{delta}}
+\index{delta@{delta}!Clock@{Clock}}
+\subsubsection[{delta}]{\setlength{\rightskip}{0pt plus 5cm}long int Clock\+::delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_clock_aea7f35ddf512b9d4ac0e73879cdecb3f}
+Gets the time elapsed sense delta was last called or sense the object was created \begin{DoxyReturn}{Returns}
+A long int showing the elapsed time in nanoseconds 
+\end{DoxyReturn}
+\hypertarget{class_clock_a348153d645bb6df7b57232cad436ef62}{\index{Clock@{Clock}!split@{split}}
+\index{split@{split}!Clock@{Clock}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}long int Clock\+::split (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_clock_a348153d645bb6df7b57232cad436ef62}
+Gets the time elapsed sense delta was last called or sense the object was created \begin{DoxyReturn}{Returns}
+A long int showing the elapsed time in nanosesconds 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This method unlike delta does not reset the timer to the current time 
+\end{DoxyRemark}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/Clock.\+h\end{DoxyCompactItemize}
