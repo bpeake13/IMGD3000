@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['worldmanager',['WorldManager',['../class_world_manager.html',1,'']]],
-  ['worldtoview',['worldToView',['../class_world_manager.html#adb6dd142eb66b01eb5104ab496c9517a',1,'WorldManager']]],
-  ['writelog',['writeLog',['../class_log_manager.html#a06b055d8fe1aef0f8b8cba3053f2d1ec',1,'LogManager::writeLog(const char *fmt,...) const '],['../class_log_manager.html#a400f99a653cb542aa5e593cba35dd206',1,'LogManager::writeLog(int logLevel, const char *fmt,...) const ']]]
+  ['_7edynamicptrarray',['~DynamicPtrArray',['../class_dynamic_ptr_array.html#a075c62d5548fc344033a2a401e5593e0',1,'DynamicPtrArray']]],
+  ['_7edynamicptrarraycell',['~DynamicPtrArrayCell',['../class_dynamic_ptr_array_cell.html#adfd6766be886a505bd4d7f7c83f8b47f',1,'DynamicPtrArrayCell']]],
+  ['_7eevent',['~Event',['../class_event.html#a7704ec01ce91e673885792054214b3d2',1,'Event']]],
+  ['_7eeventstep',['~EventStep',['../class_event_step.html#a1fd5402baa54bf82bac6bc8b6f3a84d1',1,'EventStep']]],
+  ['_7eobject',['~Object',['../class_object.html#ae8f5483f459e46687bd01e6f9977afd3',1,'Object']]],
+  ['_7eobjectlist',['~ObjectList',['../class_object_list.html#ac8d809647b3ac18b2369e827c3d56c19',1,'ObjectList']]]
 ];

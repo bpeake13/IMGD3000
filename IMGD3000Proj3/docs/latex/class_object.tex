@@ -8,7 +8,7 @@
 Inheritance diagram for Object\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_object}
+\includegraphics[height=2.000000cm]{class_object}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -62,22 +62,6 @@ void \hyperlink{class_object_a2ee8e04108059dc5ca44ef6bfdc8543f}{set\+Bounds} (\h
 \item 
 \hyperlink{class_box}{Box} \hyperlink{class_object_a478c8650ee8250fc9d44c0a6e8b6c5f2}{get\+World\+Bounds} (const \hyperlink{class_i_vector}{I\+Vector} \&position) const 
 \item 
-\hyperlink{class_sprite}{Sprite} $\ast$ \hyperlink{class_object_aae255594aef34a3db3bd15b5af41a5af}{get\+Sprite} () const 
-\item 
-void \hyperlink{class_object_adabc85f4c580093594250b677b8573d7}{set\+Sprite} (\hyperlink{class_sprite}{Sprite} $\ast$sprite, bool set\+Box=true)
-\item 
-bool \hyperlink{class_object_a517454b636773a14b7710b78734056f3}{is\+Centered} () const 
-\item 
-void \hyperlink{class_object_a8eac55a24936bb18524c96fe00189404}{set\+Centered} (bool centered)
-\item 
-void \hyperlink{class_object_add0a363fc8351f966979f61c75232bd9}{set\+Frame\+Index} (int frame)
-\item 
-int \hyperlink{class_object_a85ef29d394641a1f96cab82217245d51}{get\+Frame\+Index} () const 
-\item 
-void \hyperlink{class_object_ab753d38950b3e3ea3a0d1c53c4912c38}{set\+Slowdown} (int slowdown)
-\item 
-int \hyperlink{class_object_aeec8faca38e258b6ec6b5298956c15b2}{get\+Slowdown} () const 
-\item 
 void \hyperlink{class_object_a937aa61549bbcea2c02f43ae24cd73ef}{set\+Color} (int color)
 \item 
 int \hyperlink{class_object_ae5e6499a684d0e46c2609b219650e598}{get\+Color} () const 
@@ -118,7 +102,7 @@ D\+O N\+O\+T C\+A\+L\+L T\+H\+R\+O\+U\+G\+H D\+E\+L\+E\+T\+E, C\+A\+L\+L T\+H\+R
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_object_a821f5b25b450fa1acdb3f9c0b5962592}
 Called once per frame to draw the object 
 
-Reimplemented in \hyperlink{class_view_object_aae76e90e25d65e34d80e468b41af95da}{View\+Object}, \hyperlink{class_tester_object_a89ca89d9a75a1aa07f7de7fdd3a3eab7}{Tester\+Object}, \hyperlink{class_test_object_solid_a4a4bbaa86d29b0294134b89a6e4d77be}{Test\+Object\+Solid}, and \hyperlink{class_test_object_soft_ab08f5c7bf248ff21e4fcffe3b4a053e9}{Test\+Object\+Soft}.
+Reimplemented in \hyperlink{class_view_object_aae76e90e25d65e34d80e468b41af95da}{View\+Object}, and \hyperlink{class_sprite_object_ae847b803fc182b7ff0136d902b80819a}{Sprite\+Object}.
 
 \hypertarget{class_object_aef5d6ac71c5184a72e7101584d377998}{\index{Object@{Object}!event\+Handler@{event\+Handler}}
 \index{event\+Handler@{event\+Handler}!Object@{Object}}
@@ -137,7 +121,7 @@ a non-\/zero number if this object does consume the event, otherwise 0
 \end{DoxyReturn}
 
 
-Reimplemented in \hyperlink{class_view_object_aae06f1481afddf829a97b045a0c60bb7}{View\+Object}, \hyperlink{class_tester_object_aa9991d352e5745062f4e040c3f812b4d}{Tester\+Object}, \hyperlink{class_test_object_solid_a74649b5b4fd341268f2938e9b2d9ebf3}{Test\+Object\+Solid}, and \hyperlink{class_test_object_soft_a3eb882515691114d9eb09455468cf4fd}{Test\+Object\+Soft}.
+Reimplemented in \hyperlink{class_view_object_aae06f1481afddf829a97b045a0c60bb7}{View\+Object}.
 
 \hypertarget{class_object_aa683addeedbb34a8932bbc6c2a240fab}{\index{Object@{Object}!get\+Altitude@{get\+Altitude}}
 \index{get\+Altitude@{get\+Altitude}!Object@{Object}}
@@ -169,16 +153,6 @@ The objects bounding box
 Gets the color to draw the object with \begin{DoxyReturn}{Returns}
 The color to draw the object with 
 \end{DoxyReturn}
-\hypertarget{class_object_a85ef29d394641a1f96cab82217245d51}{\index{Object@{Object}!get\+Frame\+Index@{get\+Frame\+Index}}
-\index{get\+Frame\+Index@{get\+Frame\+Index}!Object@{Object}}
-\subsubsection[{get\+Frame\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+::get\+Frame\+Index (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_object_a85ef29d394641a1f96cab82217245d51}
-Gets the index of the current frame of the sprite \begin{DoxyReturn}{Returns}
-The index of the current frame 
-\end{DoxyReturn}
 \hypertarget{class_object_ac62e10ee5bcc2b7855fa0bae401b2ca7}{\index{Object@{Object}!get\+I\+D@{get\+I\+D}}
 \index{get\+I\+D@{get\+I\+D}!Object@{Object}}
 \subsubsection[{get\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Object\+::get\+I\+D (
@@ -199,16 +173,6 @@ The object I\+D
 Gets the current position of this object \begin{DoxyReturn}{Returns}
 The position of this object 
 \end{DoxyReturn}
-\hypertarget{class_object_aeec8faca38e258b6ec6b5298956c15b2}{\index{Object@{Object}!get\+Slowdown@{get\+Slowdown}}
-\index{get\+Slowdown@{get\+Slowdown}!Object@{Object}}
-\subsubsection[{get\+Slowdown}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+::get\+Slowdown (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_object_aeec8faca38e258b6ec6b5298956c15b2}
-Gets the slowdown for the animation \begin{DoxyReturn}{Returns}
-The number of frames to wait before drawing the next frame 
-\end{DoxyReturn}
 \hypertarget{class_object_a15c18dc963ca3e6b79ec5cbb7c187600}{\index{Object@{Object}!get\+Solidness@{get\+Solidness}}
 \index{get\+Solidness@{get\+Solidness}!Object@{Object}}
 \subsubsection[{get\+Solidness}]{\setlength{\rightskip}{0pt plus 5cm}Solidness Object\+::get\+Solidness (
@@ -218,16 +182,6 @@ The number of frames to wait before drawing the next frame
 ) const}}\label{class_object_a15c18dc963ca3e6b79ec5cbb7c187600}
 Gets the collision model to use with this object \begin{DoxyReturn}{Returns}
 The collision model that this object is using 
-\end{DoxyReturn}
-\hypertarget{class_object_aae255594aef34a3db3bd15b5af41a5af}{\index{Object@{Object}!get\+Sprite@{get\+Sprite}}
-\index{get\+Sprite@{get\+Sprite}!Object@{Object}}
-\subsubsection[{get\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sprite} $\ast$ Object\+::get\+Sprite (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_object_aae255594aef34a3db3bd15b5af41a5af}
-Gets the sprite that this object uses \begin{DoxyReturn}{Returns}
-The sprite this object uses or N\+U\+L\+L if there is none 
 \end{DoxyReturn}
 \hypertarget{class_object_af18945ab6296dc8f0ea0d9517446020a}{\index{Object@{Object}!get\+Type@{get\+Type}}
 \index{get\+Type@{get\+Type}!Object@{Object}}
@@ -304,16 +258,6 @@ Gets an objects bounds in world space as though the object is at a different pos
 \begin{DoxyReturn}{Returns}
 The objects bounds in world space relative to the position 
 \end{DoxyReturn}
-\hypertarget{class_object_a517454b636773a14b7710b78734056f3}{\index{Object@{Object}!is\+Centered@{is\+Centered}}
-\index{is\+Centered@{is\+Centered}!Object@{Object}}
-\subsubsection[{is\+Centered}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::is\+Centered (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_object_a517454b636773a14b7710b78734056f3}
-Checks to see if this object is centered on its position \begin{DoxyReturn}{Returns}
-True if it is centered, false otherwise 
-\end{DoxyReturn}
 \hypertarget{class_object_a0d2e685ed20b49ec1b7feeba4c0f1cc9}{\index{Object@{Object}!is\+Collidable@{is\+Collidable}}
 \index{is\+Collidable@{is\+Collidable}!Object@{Object}}
 \subsubsection[{is\+Collidable}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::is\+Collidable (
@@ -348,18 +292,6 @@ Sets the bounding box for this object
 {\em bounds} & The new bounding box \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_object_a8eac55a24936bb18524c96fe00189404}{\index{Object@{Object}!set\+Centered@{set\+Centered}}
-\index{set\+Centered@{set\+Centered}!Object@{Object}}
-\subsubsection[{set\+Centered}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::set\+Centered (
-\begin{DoxyParamCaption}
-\item[{bool}]{centered}
-\end{DoxyParamCaption}
-)}}\label{class_object_a8eac55a24936bb18524c96fe00189404}
-Sets if this object should be centered on its world position or not 
-\begin{DoxyParams}{Parameters}
-{\em centered} & If true the object will be centered, if false the object will not \\
-\hline
-\end{DoxyParams}
 \hypertarget{class_object_a937aa61549bbcea2c02f43ae24cd73ef}{\index{Object@{Object}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!Object@{Object}}
 \subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::set\+Color (
@@ -370,18 +302,6 @@ Sets if this object should be centered on its world position or not
 Sets the color to draw the object with 
 \begin{DoxyParams}{Parameters}
 {\em color} & The color to draw the object with \\
-\hline
-\end{DoxyParams}
-\hypertarget{class_object_add0a363fc8351f966979f61c75232bd9}{\index{Object@{Object}!set\+Frame\+Index@{set\+Frame\+Index}}
-\index{set\+Frame\+Index@{set\+Frame\+Index}!Object@{Object}}
-\subsubsection[{set\+Frame\+Index}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::set\+Frame\+Index (
-\begin{DoxyParamCaption}
-\item[{int}]{frame}
-\end{DoxyParamCaption}
-)}}\label{class_object_add0a363fc8351f966979f61c75232bd9}
-Sets the current frame that the object should render 
-\begin{DoxyParams}{Parameters}
-{\em frame} & The index of the frame in the sprite, if this number is out of bounds it will be wrapped around to fit \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_object_a5d973a1f45b51420a8bfb324ef2c25f7}{\index{Object@{Object}!set\+I\+D@{set\+I\+D}}
@@ -414,18 +334,6 @@ Changes the objects position
 {\em new\+Position} & The new position this object should be at \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_object_ab753d38950b3e3ea3a0d1c53c4912c38}{\index{Object@{Object}!set\+Slowdown@{set\+Slowdown}}
-\index{set\+Slowdown@{set\+Slowdown}!Object@{Object}}
-\subsubsection[{set\+Slowdown}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::set\+Slowdown (
-\begin{DoxyParamCaption}
-\item[{int}]{slowdown}
-\end{DoxyParamCaption}
-)}}\label{class_object_ab753d38950b3e3ea3a0d1c53c4912c38}
-Sets the slowdown on the animation 
-\begin{DoxyParams}{Parameters}
-{\em slowdown} & The number of frames to wait before drawing the next frame \\
-\hline
-\end{DoxyParams}
 \hypertarget{class_object_aa8e7d1dab28e847c2c7308dcfdcb3530}{\index{Object@{Object}!set\+Solidness@{set\+Solidness}}
 \index{set\+Solidness@{set\+Solidness}!Object@{Object}}
 \subsubsection[{set\+Solidness}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Solidness (
@@ -441,21 +349,6 @@ Sets the collision model to use with this object
 \begin{DoxyReturn}{Returns}
 True if the solidness could be set, false otherwise 
 \end{DoxyReturn}
-\hypertarget{class_object_adabc85f4c580093594250b677b8573d7}{\index{Object@{Object}!set\+Sprite@{set\+Sprite}}
-\index{set\+Sprite@{set\+Sprite}!Object@{Object}}
-\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::set\+Sprite (
-\begin{DoxyParamCaption}
-\item[{{\bf Sprite} $\ast$}]{sprite, }
-\item[{bool}]{set\+Box = {\ttfamily true}}
-\end{DoxyParamCaption}
-)}}\label{class_object_adabc85f4c580093594250b677b8573d7}
-Sets the sprite for this object 
-\begin{DoxyParams}{Parameters}
-{\em sprite} & The sprite that this object should use \\
-\hline
-{\em set\+Box} & If true then the bounding box for this object will be set to fit this sprite \\
-\hline
-\end{DoxyParams}
 \hypertarget{class_object_a4ea1a63afb9ac3fdb61dbcd23c86ce33}{\index{Object@{Object}!set\+Type@{set\+Type}}
 \index{set\+Type@{set\+Type}!Object@{Object}}
 \subsubsection[{set\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::set\+Type (

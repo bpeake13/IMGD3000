@@ -32,11 +32,6 @@ Object::Object() : position(IVector(0, 0)), velocity(FVector(0, 0)), velocityCou
 	world.addObject(this);
 	world.addToLayerPool(this);
 
-	spr = NULL;
-	drawCentered = false;
-	frame = 0;
-	slowdown = 0;
-	slowdown_count = 0;
 	color = DF_DEFAULT_COLOR;
 
 	bounds = Box(IVector(0, 0), 1, 1);
@@ -195,63 +190,6 @@ Box Object::getWorldBounds(const IVector& position) const
 	return worldBox;
 }
 
-Sprite* Object::getSprite() const
-{
-	return spr;
-}
-
-void Object::setSprite(Sprite* sprite, bool setBox)
-{
-	spr = sprite;
-
-	if(setBox)
-	{
-		int w = sprite->getWidth();
-		int h = sprite->getHeight();
-		if(drawCentered)
-			bounds.setCorner(IVector(-w / 2, -h / 2));
-		else
-			bounds.setCorner(IVector(0, 0));
-
-		bounds.setHorizontal(w);
-		bounds.setVertical(h);
-	}
-}
-
-bool Object::isCentered() const
-{
-	return drawCentered;
-}
-
-void Object::setCentered(bool centered)
-{
-	drawCentered = centered;
-}
-
-void Object::setFrameIndex(int frame)
-{
-	if(spr)
-		this->frame = frame % spr->getFrameCount();
-	else
-		this->frame = 0;
-}
-
-int Object::getFrameIndex() const
-{
-	return frame;
-}
-
-void Object::setSlowdown(int slowdown)
-{
-	this->slowdown = slowdown;
-	this->slowdown_count = 0;
-}
-
-int Object::getSlowdown() const
-{
-	return slowdown;
-}
-
 void Object::setColor(int color)
 {
 	this->color = color;
@@ -269,22 +207,5 @@ int Object::eventHandler(Event* e)
 
 void Object::draw()
 {
-	if(!spr)
-		return;
 
-	Frame* f = spr->getFrame(frame);
-
-	GraphicsManager& graphics = GraphicsManager::getInstance();
-	graphics.drawFrame(position, f, drawCentered, color);
-
-	if(slowdown == 0)
-		return;
-
-	slowdown_count++;
-	if(slowdown_count >= slowdown)
-	{
-		slowdown_count = 0;
-		frame += 1;
-		frame = frame % spr->getFrameCount();
-	}
 }
