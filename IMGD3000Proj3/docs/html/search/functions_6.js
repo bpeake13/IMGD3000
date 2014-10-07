@@ -31,6 +31,7 @@ var searchData=
   ['getobj1',['getObj1',['../class_event_collision.html#a74ac21fbda77c2ffb080a0228178b5ae',1,'EventCollision']]],
   ['getobj2',['getObj2',['../class_event_collision.html#a57b819fcb05e03b7b9ca41631881b909',1,'EventCollision']]],
   ['getposition',['getPosition',['../class_event_collision.html#a9ed1a0fd9cc1006ef8a25574c5bb5a69',1,'EventCollision::getPosition()'],['../class_object.html#a548a4a71f26f3c0182dcad383a1877b9',1,'Object::getPosition()']]],
+  ['getrenderstring',['getRenderString',['../class_status_bar.html#a3213353214665edfaa66eead5af8ea27',1,'StatusBar::getRenderString()'],['../class_view_object.html#a4dbdd0c17f18ff9412eaff095ab583d3',1,'ViewObject::getRenderString()']]],
   ['getsize',['getSize',['../class_dynamic_ptr_array.html#a57608e634402b3e16048ad2c1c26e74e',1,'DynamicPtrArray::getSize()'],['../class_dynamic_ptr_array_cell.html#a84621246e6c536a8a9c1508a584aedfe',1,'DynamicPtrArrayCell::getSize()']]],
   ['getslowdown',['getSlowdown',['../class_sprite_object.html#af815a869de3942821121c7c8369037b2',1,'SpriteObject']]],
   ['getsolidness',['getSolidness',['../class_object.html#a15c18dc963ca3e6b79ec5cbb7c187600',1,'Object']]],

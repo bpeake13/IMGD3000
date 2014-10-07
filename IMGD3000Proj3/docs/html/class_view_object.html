@@ -84,6 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_view_object-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ViewObject Class Reference</div>  </div>
@@ -96,6 +97,7 @@ Inheritance diagram for ViewObject:</div>
   <img src="class_view_object.png" usemap="#ViewObject_map" alt=""/>
   <map id="ViewObject_map" name="ViewObject_map">
 <area href="class_object.html" alt="Object" shape="rect" coords="0,0,77,24"/>
+<area href="class_status_bar.html" alt="StatusBar" shape="rect" coords="0,112,77,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -178,6 +180,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a937aa61549bbcea2c02f43ae24cd73ef inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e6499a684d0e46c2609b219650e598 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#ae5e6499a684d0e46c2609b219650e598">getColor</a> () const </td></tr>
 <tr class="separator:ae5e6499a684d0e46c2609b219650e598 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4dbdd0c17f18ff9412eaff095ab583d3"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_object.html#a4dbdd0c17f18ff9412eaff095ab583d3">getRenderString</a> () const </td></tr>
+<tr class="separator:a4dbdd0c17f18ff9412eaff095ab583d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aae76e90e25d65e34d80e468b41af95da"></a>
@@ -268,6 +275,32 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Gets the justification on the string that is going to be drawn </p><dl class="section return"><dt>Returns</dt><dd>The justification on the string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4dbdd0c17f18ff9412eaff095ab583d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ViewObject::getRenderString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the string to be rendered </p><dl class="section return"><dt>Returns</dt><dd>The string to render on screen (this does not include the border </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_status_bar.html#a3213353214665edfaa66eead5af8ea27">StatusBar</a>.</p>
 
 </div>
 </div>
@@ -431,12 +464,12 @@ Public Member Functions</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>F:/Users/Benny/git/IMGD3000/IMGD3000Proj3/include/<a class="el" href="_view_object_8h_source.html">ViewObject.h</a></li>
-<li>F:/Users/Benny/git/IMGD3000/IMGD3000Proj3/lib/src/Object/ViewObject.cpp</li>
+<li>F:/Users/Benny/git/IMGD3000/IMGD3000Proj3/lib/src/UI/ViewObject.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 5 2014 22:22:13 for Rogue Like Trail by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 6 2014 23:33:20 for Rogue Like Trail by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
