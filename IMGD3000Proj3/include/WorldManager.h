@@ -125,6 +125,13 @@ public:
 	int removeObject(Object* obj);
 
 	/**
+	 * Checks to see if an object is part of the world
+	 * @param obj The object to look for
+	 * @return True if the object is in the world, false otherwise
+	 */
+	bool containsObject(Object* obj);
+
+	/**
 	 * Adds the object to the current layer pool that it has been assigned
 	 * @param obj The object to add to a layer pool
 	 * @return 1 if the object was added, 0 otherwise

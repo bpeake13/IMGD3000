@@ -133,6 +133,19 @@ int WorldManager::removeObject(Object* obj)
 	return objects.remove(obj);
 }
 
+bool WorldManager::containsObject(Object* obj)
+{
+	ObjectListIterator iterator = ObjectListIterator(&objects);
+	for(Object* o = iterator.getCurrent(); !iterator.isDone(); iterator.next(), o = iterator.getCurrent())
+	{
+		if(o == obj)
+			return true;
+	}
+
+	return false;
+}
+
+
 int WorldManager::addToLayerPool(Object* obj)
 {
 	unsigned int layer = obj->getAltitude();//get the objects layer
@@ -327,4 +340,3 @@ void WorldManager::draw()
 		}
 	}
 }
-
