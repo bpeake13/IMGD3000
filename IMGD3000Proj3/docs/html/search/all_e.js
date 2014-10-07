@@ -40,6 +40,7 @@ var searchData=
   ['sprite',['Sprite',['../class_sprite.html',1,'Sprite'],['../class_sprite.html#a613e3ce159a3a9c74a3b3ad4f94d503c',1,'Sprite::Sprite()']]],
   ['spriteobject',['SpriteObject',['../class_sprite_object.html',1,'SpriteObject'],['../class_sprite_object.html#a2f087f058dc5fcbee302a8f55c20e056',1,'SpriteObject::SpriteObject()']]],
   ['startup',['startUp',['../class_game_manager.html#a6626dd9f245039379b3416e2a28bb71c',1,'GameManager::startUp()'],['../class_graphics_manager.html#ac1961e1b4985a41a6eb233736d5d3191',1,'GraphicsManager::startUp()'],['../class_input_manager.html#a210997e45748bae7d0901ac3ede788c6',1,'InputManager::startUp()'],['../class_log_manager.html#a61c2443f3923240ba6e7b74f89c4a50f',1,'LogManager::startUp()'],['../class_manager.html#a2a0f0d6810a5a051afd707d83ff1ff36',1,'Manager::startUp()'],['../class_resource_manager.html#a53bf358b029e050a285725bc70a8550a',1,'ResourceManager::startUp()'],['../class_world_manager.html#a7ad9c0bf4968b08b82d7d7daa159943a',1,'WorldManager::startUp()']]],
+  ['statusbar',['StatusBar',['../class_status_bar.html',1,'StatusBar'],['../class_status_bar.html#a651573f47ad4106ceb73c125685116c8',1,'StatusBar::StatusBar()']]],
   ['stringptrpair',['StringPtrPair',['../class_string_ptr_pair.html',1,'StringPtrPair'],['../class_string_ptr_pair.html#ac4168e080e2704e725a0ea74b33f40e1',1,'StringPtrPair::StringPtrPair()']]],
   ['swapbuffer',['swapBuffer',['../class_graphics_manager.html#a18954a6304591268760d2eab5804d7b3',1,'GraphicsManager']]]
 ];

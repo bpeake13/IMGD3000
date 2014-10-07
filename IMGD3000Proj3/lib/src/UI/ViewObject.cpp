@@ -136,7 +136,7 @@ void ViewObject::draw()
 
 	GraphicsManager& graphics = GraphicsManager::getInstance();
 
-	string renderString = viewString + " " + intToString(value);//get the render string
+	string renderString = getRenderString();//get the render string
 	if(drawBorder)
 	{
 		renderString = "|" + renderString + "|";
@@ -217,4 +217,9 @@ void ViewObject::setViewObjectLocation(
 		setJustification(RIGHT_JUSTIFIED);
 		break;
 	}
+}
+
+string ViewObject::getRenderString() const
+{
+	return viewString + intToString(value);
 }

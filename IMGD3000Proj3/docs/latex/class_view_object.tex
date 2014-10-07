@@ -4,7 +4,7 @@
 Inheritance diagram for View\+Object\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_view_object}
+\includegraphics[height=3.000000cm]{class_view_object}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -33,6 +33,11 @@ void \hyperlink{class_view_object_a48b915f41e561fd210ea5e22d690aa10}{set\+Justif
 View\+Object\+Location \hyperlink{class_view_object_ac0672505b7a72ec0a4be8f261bcffe5c}{get\+View\+Object\+Location} () const 
 \item 
 void \hyperlink{class_view_object_a2a3ae5cb263ecc0597d1b0cc85c0300e}{set\+View\+Object\+Location} (View\+Object\+Location)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \hyperlink{class_view_object_a4dbdd0c17f18ff9412eaff095ab583d3}{get\+Render\+String} () const 
 \end{DoxyCompactItemize}
 
 
@@ -87,6 +92,20 @@ True if we are drawing a border, false otherwise
 Gets the justification on the string that is going to be drawn \begin{DoxyReturn}{Returns}
 The justification on the string 
 \end{DoxyReturn}
+\hypertarget{class_view_object_a4dbdd0c17f18ff9412eaff095ab583d3}{\index{View\+Object@{View\+Object}!get\+Render\+String@{get\+Render\+String}}
+\index{get\+Render\+String@{get\+Render\+String}!View\+Object@{View\+Object}}
+\subsubsection[{get\+Render\+String}]{\setlength{\rightskip}{0pt plus 5cm}string View\+Object\+::get\+Render\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_view_object_a4dbdd0c17f18ff9412eaff095ab583d3}
+Gets the string to be rendered \begin{DoxyReturn}{Returns}
+The string to render on screen (this does not include the border 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_status_bar_a3213353214665edfaa66eead5af8ea27}{Status\+Bar}.
+
 \hypertarget{class_view_object_a87877b05cb9a8d44a77dc173b7738d62}{\index{View\+Object@{View\+Object}!get\+Value@{get\+Value}}
 \index{get\+Value@{get\+Value}!View\+Object@{View\+Object}}
 \subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}int View\+Object\+::get\+Value (
@@ -182,4 +201,4 @@ Sets the string to display
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/include/View\+Object.\+h\item 
-F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+Object/View\+Object.\+cpp\end{DoxyCompactItemize}
+F\+:/\+Users/\+Benny/git/\+I\+M\+G\+D3000/\+I\+M\+G\+D3000\+Proj3/lib/src/\+U\+I/View\+Object.\+cpp\end{DoxyCompactItemize}

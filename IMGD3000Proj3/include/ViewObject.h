@@ -102,6 +102,13 @@ public:
 	 * @param The view objects relative location on screen
 	 */
 	void setViewObjectLocation(ViewObjectLocation);
+
+protected:
+	/**
+	 * Gets the string to be rendered
+	 * @return The string to render on screen (this does not include the border
+	 */
+	virtual string getRenderString() const;
 };
 
 #endif /* VIEWOBJECT_H_ */
