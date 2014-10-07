@@ -65,6 +65,11 @@ Scene* SceneManager::pop()
 	return instance->popStack();
 }
 
+bool SceneManager::popKill()
+{
+	return instance->popKillStack();
+}
+
 Scene* SceneManager::peekStack() const
 {
 	size_t stackSize = stack->getSize();
@@ -88,4 +93,17 @@ Scene* SceneManager::popStack()
 	Scene* s = static_cast<Scene*>(stack->get(size - 1));
 	stack->remove(size - 1);
 	return s;
+}
+
+bool SceneManager::popKillStack()
+{
+	Scene* scene = popStack();
+
+	if(scene)
+	{
+		delete scene;
+		return true;
+	}
+
+	return false;
 }

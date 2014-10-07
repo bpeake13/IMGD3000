@@ -55,6 +55,12 @@ public:
 	static bool push(Scene* scene);
 
 	/**
+	 * Pops off the top scene and deletes it
+	 * @return True if a scene was able to be popped and killed, false otherwise
+	 */
+	static bool popKill();
+
+	/**
 	 * Pops a scene from the stack
 	 * @return The scene that was popped or NULL if no scene was popped
 	 */
@@ -67,6 +73,8 @@ private:
 	bool pushStack(Scene* scene);
 
 	Scene* popStack();
+
+	bool popKillStack();
 
 	static SceneManager* instance;
 
