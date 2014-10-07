@@ -5,6 +5,7 @@
  *      Author: Eric
  */
 
+#include "ResourceManager.h"
 #include "Monster.h"
 
 Monster::Monster() {
@@ -36,4 +37,13 @@ void Monster::setReward(int reward) {
  * This function chooses a living adventurer and attacks them
  */
 void Monster::attackPlayer() {
+}
+
+void Monster::setSpr(string name){
+	string filename = "mon-" + name + "-spr.txt";
+
+	//Load the sprite
+	ResourceManager::getInstance().loadSprite(filename, name);
+
+
 }

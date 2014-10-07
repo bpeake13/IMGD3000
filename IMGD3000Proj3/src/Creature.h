@@ -27,7 +27,7 @@ public:
 	int getHealth() const;
 	void setHealth(int health);
 	const SpriteObject& getSpr() const;
-	void setSpr(const SpriteObject& spr);
+	void setSpr(string name);
 	const string& getDesc() const;
 	void setDesc(const string& desc);
 	const string& getName() const;

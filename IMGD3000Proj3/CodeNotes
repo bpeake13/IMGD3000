@@ -1,0 +1,43 @@
+Dungeon Manager startup:
+
+Get the list of available monsers
+Make an array of 10 Battles
+	Make a battle variable
+	Choose a random monster from the list of available monsters, with monster name 'name'
+	Call Battle.setMonster(name), passing in a string.
+		Battle has a variable that stores the monster being battled.
+		Generate the monster's stats, health and reward.
+		Call Monster.setSprite(name)
+			Call resource manager and load the sprite, store the spriteObject in monster, just like an object
+			Done with setSprite
+		Done with setMonster
+	Repeat 10 times, once for each battle.
+Now generate party.
+A list of 4 'Adventurer' class objects.
+Load rogue, cleric, fighter and wizard sprites and set the right stats for each.
+set treasure variable to 0
+set location of the party to scene 0.
+Done with Startup
+
+DungeonManager loop:
+
+Open the scene the players are on and display it
+Is it a battle?
+	Yes:
+		Wait for input from player.
+			Attack - Deal damage from each adventurer
+		Make monster attack
+			Choose random player adventurer
+			Deal damage to the adventurer - modify their health with setHealth
+			If the adventurer is at <0 health, remove their sprite from the screen, the adventurer party
+		Loop until monster or player is dead.
+		Battle is over, reward treasure if player survived.
+	No:
+		Wait for input from player
+			Store - Allow player to purchase things
+			Quest - Begin a battle to get extra gold!
+			Leave - Goodbye!
+		Player leaves the safezone
+Increment location
+
+	

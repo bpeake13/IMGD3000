@@ -20,6 +20,7 @@ public:
 	void attackPlayer();
 	int getReward() const;
 	void setReward(int reward);
+	void setSpr(string name);
 };
 
 #endif /* MONSTER_H_ */

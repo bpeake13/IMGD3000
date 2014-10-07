@@ -92,6 +92,6 @@ void Creature::setName(const string& name) {
  * Setter for sprite
  * @param spr
  */
-void Creature::setSpr(const SpriteObject& spr) {
-	this->spr = spr;
+void Creature::setSpr(string name) {
+
 }
