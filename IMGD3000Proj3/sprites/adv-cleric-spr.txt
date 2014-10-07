@@ -1,0 +1,17 @@
+frames 2
+width 7
+height 5
+color green
+  n    
+ |||   
+('-') *
+<|_|--|
+ / \  |
+end
+  n    
+ |||   
+('o') O
+/|_|--|
+ / \  |
+end
+eof

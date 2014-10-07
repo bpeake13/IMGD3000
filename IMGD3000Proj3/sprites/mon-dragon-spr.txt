@@ -1,0 +1,12 @@
+frames 1
+width 20
+height 6
+color green
+_____/\_/\          
+|         \_^_^_^_^_ 
+vvvvv\ 0            
+   ~~|              
+^^^^^/   >_/_/_/_/_/
+\_______/            
+end
+eof
