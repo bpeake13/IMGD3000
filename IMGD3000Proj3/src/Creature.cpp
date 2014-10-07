@@ -57,6 +57,38 @@ const SpriteObject& Creature::getSpr() const {
 }
 
 /**
+ * Getter for description
+ * @return
+ */
+const string& Creature::getDesc() const {
+	return desc;
+}
+
+/**
+ * Setter for description
+ * @param desc
+ */
+void Creature::setDesc(const string& desc) {
+	this->desc = desc;
+}
+
+/**
+ * Getter for name
+ * @return
+ */
+const string& Creature::getName() const {
+	return name;
+}
+
+/**
+ * Setter for name
+ * @param name
+ */
+void Creature::setName(const string& name) {
+	this->name = name;
+}
+
+/**
  * Setter for sprite
  * @param spr
  */

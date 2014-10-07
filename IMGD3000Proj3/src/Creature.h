@@ -14,8 +14,10 @@
 class Creature: public Object {
 private:
 	int health; //How much damage the creature needs to take to be destroyed
-	int attack; //The creature's attack value
-	SpriteObject spr;
+	int attack; //The creature's attack value, physical
+	SpriteObject spr; //The creatures sprite object
+	string name; //Name of the creature
+	string desc; //Description for the creature
 
 public:
 	Creature();
@@ -26,6 +28,10 @@ public:
 	void setHealth(int health);
 	const SpriteObject& getSpr() const;
 	void setSpr(const SpriteObject& spr);
+	const string& getDesc() const;
+	void setDesc(const string& desc);
+	const string& getName() const;
+	void setName(const string& name);
 };
 
 #endif /* CREATURE_H_ */
