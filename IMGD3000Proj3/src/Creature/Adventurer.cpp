@@ -7,17 +7,17 @@
 
 #include "Adventurer.h"
 
-Adventurer::Adventurer() {
-	// TODO Auto-generated constructor stub
+Adventurer::Adventurer() {}
 
+Adventurer::Adventurer(string na, int h, int a, int m, string d){
+	setName(na);
+	setHealth(h);
+	setAttack(a);
+	setMagic(m);
+	setDesc(d);
 }
 
-void Adventurer::death() {
-}
-
-Adventurer::~Adventurer() {
-	// TODO Auto-generated destructor stub
-}
+Adventurer::~Adventurer() {}
 
 void Adventurer::magicAttack() {
 }

@@ -8,8 +8,18 @@
 #include "Creature.h"
 
 Creature::Creature() {
-	// TODO Auto-generated constructor stub
+	//Default values, always remember to set them
+	this->name = "Error";
+	this->desc = "A confusing, blurry creature with no real definition.";
+	this->health = -1;
+	this->attack = -1;
+}
 
+Creature::Creature(string na, int h, int a, string d){
+	this->name = na;
+	this->health = h;
+	this->attack = a;
+	this->desc = d;
 }
 
 Creature::~Creature() {

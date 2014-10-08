@@ -17,6 +17,7 @@ private:
 
 public:
 	Adventurer();
+	Adventurer(string name, int health, int atk, int mag, string desc);
 	virtual ~Adventurer();
 	void magicAttack();
 	void physicalAttack();

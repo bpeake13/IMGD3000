@@ -21,6 +21,7 @@ private:
 
 public:
 	Creature();
+	Creature(string name, int health, int attack, string desc);
 	virtual ~Creature();
 	int getAttack() const;
 	void setAttack(int attack);
