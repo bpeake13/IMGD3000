@@ -24,15 +24,19 @@ public:
 	Monster();
 
 	/**
+	 * Constructor for monster
+	 * @param name The name of the monster as a string
+	 * @param health The health of the monster, as an int
+	 * @param attack The attack power of the monster, as an int
+	 * @param reward The reward for defeating this monster, as an int
+	 * @param desc A description of the monster, as a string
+	 */
+	Monster(string name, int health, int attack, int reward, string desc);
+
+	/**
 	 * Destructor for monster
 	 */
 	virtual ~Monster();
-
-	/**
-	 * This function is called when the monster gets to make an attack on the player
-	 * It deals its 'attack' value in damage
-	 */
-	void attackPlayer();
 
 	/**
 	 * Getter for reward from defeating a monster

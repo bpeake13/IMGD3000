@@ -19,7 +19,10 @@ Adventurer::Adventurer(string na, int h, int a, int m, string d){
 
 Adventurer::~Adventurer() {}
 
-void Adventurer::magicAttack() {
+void Adventurer::magicAttack(AttackEvent* e) {
+	e->setDamage(this->magic);
+	e->setDamageType("magical");
+	e->setSender(this);
 }
 
 int Adventurer::getMagic() const {
@@ -28,7 +31,4 @@ int Adventurer::getMagic() const {
 
 void Adventurer::setMagic(int magic) {
 	this->magic = magic;
-}
-
-void Adventurer::physicalAttack() {
 }

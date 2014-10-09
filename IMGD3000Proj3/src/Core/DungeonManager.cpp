@@ -64,14 +64,6 @@ int DungeonManager::startUp(){
 	//Adventurers are ready to take on the world
 
 	treasure =0; //They are dirt poor though
-
-	//We must add the object to the world manager
-	//This way it will recieve events just like an object
-	//And can translate them and send a different event to objects
-	WorldManager &wm = WorldManager::getInstance();
-	wm.addObject((Object *) this);
-	//Casting to object, the only functions that should be called
-	//On this incorrectly casted object is eventHandler
 }
 
 void DungeonManager::shutDown(){

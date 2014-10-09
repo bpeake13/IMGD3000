@@ -57,3 +57,9 @@ const string Creature::getName() const {
 void Creature::setName(string name) {
 	this->name = name;
 }
+
+void Creature::getAttack(AttackEvent* e) {
+	e->setDamage(this->attack);
+	e->setDamageType("physical");
+	e->setSender(this);
+}

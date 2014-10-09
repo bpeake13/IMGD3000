@@ -37,3 +37,15 @@ string AttackEvent::getDamageType() const
 {
 	return damageType;
 }
+
+void AttackEvent::setDamage(int damage) {
+	this->damage = damage;
+}
+
+void AttackEvent::setDamageType(const string& damageType) {
+	this->damageType = damageType;
+}
+
+void AttackEvent::setSender(Object* sender) {
+	this->sender = sender;
+}

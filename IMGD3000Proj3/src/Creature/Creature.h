@@ -9,6 +9,7 @@
 #define CREATURE_H_
 
 #include "SpriteObject.h"
+#include "AttackEvent.h"
 
 class Creature: public SpriteObject {
 private:
@@ -54,6 +55,12 @@ public:
 	 * @return the attack variable
 	 */
 	int getAttack() const;
+
+	/**
+	 * Fills an attackEvent with the needed information
+	 * @param e The AttackEvent to fill
+	 */
+	void getAttack(AttackEvent *e);
 
 	/**
 	 * Setter for attack value

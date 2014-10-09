@@ -1,0 +1,6 @@
+name Centaur
+health 1
+attack 2
+reward 3
+description A man with the lower body of a horse.
+eof

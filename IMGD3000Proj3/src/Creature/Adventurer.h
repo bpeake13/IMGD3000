@@ -38,14 +38,11 @@ public:
 	virtual ~Adventurer();
 
 	/**
-	 * Calculates and sends a magical attack event
+	 * This magic-type attack fills an AttackEvent with data
+	 * @param e The event to modify
 	 */
-	void magicAttack();
+	void magicAttack(AttackEvent* e);
 
-	/**
-	 * Calculates and send a physical attack event
-	 */
-	void physicalAttack();
 	/**
 	 * Getter for magical attack power
 	 * @return the magic variable

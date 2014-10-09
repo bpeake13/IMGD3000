@@ -53,6 +53,24 @@ public:
 	 */
 	string getDamageType() const;
 
+	/**
+	 * Sets the damage to be dealt by the attack
+	 * @param damage The amount of damage
+	 */
+	void setDamage(int damage);
+
+	/**
+	 * Sets the type of the damage of the attack
+	 * @param damageType The damage type of the attack
+	 */
+	void setDamageType(const string& damageType);
+
+	/**
+	 * Sets the object attacking
+	 * @param sender The object that is attacking
+	 */
+	void setSender(Object* sender);
+
 private:
 	Object* sender;
 	Object* reciever;
