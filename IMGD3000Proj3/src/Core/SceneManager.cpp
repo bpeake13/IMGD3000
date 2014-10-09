@@ -6,6 +6,7 @@
  */
 
 #include "SceneManager.h"
+#include "WorldManager.h"
 
 SceneManager* SceneManager::instance = NULL;
 
@@ -26,7 +27,14 @@ SceneManager& SceneManager::operator =(const SceneManager& other)
 
 int SceneManager::startUp()
 {
+	if(hasStarted())
+		return 0;
+
+	Manager::startUp();
+
 	stack = new DynamicPtrArray(8);
+
+	return 0;
 }
 
 void SceneManager::shutDown()
@@ -101,7 +109,8 @@ bool SceneManager::popKillStack()
 
 	if(scene)
 	{
-		delete scene;
+		WorldManager& world = WorldManager::getInstance();
+		world.markForDelete(scene);
 		return true;
 	}
 

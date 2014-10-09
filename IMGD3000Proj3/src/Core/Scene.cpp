@@ -12,6 +12,7 @@
 Scene::Scene()
 {
 	objectList = new DynamicPtrArray(32);
+	setSolidness(Spectral);
 }
 
 Scene::~Scene()
