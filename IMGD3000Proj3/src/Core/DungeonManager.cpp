@@ -12,10 +12,11 @@
 #include "Battle.h"
 #include "Adventurer.h"
 #include "Monster.h"
+#include "ObjectListIterator.h"
+
 
 #include "EventKeybaord.h"
 
-#include "HashTable.h"
 
 const string MONSTERS[2] = {"centaur", "slime"};
 
@@ -56,11 +57,15 @@ int DungeonManager::startUp(){
 	Adventurer *wizard = new Adventurer("wizard", 50, 25, 225, "A wise wizard");
 	Adventurer *rogue = new Adventurer("rogue", 100, 0, 200, "A sneaky rogue");
 
+	ObjectList tp(MAXPARTYSIZE);
+
 	//Put them in a rad party.
-	party.set("paladin", (void *) paladin);
-	party.set("rogue", (void *) rogue);
-	party.set("wizard", (void *) wizard);
-	party.set("cleric", (void *) cleric);
+	tp.add((Object *) paladin);
+	tp.add((Object *) rogue);
+	tp.add((Object *) wizard);
+	tp.add((Object *) cleric);
+
+	party = tp;
 	//Adventurers are ready to take on the world
 
 	treasure =0; //They are dirt poor though
@@ -79,6 +84,19 @@ void DungeonManager::setTreasure(int treasure) {
 }
 
 Adventurer* DungeonManager::getPartyMember(string name){
-	Adventurer *a = (Adventurer *) party.get(name);
-	return a;
+	ObjectListIterator oli = ObjectListIterator(party);
+
+	for(oli.first(); !oli.isDone(); oli.next()){
+		Adventurer* a = (Adventurer *) oli.getCurrent();
+		if(a->getName() == name){
+			return a;
+		}
+	}
+
+	Adventurer* empty;
+	return empty;
+}
+
+ObjectList* DungeonManager::getParty(){
+	return party;
 }
