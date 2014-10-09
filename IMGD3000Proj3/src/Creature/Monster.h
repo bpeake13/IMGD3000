@@ -12,10 +12,20 @@
 
 class Monster: public Creature {
 private:
+	/**
+	 * The reward a player gets from killing a monster
+	 */
 	int reward;
 
 public:
+	/**
+	 * Constructor for monster
+	 */
 	Monster();
+
+	/**
+	 * Destructor for monster
+	 */
 	virtual ~Monster();
 
 	/**

@@ -15,10 +15,18 @@
 #include "Monster.h"
 #include "HashTable.h"
 
+#define ADVENTURERMENU "__adventurermenu__"
+#define ATTACKMENU "__attackmenu__"
+
 class DungeonManager: public Manager {
 private:
+	/**
+	 * The amount of treasure the party has accrued
+	 */
 	int treasure; //The amount of treasure amassed
-	bool isPlayerTurn; //True if the player can make their turn, or do input
+	/**
+	 * The party of adventurers
+	 */
 	HashTable party;
 
 public:
@@ -62,7 +70,6 @@ public:
 	 * @param treasure
 	 */
 	void setTreasure(int treasure);
-	void onEvent(Event *p_e);
 };
 
 #endif /* DUNGEONMANAGER_H_ */

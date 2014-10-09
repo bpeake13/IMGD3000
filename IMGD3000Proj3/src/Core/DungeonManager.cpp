@@ -5,12 +5,15 @@
  *      Author: Eric
  */
 
+#include "WorldManager.h"
 #include "DungeonManager.h"
 #include "ResourceManager.h"
 #include "SceneManager.h"
 #include "Battle.h"
 #include "Adventurer.h"
 #include "Monster.h"
+
+#include "EventKeybaord.h"
 
 #include "HashTable.h"
 
@@ -61,6 +64,14 @@ int DungeonManager::startUp(){
 	//Adventurers are ready to take on the world
 
 	treasure =0; //They are dirt poor though
+
+	//We must add the object to the world manager
+	//This way it will recieve events just like an object
+	//And can translate them and send a different event to objects
+	WorldManager &wm = WorldManager::getInstance();
+	wm.addObject((Object *) this);
+	//Casting to object, the only functions that should be called
+	//On this incorrectly casted object is eventHandler
 }
 
 void DungeonManager::shutDown(){
@@ -71,10 +82,6 @@ int DungeonManager::getTreasure() const {
 	return treasure;
 }
 
-Scene* DungeonManager::currentScene() {
-	return SceneManager::getInstance().peek();
-}
-
 void DungeonManager::setTreasure(int treasure) {
 	this->treasure = treasure;
 }
@@ -82,9 +89,4 @@ void DungeonManager::setTreasure(int treasure) {
 Adventurer* DungeonManager::getPartyMember(string name){
 	Adventurer *a = (Adventurer *) party.get(name);
 	return a;
-}
-
-void DungeonManager::onEvent(Event* p_e) {
-	//TODO keyboard input
-
 }
