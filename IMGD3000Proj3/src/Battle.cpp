@@ -8,6 +8,7 @@
 #include "Battle.h"
 #include "DeathEvent.h"
 #include "EventStep.h"
+#include "EventKeyboard.h"
 #include "SceneManager.h"
 #include "SceneOverEvent.h"
 #include "WorldManager.h"
@@ -23,6 +24,9 @@ Battle::Battle()
 
 	this->battlePhase = BATTLE_PHASE_PLAYER;
 	this->battlePhaseState = BATTLE_PHASE_STATE_INPUT;
+	this->attackTimer = 30;
+
+	this->attackerIndex = 0;
 }
 
 Battle::~Battle()
@@ -75,9 +79,35 @@ int Battle::eventHandler(Event* e)
 		{
 			if(this->battlePhaseState == BATTLE_PHASE_STATE_INPUT)
 			{
+				message->setViewString("Select an action for " + "...");
+			}
+			else if(this->battlePhaseState == BATTLE_PHASE_STATE_ATTACK)
+			{
+				attackTimer -= 1;
+				if(attackTimer <= 0)
+				{
+					this->battlePhaseState = BATTLE_PHASE_STATE_INPUT;
 
+				}
 			}
 		}
+	}
+	else if(DF_EVENT_KEYBOARD && battlePhase == BATTLE_PHASE_PLAYER && battlePhaseState == BATTLE_PHASE_STATE_INPUT)
+	{
+		EventKeyboard* ke = static_cast<EventKeyboard*>(e);
+		int key = ke->getKey();
+
+		int monsterIndex = key - '1';
+		if(monsterIndex < 0 || monsterIndex > getMonsterCount)
+			return 0;
+
+		Monster* target = getMonster(monsterIndex);
+
+		AttackEvent ae = AttackEvent(NULL, target, 5, "physical");
+
+		battlePhaseState = BATTLE_PHASE_STATE_ATTACK;
+
+
 	}
 
 	return 0;

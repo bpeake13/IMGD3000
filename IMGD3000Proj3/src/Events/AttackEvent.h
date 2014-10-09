@@ -10,6 +10,7 @@
 
 #include "Event.h"
 #include "Object.h"
+#include "Creature.h"
 #include "Utility.h"
 
 #define DF_ATTACK_EVENT "__attack__"
@@ -25,21 +26,21 @@ public:
 	 * @param sender The object who is attacking
 	 * @param reciever The object who is being attacked
 	 * @param damage The damage to deal
-	 * @param damageType THe type of damage to deal
+	 * @param damageType The type of damage to deal
 	 */
-	AttackEvent(Object* sender, Object* reciever, int damage, string damageType);
+	AttackEvent(Creature* sender, Creature* reciever, int damage, string damageType);
 
 	/**
 	 * Gets the object attacking
 	 * @return The object attacking
 	 */
-	Object* getSender() const;
+	Creature* getSender() const;
 
 	/**
 	 * Gets the object being attacked
 	 * @return The object being attacked
 	 */
-	Object* getReciver() const;
+	Creature* getReciver() const;
 
 	/**
 	 * Gets the damage of the attack
@@ -69,11 +70,11 @@ public:
 	 * Sets the object attacking
 	 * @param sender The object that is attacking
 	 */
-	void setSender(Object* sender);
+	void setSender(Creature* sender);
 
 private:
-	Object* sender;
-	Object* reciever;
+	Creature* sender;
+	Creature* reciever;
 	int damage;
 	string damageType;
 };

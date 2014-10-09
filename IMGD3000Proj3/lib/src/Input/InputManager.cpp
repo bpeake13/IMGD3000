@@ -88,7 +88,7 @@ void InputManager::getInput()
 	}
 	else
 	{
-		EventKeybaord e = EventKeybaord(key);
+		EventKeyboard e = EventKeyboard(key);
 
 		WorldManager& world = WorldManager::getInstance();
 		world.onEvent(&e);

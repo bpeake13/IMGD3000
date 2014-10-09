@@ -7,7 +7,7 @@
 
 #include "AttackEvent.h"
 
-AttackEvent::AttackEvent(Object* sender, Object* reciever, int damage,
+AttackEvent::AttackEvent(Creature* sender, Creature* reciever, int damage,
 		string damageType)
 {
 	this->sender = sender;
@@ -18,12 +18,12 @@ AttackEvent::AttackEvent(Object* sender, Object* reciever, int damage,
 	setType(DF_ATTACK_EVENT);
 }
 
-Object* AttackEvent::getSender() const
+Creature* AttackEvent::getSender() const
 {
 	return sender;
 }
 
-Object* AttackEvent::getReciver() const
+Creature* AttackEvent::getReciver() const
 {
 	return reciever;
 }
@@ -46,6 +46,6 @@ void AttackEvent::setDamageType(const string& damageType) {
 	this->damageType = damageType;
 }
 
-void AttackEvent::setSender(Object* sender) {
+void AttackEvent::setSender(Creature* sender) {
 	this->sender = sender;
 }

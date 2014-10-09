@@ -5,16 +5,16 @@
  *      Author: Benny
  */
 
-#include "EventKeybaord.h"
+#include "EventKeyboard.h"
 
-EventKeybaord::EventKeybaord(int key)
+EventKeyboard::EventKeyboard(int key)
 {
 	this->key = key;
 
 	setType(DF_EVENT_KEYBOARD);
 }
 
-int EventKeybaord::getKey() const
+int EventKeyboard::getKey() const
 {
 	return key;
 }

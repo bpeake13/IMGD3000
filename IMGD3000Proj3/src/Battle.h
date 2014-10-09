@@ -21,6 +21,9 @@
 #define BATTLE_PHASE_STATE_INPUT 0
 #define BATTLE_PHASE_STATE_ATTACK 1
 
+#define ATTACK_MODE_PHYSICAL 0
+#define ATTACK_MODE_MAGIC 1
+
 /**
  * Is a battle scene and is in charge of managing the battle
  */
@@ -74,10 +77,17 @@ protected:
 	virtual void endBattle(string reason);
 private:
 
-	int battlePhase;
-	int battlePhaseState;
+	int battlePhase;//the current phase of the battle
+	int battlePhaseState;//the state of the phase of the battle
+
+	int attackMode;//the mode that the player will attack in
+
+	int attackTimer;
+
+	int attackerIndex;
 
 	TextObject* message;
+	TextObject* attackModeLabel;
 
 	DynamicPtrArray* enemyList;
 };
