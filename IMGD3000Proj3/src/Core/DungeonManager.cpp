@@ -65,7 +65,7 @@ int DungeonManager::startUp(){
 	tp.add((Object *) wizard);
 	tp.add((Object *) cleric);
 
-	party = tp;
+	party = &tp;
 	//Adventurers are ready to take on the world
 
 	treasure =0; //They are dirt poor though

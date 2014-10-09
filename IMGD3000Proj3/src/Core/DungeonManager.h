@@ -26,7 +26,7 @@ private:
 	/**
 	 * An objectlist for the party
 	 */
-	ObjectList party;
+	ObjectList* party;
 
 public:
 	/**
