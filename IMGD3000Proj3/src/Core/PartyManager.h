@@ -17,22 +17,24 @@
 
 #define MAXPARTYSIZE 4
 
-class DungeonManager: public Manager {
+/**
+ * Class used to manage the party members and items of the party
+ */
+class PartyManager: public Manager {
 private:
-	/**
-	 * The amount of treasure the party has accrued
-	 */
-	int treasure; //The amount of treasure amassed
-	/**
-	 * An objectlist for the party
-	 */
-	ObjectList* party;
+	int treasure;
+	ObjectList party;
+	PartyManager();
+	PartyManager(PartyManager const&);
+	PartyManager& operator=(const PartyManager& other);
 
 public:
+
 	/**
-	 * Class used to manage the adventure and party
+	 * Returns the singleton instance of the party manager
+	 * @return Reference  to the party manager instance
 	 */
-	DungeonManager();
+	PartyManager& getInstance();
 
 	/**
 	 * Called when the Dungeon Manager is started. Creates the adventure

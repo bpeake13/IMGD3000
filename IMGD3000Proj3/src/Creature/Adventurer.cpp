@@ -7,14 +7,12 @@
 
 #include "Adventurer.h"
 
-Adventurer::Adventurer() {}
+Adventurer::Adventurer() {
+	this->magic = 0;
+}
 
 Adventurer::Adventurer(string na, int h, int a, int m, string d){
-	setName(na);
-	setHealth(h);
-	setAttack(a);
-	setMagic(m);
-	setDesc(d);
+	this->magic = m;
 }
 
 Adventurer::~Adventurer() {}
