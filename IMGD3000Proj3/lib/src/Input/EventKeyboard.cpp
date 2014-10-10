@@ -5,7 +5,7 @@
  *      Author: Benny
  */
 
-#include "EventKeybaord.h"
+#include "EventKeyboard.h"
 
 EventKeybaord::EventKeybaord(int key)
 {
