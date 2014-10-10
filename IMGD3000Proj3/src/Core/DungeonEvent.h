@@ -57,6 +57,17 @@ public:
 	 */
 	virtual void draw();
 
+	/**
+	 * Set whether the key has been pressed or not
+	 * @param b True or False whether the key has been pressed
+	 */
+	void setKeyPressed(bool b);
+
+	/**
+	 * Gets whether a key has been pressed or not
+	 * @return True or false whether key has been pressed
+	 */
+	bool getKeyPressed() const;
 private:
 
 	bool hasPressedKey;

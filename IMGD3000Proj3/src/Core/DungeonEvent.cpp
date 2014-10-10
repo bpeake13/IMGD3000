@@ -58,3 +58,11 @@ void DungeonEvent::draw()
 	if(isActive)
 		TextObject::draw();
 }
+
+void DungeonEvent::setKeyPressed(bool b) {
+	this->hasPressedKey = b;
+}
+
+bool DungeonEvent::getKeyPressed() const{
+	return this->hasPressedKey;
+}
