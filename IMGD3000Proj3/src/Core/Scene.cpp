@@ -8,6 +8,7 @@
 #include "Scene.h"
 
 #include "WorldManager.h"
+#include "SceneManager.h"
 
 Scene::Scene()
 {
