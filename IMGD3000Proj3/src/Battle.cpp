@@ -79,7 +79,7 @@ int Battle::eventHandler(Event* e)
 		{
 			if(this->battlePhaseState == BATTLE_PHASE_STATE_INPUT)
 			{
-				message->setViewString("Select an action for " + "...");
+				message->setViewString("Select an action for ");
 			}
 			else if(this->battlePhaseState == BATTLE_PHASE_STATE_ATTACK)
 			{
@@ -98,7 +98,7 @@ int Battle::eventHandler(Event* e)
 		int key = ke->getKey();
 
 		int monsterIndex = key - '1';
-		if(monsterIndex < 0 || monsterIndex > getMonsterCount)
+		if(monsterIndex < 0 || monsterIndex > getMonsterCount())
 			return 0;
 
 		Monster* target = getMonster(monsterIndex);

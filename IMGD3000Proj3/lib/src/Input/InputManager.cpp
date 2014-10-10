@@ -7,7 +7,7 @@
 
 #include "InputManager.h"
 #include "EventMouse.h"
-#include "EventKeybaord.h"
+#include "EventKeyboard.h"
 #include "WorldManager.h"
 
 InputManager::InputManager()

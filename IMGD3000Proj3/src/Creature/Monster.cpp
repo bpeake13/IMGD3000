@@ -9,14 +9,8 @@
 #include "Monster.h"
 
 Monster::Monster() {
-	// TODO Auto-generated constructor stub
-
+	reward = 0;
 }
-
-Monster::~Monster() {
-	// TODO Auto-generated destructor stub
-}
-
 
 Monster::Monster(string name, int health, int attack, int reward, string desc) {
 	setName(name);

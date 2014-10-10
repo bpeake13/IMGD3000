@@ -13,27 +13,28 @@
 #include "ObjectList.h"
 #include "Scene.h"
 #include "Monster.h"
-#include "HashTable.h"
 
-#define ADVENTURERMENU "__adventurermenu__"
-#define ATTACKMENU "__attackmenu__"
 
-class DungeonManager: public Manager {
+#define MAXPARTYSIZE 4
+
+/**
+ * Class used to manage the party members and items of the party
+ */
+class PartyManager: public Manager {
 private:
-	/**
-	 * The amount of treasure the party has accrued
-	 */
-	int treasure; //The amount of treasure amassed
-	/**
-	 * The party of adventurers
-	 */
-	HashTable party;
+	int treasure;
+	ObjectList party;
+	PartyManager();
+	PartyManager(PartyManager const&);
+	PartyManager& operator=(const PartyManager& other);
 
 public:
+
 	/**
-	 * Class used to manage the adventure and party
+	 * Returns the singleton instance of the party manager
+	 * @return Reference  to the party manager instance
 	 */
-	DungeonManager();
+	PartyManager& getInstance();
 
 	/**
 	 * Called when the Dungeon Manager is started. Creates the adventure
@@ -52,6 +53,12 @@ public:
 	 * @return The Adventurer requested
 	 */
 	Adventurer* getPartyMember(string name);
+
+	/**
+	 * This function returns a pointer to an object list containing the adventuring party
+	 * @return The pointer to an object list of adventurers
+	 */
+	ObjectList* getParty();
 
 	/**
 	 * Returns the current scene the player is on

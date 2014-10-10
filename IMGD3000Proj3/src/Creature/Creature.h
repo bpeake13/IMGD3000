@@ -11,6 +11,8 @@
 #include "SpriteObject.h"
 #include "AttackEvent.h"
 
+class AttackEvent;
+
 class Creature: public SpriteObject {
 private:
 	/**

@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
  * EventKeyboard.h
  *
  *  Created on: Sep 22, 2014

@@ -12,9 +12,6 @@
 
 class Monster: public Creature {
 private:
-	/**
-	 * The reward a player gets from killing a monster
-	 */
 	int reward;
 
 public:
@@ -32,11 +29,6 @@ public:
 	 * @param desc A description of the monster, as a string
 	 */
 	Monster(string name, int health, int attack, int reward, string desc);
-
-	/**
-	 * Destructor for monster
-	 */
-	virtual ~Monster();
 
 	/**
 	 * Getter for reward from defeating a monster

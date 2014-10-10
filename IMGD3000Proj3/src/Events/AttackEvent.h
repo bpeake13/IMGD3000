@@ -15,6 +15,8 @@
 
 #define DF_ATTACK_EVENT "__attack__"
 
+class Creature;
+
 /**
  * Event sent whenever an attack is issued
  */
