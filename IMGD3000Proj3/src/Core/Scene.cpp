@@ -6,7 +6,7 @@
  */
 
 #include "Scene.h"
-
+#include "SceneManager.h"
 #include "WorldManager.h"
 
 Scene::Scene()

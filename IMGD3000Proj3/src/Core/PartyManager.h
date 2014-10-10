@@ -34,7 +34,7 @@ public:
 	 * Returns the singleton instance of the party manager
 	 * @return Reference  to the party manager instance
 	 */
-	PartyManager& getInstance();
+	static PartyManager& getInstance();
 
 	/**
 	 * Called when the Dungeon Manager is started. Creates the adventure
@@ -77,6 +77,13 @@ public:
 	 * @param treasure
 	 */
 	void setTreasure(int treasure);
+
+	/**
+	 * Adds an amount treasure to the party's treasure
+	 * @param reward The amount of treasure to add
+	 */
+	void addTreasure(int reward);
+
 };
 
 #endif /* DUNGEONMANAGER_H_ */

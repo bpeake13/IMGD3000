@@ -51,6 +51,10 @@ void PartyManager::setTreasure(int treasure) {
 	this->treasure = treasure;
 }
 
+void PartyManager::addTreasure(int reward){
+	this->treasure = this->treasure + reward;
+}
+
 Adventurer* PartyManager::getPartyMember(string name){
 	ObjectListIterator oli = ObjectListIterator(&party);
 
