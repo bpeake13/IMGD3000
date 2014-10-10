@@ -16,11 +16,28 @@
 class StatusBar : public ViewObject
 {
 public:
+
+	/**
+	 * Creates a new empty status bar
+	 */
+	StatusBar();
+
 	/**
 	 * Creates a new status bar
 	 * @param maxValue The max value for the bar
 	 */
 	StatusBar(int maxValue);
+
+	/**
+	 * Sets the max value of the bar
+	 */
+	void setMaxValue(int mv);
+
+	/**
+	 * Returns the max value of the bar
+	 * @return The max value of the bar
+	 */
+	int getMaxValue() const;
 
 protected:
 	/**

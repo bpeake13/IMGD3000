@@ -13,6 +13,10 @@ StatusBar::StatusBar(int maxValue) : ViewObject()
 	setValue(maxValue);
 }
 
+void StatusBar::setMaxValue(int mv){
+	this->maxValue = mv;
+}
+
 string StatusBar::getRenderString() const
 {
 	string s = getViewString() + " [";
