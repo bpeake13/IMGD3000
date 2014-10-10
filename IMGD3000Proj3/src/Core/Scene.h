@@ -48,6 +48,13 @@ public:
 	 */
 	bool isChild(Object* obj);
 
+	/**
+	 * Processes events for the scene
+	 * @param e The Event to process
+	 * @return 1 if the event is eaten, 0 otherwise
+	 */
+	virtual int eventHandler(Event* e);
+
 private:
 	DynamicPtrArray* objectList;//list of all objects in this scene
 };

@@ -59,3 +59,11 @@ bool Scene::isChild(Object* obj)
 
 	return false;
 }
+
+int Scene::eventHandler(Event* e)
+{
+	if(SceneManager::peek() != this)//only process events when on the top of the stack
+		return 1;
+
+	return 0;
+}
