@@ -52,3 +52,9 @@ int DungeonEvent::eventHandler(Event* e)
 
 	return 0;
 }
+
+void DungeonEvent::draw()
+{
+	if(isActive)
+		TextObject::draw();
+}
