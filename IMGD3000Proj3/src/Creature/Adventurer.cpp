@@ -12,7 +12,11 @@ Adventurer::Adventurer() {
 }
 
 Adventurer::Adventurer(string na, int h, int a, int m, string d){
+	setName(na);
+	setHealth(h);
+	setAttack(a);
 	this->magic = m;
+	setDesc(d);
 }
 
 Adventurer::~Adventurer() {}
@@ -20,7 +24,7 @@ Adventurer::~Adventurer() {}
 void Adventurer::magicAttack(AttackEvent* e) {
 	e->setDamage(this->magic);
 	e->setDamageType("magical");
-	e->setSender(this);
+	e->setSender((Creature *) this);
 }
 
 int Adventurer::getMagic() const {

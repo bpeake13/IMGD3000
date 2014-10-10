@@ -23,6 +23,18 @@ class Creature;
 class AttackEvent : public Event
 {
 public:
+
+	/**
+	 * Creates a new empty attack event
+	 */
+	AttackEvent();
+
+	/**
+	 * Creates a new attack event aimed at a creature
+	 * @param receiver The creature getting attacked
+	 */
+	AttackEvent(Creature* receiver);
+
 	/**
 	 * Creates a new attack event
 	 * @param sender The object who is attacking
@@ -30,7 +42,7 @@ public:
 	 * @param damage The damage to deal
 	 * @param damageType The type of damage to deal
 	 */
-	AttackEvent(Creature* sender, Creature* reciever, int damage, string damageType);
+	AttackEvent(Creature* sender, Creature* receiver, int damage, string damageType);
 
 	/**
 	 * Gets the object attacking
@@ -42,7 +54,7 @@ public:
 	 * Gets the object being attacked
 	 * @return The object being attacked
 	 */
-	Creature* getReciver() const;
+	Creature* getReceiver() const;
 
 	/**
 	 * Gets the damage of the attack
@@ -76,7 +88,7 @@ public:
 
 private:
 	Creature* sender;
-	Creature* reciever;
+	Creature* receiver;
 	int damage;
 	string damageType;
 };
