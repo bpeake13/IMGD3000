@@ -9,14 +9,31 @@
 
 #include "EventKeyboard.h"
 
-DungeonEvent::DungeonEvent()
+DungeonEvent::DungeonEvent(float probability)
 {
-	hasPressedKey = false;
+	this->hasPressedKey = false;
+	this->isActive = false;
+	this->probability = probability;
 }
 
 bool DungeonEvent::isDone() const
 {
 	return hasPressedKey;
+}
+
+void DungeonEvent::start()
+{
+	isActive = true;
+}
+
+void DungeonEvent::finish()
+{
+	isActive = false;
+}
+
+float DungeonEvent::getProbability() const
+{
+	return probability;
 }
 
 int DungeonEvent::eventHandler(Event* e)

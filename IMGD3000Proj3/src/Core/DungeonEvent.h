@@ -19,8 +19,25 @@ class DungeonEvent : public TextObject
 public:
 	/**
 	 * Creates a new DungeonEvent
+	 * @param probability The probability that this event will be used on a step if it is selected
 	 */
-	DungeonEvent();
+	DungeonEvent(float probability);
+
+	/**
+	 * Gets the probability that this event will fire if chosen
+	 * @return A 0-1 range float that represents the probability
+	 */
+	float getProbability() const;
+
+	/**
+	 * Called to start the event
+	 */
+	virtual void start();
+
+	/**
+	 * Called to finish the event
+	 */
+	virtual void finish();
 
 	/**
 	 * Checks to see if this event has finished
@@ -38,6 +55,9 @@ public:
 private:
 
 	bool hasPressedKey;
+	bool isActive;
+
+	float probability;
 };
 
 #endif /* DUNGEONEVENT_H_ */
