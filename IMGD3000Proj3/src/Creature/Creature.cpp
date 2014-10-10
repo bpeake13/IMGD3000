@@ -61,5 +61,5 @@ void Creature::setName(string name) {
 void Creature::getAttack(AttackEvent* e) {
 	e->setDamage(this->attack);
 	e->setDamageType("physical");
-	e->setSender(this);
+	e->setSender((Creature *) this);
 }
