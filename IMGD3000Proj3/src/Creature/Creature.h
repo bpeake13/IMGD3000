@@ -15,21 +15,10 @@ class AttackEvent;
 
 class Creature: public SpriteObject {
 private:
-	/**
-	 * The amount of damage a creature can take before it is destroyed
-	 */
 	int health;
-	/**
-	 * The creatures attack value
-	 */
+	int maxhealth;
 	int attack;
-	/**
-	 * The name of the creature
-	 */
 	string name;
-	/**
-	 * A description of the creature
-	 */
 	string desc;
 
 public:
@@ -82,6 +71,17 @@ public:
 	 */
 	void setHealth(int health);
 
+	/**
+	 * Returns the maximum health of the creature
+	 * @return The maximum health
+	 */
+	int getMaxHealth() const;
+
+	/**
+	 * This function sets the max health of the creature
+	 * @param newmax The new max health to set
+	 */
+	void setMaxHealth(int newmax);
 	/**
 	 * Returns the description of the creature
 	 * @return the description, as a string

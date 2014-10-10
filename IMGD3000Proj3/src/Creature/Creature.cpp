@@ -42,6 +42,14 @@ void Creature::setHealth(int health) {
 	this->health = health;
 }
 
+int Creature::getMaxHealth() const{
+	return maxhealth;
+}
+
+void Creature::setMaxHealth(int newmax){
+	this->maxhealth = newmax;
+}
+
 const string Creature::getDesc() const {
 	return desc;
 }
