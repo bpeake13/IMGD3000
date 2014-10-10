@@ -14,6 +14,7 @@ Adventurer::Adventurer() {
 Adventurer::Adventurer(string na, int h, int a, int m, string d){
 	setName(na);
 	setHealth(h);
+	setMaxHealth(h);
 	setAttack(a);
 	this->magic = m;
 	setDesc(d);

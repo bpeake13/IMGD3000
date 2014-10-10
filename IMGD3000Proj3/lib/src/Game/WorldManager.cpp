@@ -335,7 +335,7 @@ void WorldManager::draw()
 		GraphicsManager& graphics = GraphicsManager::getInstance();
 		for(Object* obj = iterator.getCurrent(); !iterator.isDone(); iterator.next(), obj = iterator.getCurrent())
 		{
-			if(obj->getWorldBounds().intersects(view))
+			//if(obj->getWorldBounds().intersects(view))
 				obj->draw();
 		}
 	}

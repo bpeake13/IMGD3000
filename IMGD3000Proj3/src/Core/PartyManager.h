@@ -55,6 +55,15 @@ public:
 	Adventurer* getPartyMember(string name);
 
 	/**
+	 * Gets the ith part member
+	 * @param i The index of the party member to get
+	 * @return The party member at i, or NULL
+	 */
+	Adventurer* getPartyMember(int i);
+
+	size_t getPartySize() const;
+
+	/**
 	 * This function returns a pointer to an object list containing the adventuring party
 	 * @return The pointer to an object list of adventurers
 	 */

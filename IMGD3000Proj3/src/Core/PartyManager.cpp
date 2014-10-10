@@ -32,10 +32,10 @@ int PartyManager::startUp(){
 	treasure =0;
 
 	//Create the adventurers and put them in a rad party.
-	party.add((Object *) new Adventurer("paladin", 100, 100, 100, "A mighty paladin"));
-	party.add((Object *) new Adventurer("cleric", 125, 50, 75, "A worldly cleric"));
-	party.add((Object *) new Adventurer("wizard", 50, 25, 225, "A wise wizard"));
-	party.add((Object *) new Adventurer("rogue", 100, 0, 200, "A sneaky rogue"));
+	party.add(new Adventurer("paladin", 15, 100, 100, "A mighty paladin"));
+	party.add(new Adventurer("cleric", 15, 50, 75, "A worldly cleric"));
+	party.add(new Adventurer("wizard", 15, 25, 225, "A wise wizard"));
+	party.add(new Adventurer("rogue", 15, 0, 200, "A sneaky rogue"));
 	//Adventurers are ready to take on the world
 }
 
@@ -49,10 +49,6 @@ int PartyManager::getTreasure() const {
 
 void PartyManager::setTreasure(int treasure) {
 	this->treasure = treasure;
-}
-
-void PartyManager::addTreasure(int reward){
-	this->treasure = this->treasure + reward;
 }
 
 Adventurer* PartyManager::getPartyMember(string name){
@@ -71,4 +67,22 @@ Adventurer* PartyManager::getPartyMember(string name){
 
 ObjectList* PartyManager::getParty(){
 	return &party;
+}
+
+Adventurer* PartyManager::getPartyMember(int i)
+{
+	return dynamic_cast<Adventurer*>(party[i]);
+}
+
+Scene* PartyManager::currentScene()
+{
+}
+
+size_t PartyManager::getPartySize() const
+{
+	return party.getCount();
+}
+
+void PartyManager::addTreasure(int reward)
+{
 }
