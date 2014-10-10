@@ -52,6 +52,11 @@ public:
 	 */
 	virtual int eventHandler(Event* e);
 
+	/**
+	 * Called every frame to draw this events text
+	 */
+	virtual void draw();
+
 private:
 
 	bool hasPressedKey;
