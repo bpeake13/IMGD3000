@@ -51,6 +51,8 @@ DungeonScene::DungeonScene(int stepCount)
 	money = new ViewObject;
 	money->setViewString("Gold");
 	money->setValue(0);
+	money->setViewObjectLocation(BOTTOM_RIGHT);
+	money->setColor(COLOR_YELLOW);
 }
 
 int DungeonScene::eventHandler(Event* e)
