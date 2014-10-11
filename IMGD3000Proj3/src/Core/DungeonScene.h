@@ -64,6 +64,8 @@ private:
 
 
 	PlayerStatView** statViews;
+
+	ViewObject* money;//shows the parties money
 };
 
 #endif /* DUNGEONSCENE_H_ */

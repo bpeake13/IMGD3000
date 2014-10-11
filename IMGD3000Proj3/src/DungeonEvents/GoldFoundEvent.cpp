@@ -14,8 +14,10 @@ GoldFoundEvent::GoldFoundEvent() : DungeonEvent(PROBABILITY){
 }
 
 void GoldFoundEvent::start(){
+	DungeonEvent::start();
+
 	treasure = Math::randomRange(1, 20) + Math::randomRange(1, 20) + Math::randomRange(0, 20);
-	string strtreasure = "You found gold, +" +treasure;
+	string strtreasure = "You found gold";
 	setViewString(strtreasure);
 	PartyManager::getInstance().addTreasure(treasure);
 }

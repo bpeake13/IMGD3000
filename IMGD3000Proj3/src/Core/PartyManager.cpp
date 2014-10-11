@@ -10,6 +10,9 @@
 #include "ObjectListIterator.h"
 
 #include "EventKeyboard.h"
+#include "EventView.h"
+
+#include "WorldManager.h"
 
 const string MONSTERS[2] = {"centaur", "slime"};
 
@@ -49,6 +52,11 @@ int PartyManager::getTreasure() const {
 
 void PartyManager::setTreasure(int treasure) {
 	this->treasure = treasure;
+
+	WorldManager& world = WorldManager::getInstance();
+
+	EventView ev = EventView("Gold", treasure, false);
+	world.onEvent(&ev);
 }
 
 Adventurer* PartyManager::getPartyMember(string name){

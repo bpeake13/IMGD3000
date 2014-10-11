@@ -11,12 +11,15 @@
 #include "GraphicsManager.h"
 #include "LogManager.h"
 #include "PartyManager.h"
+#include "GoldFoundEvent.h"
 
 #define EVENT_COUNT 1
 
 DungeonScene::DungeonScene(int stepCount)
 {
 	events = new DungeonEvent*[EVENT_COUNT];
+	events[0] = new GoldFoundEvent;
+
 	stepCounter = 30;
 	isSteping = true;
 
@@ -44,6 +47,10 @@ DungeonScene::DungeonScene(int stepCount)
 
 		statViews[i] = psv;
 	}
+
+	money = new ViewObject;
+	money->setViewString("Gold");
+	money->setValue(0);
 }
 
 int DungeonScene::eventHandler(Event* e)
@@ -87,7 +94,7 @@ void DungeonScene::step()
 	stepCounter = 30;
 	steps++;
 
-	/*int eventIndex = Math::randomRange(0, EVENT_COUNT);
+	int eventIndex = Math::randomRange(0, EVENT_COUNT);
 	DungeonEvent* e = events[eventIndex];
 
 	float p = e->getProbability();
@@ -96,7 +103,7 @@ void DungeonScene::step()
 	{
 		currentEvent = e;
 		currentEvent->start();
-	}*/
+	}
 }
 
 void DungeonScene::draw()

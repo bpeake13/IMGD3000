@@ -12,6 +12,8 @@
 
 #include "WorldManager.h"
 
+#include "LogManager.h"
+
 IVector getViewOrigin(ViewObjectLocation location)
 {
 	WorldManager& world = WorldManager::getInstance();
@@ -158,6 +160,8 @@ string ViewObject::getViewString() const
 
 void ViewObject::setViewString(string viewString)
 {
+	LogManager& l = LogManager::getInstance();
+	l.writeLog("%s", viewString.c_str());
 	this->viewString = viewString;
 }
 

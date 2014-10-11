@@ -21,6 +21,8 @@ public:
 	 */
 	TextObject();
 
+protected:
+
 	/**
 	 * Gets the string to be rendered
 	 * @return The string to render on screen (this does not include the border

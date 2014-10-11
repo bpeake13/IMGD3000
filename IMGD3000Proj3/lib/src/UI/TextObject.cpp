@@ -6,8 +6,9 @@
  */
 
 #include "TextObject.h"
+#include "LogManager.h"
 
-TextObject::TextObject()
+TextObject::TextObject() : ViewObject()
 {
 	// TODO Auto-generated constructor stub
 

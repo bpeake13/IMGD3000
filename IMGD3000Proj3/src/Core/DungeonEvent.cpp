@@ -9,11 +9,14 @@
 
 #include "EventKeyboard.h"
 
-DungeonEvent::DungeonEvent(float probability)
+DungeonEvent::DungeonEvent(float probability) : TextObject()
 {
 	this->hasPressedKey = false;
 	this->isActive = false;
 	this->probability = probability;
+
+	setViewObjectLocation(CENTER_CENTER);
+	setColor(COLOR_YELLOW);
 }
 
 bool DungeonEvent::isDone() const
