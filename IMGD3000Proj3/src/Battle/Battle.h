@@ -66,28 +66,14 @@ public:
 	int eventHandler(Event* e);
 
 protected:
-	/**
-	 * Called to check to see if the battle is over, if the battle is over then it will call endBattle
-	 */
-	virtual void checkBattleOver();
 
 	/**
 	 * Finishes the battle and pops this scene from the stack
 	 */
-	virtual void endBattle(string reason);
+	virtual void endBattle(string reason, string info);
 private:
 
-	int battlePhase;//the current phase of the battle
-	int battlePhaseState;//the state of the phase of the battle
-
-	int attackMode;//the mode that the player will attack in
-
-	int attackTimer;
-
-	int attackerIndex;
-
-	TextObject* message;
-	TextObject* attackModeLabel;
+	BattlePhase* currentPhase;
 
 	DynamicPtrArray* enemyList;
 };

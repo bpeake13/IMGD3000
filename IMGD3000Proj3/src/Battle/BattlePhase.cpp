@@ -11,7 +11,6 @@
 
 BattlePhase::BattlePhase()
 {
-	// TODO Auto-generated constructor stub
 
 }
 
@@ -27,4 +26,9 @@ int BattlePhase::eventHandler(Event* e)
 BattlePhase* BattlePhase::getNext()
 {
 	return NULL;
+}
+
+bool BattlePhase::endBattle(string* reason, string* info)
+{
+	return false;
 }

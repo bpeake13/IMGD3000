@@ -37,6 +37,15 @@ public:
 	 * @remark Returning anything that is not NULL will result in this phase being deleted
 	 */
 	BattlePhase* getNext();
+
+	/**
+	 * Checks to see if the battle should end
+	 * @param reason If the battle has ended, this will be filled with the reason for ending the battle
+	 * @param info If the battle has ended, this will be filled with the info about why the battle ended
+	 * @return True if the battle should end, false otherwise
+	 * @remarks This is called once per frame after getNext
+	 */
+	bool endBattle(string* reason, string* info);
 };
 
 #endif /* BATTLEPHASE_H_ */
