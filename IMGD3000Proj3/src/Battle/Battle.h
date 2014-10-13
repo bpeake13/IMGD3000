@@ -10,6 +10,7 @@
 
 #include "Monster.h"
 #include "Scene.h"
+#include "BattlePhase.h"
 #include "Event.h"
 #include "DynamicPtrArray.h"
 #include "TextObject.h"

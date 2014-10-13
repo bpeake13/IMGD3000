@@ -8,6 +8,8 @@
 #ifndef BATTLEPHASE_H_
 #define BATTLEPHASE_H_
 
+#include "Event.h"
+
 /**
  * Represents a single phase of battle, blocking all actions until this phase finishes
  */

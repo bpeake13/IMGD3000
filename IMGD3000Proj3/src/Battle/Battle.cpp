@@ -1,4 +1,5 @@
 #include "Battle.h"
+#include "BattlePhase.h"
 #include "EventStep.h"
 #include "SceneManager.h"
 
@@ -20,7 +21,7 @@ void Battle::addMonster(Monster* monster)
 
 Monster* Battle::getMonster(int i)
 {
-	return enemyList->get(i);
+	return (Monster *) enemyList->get(i);
 }
 
 size_t Battle::getMonsterCount()
@@ -56,7 +57,7 @@ int Battle::eventHandler(Event* e)
 	return r;
 }
 
-void Battle::endBattle(string reason, string reason)
+void Battle::endBattle(string reason, string info)
 {
 	SceneManager::popKill();
 }
