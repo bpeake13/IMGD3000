@@ -61,6 +61,8 @@ public:
 	 */
 	Adventurer* getPartyMember(int i);
 
+	void removePartyMember(Adventurer *adv);
+
 	size_t getPartySize() const;
 
 	/**

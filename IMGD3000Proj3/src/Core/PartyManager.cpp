@@ -82,6 +82,10 @@ Adventurer* PartyManager::getPartyMember(int i)
 	return dynamic_cast<Adventurer*>(party[i]);
 }
 
+void PartyManager::removePartyMember(Adventurer* adv){
+	party.remove(adv);
+}
+
 Scene* PartyManager::currentScene()
 {
 }
