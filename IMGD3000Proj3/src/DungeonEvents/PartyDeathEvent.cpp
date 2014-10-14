@@ -15,7 +15,7 @@ PartyDeathEvent::PartyDeathEvent() : DungeonEvent(PROBABILITY){
 }
 
 void PartyDeathEvent::start(){
-	int deathnum = Math::randomRange(1,9);
+	int deathnum = Math::randomRange(1,10);
 	string death;
 	switch(deathnum){
 	case 1:
@@ -42,17 +42,19 @@ void PartyDeathEvent::start(){
 	case 8:
 		death = " has joined the forces of evil.";
 		break;
+	case 9:
+		death = " can't even.";
+		break;
 	default:
 		death = " has died.";
 		break;
 	}
 
-	int partymember = Math::randomRange(0,MAXPARTYSIZE);
+	int partymember = Math::randomRange(0,MAXPARTYSIZE+1);
 	PartyManager &pm = PartyManager::getInstance();
-	Adventurer* adv = pm.getPartyMember("rogue");
+	Adventurer* adv = pm.getPartyMember(partymember);
 
 	string fullmessage = adv->getName() + death;
 	setViewString(fullmessage);
-
-	//pm.getPartyMember(partymember);
+	pm.removePartyMember(adv);
 }
