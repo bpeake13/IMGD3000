@@ -48,10 +48,9 @@ public:
 	int getAttack() const;
 
 	/**
-	 * Fills an attackEvent with the needed information
-	 * @param e The AttackEvent to fill
+	 * Does an attack and gets the damage done
 	 */
-	void getAttack(AttackEvent *e);
+	virtual int doAttack();
 
 	/**
 	 * Setter for attack value
@@ -105,6 +104,12 @@ public:
 	 * @param name the name of the creature, as a string
 	 */
 	void setName(string name);
+
+	/**
+	 * Damages a creature by some amount
+	 * @param damage The amount of damage to cause
+	 */
+	virtual void damage(int damage);
 };
 
 #endif /* CREATURE_H_ */

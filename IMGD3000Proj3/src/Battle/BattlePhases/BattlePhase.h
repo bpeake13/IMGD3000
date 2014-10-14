@@ -18,8 +18,9 @@ class BattlePhase
 public:
 	/**
 	 * Creates a new battle phase
+	 * @param battle The battle this phase belongs to
 	 */
-	BattlePhase();
+	BattlePhase(Battle* battle);
 
 	/**
 	 * Called to destroy the current battle phase
@@ -32,6 +33,12 @@ public:
 	 * @return
 	 */
 	virtual int eventHandler(Event* e);
+
+	/**
+	 * Gets the message to display during this phase
+	 * @return The message to display
+	 */
+	string getMessage();
 
 	/**
 	 * Called once per frame to get the next phase, if NULL this phase will resume
@@ -48,6 +55,15 @@ public:
 	 * @remarks This is called once per frame after getNext
 	 */
 	bool endBattle(string* reason, string* info);
+
+	/**
+	 * Gets the battle this phase belongs to
+	 * @return A pointer to the battle this phase belongs to
+	 */
+	Battle* getBattle() const;
+
+private:
+	Battle* battle;
 };
 
 #endif /* BATTLEPHASE_H_ */

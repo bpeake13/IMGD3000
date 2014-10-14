@@ -6,6 +6,7 @@
  */
 
 #include "Adventurer.h"
+#include "MathExt.h"
 
 Adventurer::Adventurer() {
 	this->magic = 0;
@@ -34,4 +35,14 @@ int Adventurer::getMagic() const {
 
 void Adventurer::setMagic(int magic) {
 	this->magic = magic;
+}
+
+int Adventurer::doAttack()
+{
+	int v = Creature::doAttack();
+
+	if(!Math::randomRange(0, magic + 1))
+		damage(health / 10);
+
+	return v;
 }

@@ -6,6 +6,7 @@
  */
 
 #include "Creature.h"
+#include "MathExt.h"
 
 Creature::Creature() {
 	//Default values, always remember to set them
@@ -13,6 +14,7 @@ Creature::Creature() {
 	this->desc = "A confusing, blurry creature with no real definition.";
 	this->health = 1;
 	this->attack = 1;
+	this->maxhealth = 1;
 }
 
 Creature::Creature(string na, int h, int a, string d){
@@ -20,6 +22,7 @@ Creature::Creature(string na, int h, int a, string d){
 	this->health = h;
 	this->attack = a;
 	this->desc = d;
+	this->maxhealth = h;
 }
 
 Creature::~Creature() {
@@ -66,8 +69,13 @@ void Creature::setName(string name) {
 	this->name = name;
 }
 
-void Creature::getAttack(AttackEvent* e) {
-	e->setDamage(this->attack);
-	e->setDamageType("physical");
-	e->setSender((Creature *) this);
+int Creature::doAttack()
+{
+	int r = Math::randomRange(attack / 2, attack + 1);
+	return Math::clamp(r, 1, attack);
+}
+
+void Creature::damage(int damage)
+{
+	health -= damage;
 }

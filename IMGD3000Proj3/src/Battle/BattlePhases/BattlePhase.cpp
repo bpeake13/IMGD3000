@@ -6,16 +6,18 @@
  */
 
 #include "BattlePhase.h"
+#include "Battle.h"
 
 #include <stdlib.h>
 
-BattlePhase::BattlePhase()
+BattlePhase::BattlePhase(Battle* battle)
 {
-
+	this->battle = battle;
 }
 
 BattlePhase::~BattlePhase()
 {
+	battle = NULL;
 }
 
 int BattlePhase::eventHandler(Event* e)
@@ -31,4 +33,9 @@ BattlePhase* BattlePhase::getNext()
 bool BattlePhase::endBattle(string* reason, string* info)
 {
 	return false;
+}
+
+string BattlePhase::getMessage()
+{
+	return "";
 }

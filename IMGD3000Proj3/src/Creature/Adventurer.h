@@ -53,6 +53,8 @@ public:
 	 * @param magic
 	 */
 	void setMagic(int magic);
+
+	int doAttack();
 };
 
 #endif /* ADVENTURER_H_ */
