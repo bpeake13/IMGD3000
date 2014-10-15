@@ -1,0 +1,28 @@
+Eric Faust
+Benny Peake
+
+Built on windows running cygwin
+
+
+Make the file with "Make all",
+Then run the game.exe file
+
+The Game
+The game allows the player to go through a dungeon crawl. There are random chances whether an event happens, similar to Oregon Trail styled games.
+Such events might be a battle with a monster (of which there are 8), a prompt asking for a choice (jump the chasm, or find a way around), or simple good fortune of finding gold.
+The player has 4 party members to choose from. Once a party member has died, there is no way to bring them back, but certain prompts can heal the living ones.
+The player's goal is to get to the end with as much gold as they can.
+
+
+
+Playing the Game:
+Start the game up
+
+At the top is your progress in the dungeon.
+The info on the left is the health of various party members.
+In the lower right is the amount of gold you have obtained.
+
+The marker will progress through the dungeon until an event occurs.
+You can react to these events with the space key (next, OK or exit), and the number buttons 1-4
+
+In combat, each party member has a number, 1-4 corresponding to them, from top to bottom.
