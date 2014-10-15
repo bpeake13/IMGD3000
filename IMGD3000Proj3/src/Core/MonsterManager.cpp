@@ -6,6 +6,7 @@
  */
 
 #include "MonsterManager.h"
+#include "ResourceManager.h"
 #include "LogManager.h"
 #include "Utility.h"
 
@@ -97,7 +98,7 @@ void MonsterManager::shutDown() {
 	delete resourceTable;
 }
 
-bool MonsterManager::loadMonster(string file, string label) {
+bool MonsterManager::loadMonster(string file, string sprite, string label) {
 	if(resourceTable->contains(label))
 		return false;
 
@@ -154,6 +155,9 @@ bool MonsterManager::loadMonster(string file, string label) {
 	}
 
 	Monster *newMon = new Monster(name, health, attack, reward, desc);
+	ResourceManager &rm = ResourceManager::getInstance();
+	rm.loadSprite(sprite, label);
+	newMon->setSprite(rm.getSprite(label));
 	resourceTable->set(label, newMon);
 
 	keys[keycount] = label;

@@ -23,7 +23,7 @@ public:
 	static MonsterManager& getInstance();
 	int startUp();
 	void shutDown();
-	bool loadMonster(string file, string label);
+	bool loadMonster(string file, string sprite, string label);
 	bool unloadMonster(string label);
 	Monster* getMonster(string label) const;
 	Monster* randomMonster() const;

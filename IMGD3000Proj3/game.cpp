@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	MonsterManager &mm = MonsterManager::getInstance();
 	mm.startUp();
-	mm.loadMonster("monsters\\stat-centaur.txt", "centaur")
+	mm.loadMonster("monsters\\stat-centaur.txt", "sprites\mon-centaur-spr.txt", "centaur");
 	Monster* mon = mm.getMonster("centaur");
 
 	GameManager& gm = GameManager::getInstance();
