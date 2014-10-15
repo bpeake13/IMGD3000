@@ -39,3 +39,8 @@ string BattlePhase::getMessage()
 {
 	return "";
 }
+
+Battle* BattlePhase::getBattle() const
+{
+	return battle;
+}

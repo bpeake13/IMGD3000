@@ -6,7 +6,9 @@
  */
 
 #include "MonsterAttackPhase.h"
+#include "AdventurerSelectPhase.h"
 #include "PartyManager.h"
+#include "EventKeyboard.h"
 
 #include <ostream>
 
@@ -22,7 +24,7 @@ MonsterAttackPhase::MonsterAttackPhase(Battle* battle) : BattlePhase(battle)
 	PartyManager& party = PartyManager::getInstance();
 
 	float highestAttackRatio = 0;
-	Adventurer bestBet = NULL;
+	Adventurer* bestBet = NULL;
 
 	size_t partySize = party.getPartySize();
 	for(size_t i = 0; i < party.getPartySize(); i++)
@@ -46,15 +48,36 @@ MonsterAttackPhase::MonsterAttackPhase(Battle* battle) : BattlePhase(battle)
 
 int MonsterAttackPhase::eventHandler(Event* event)
 {
+	string eventType = event->getType();
+
+	if(eventType == DF_EVENT_KEYBOARD)
+	{
+		EventKeyboard* ek = static_cast<EventKeyboard*>(event);
+		if(ek->getKey() == ' ')
+		{
+			buttonPressed = true;
+			return 1;
+		}
+
+		return 0;
+	}
+
+	return 0;
 }
 
 BattlePhase* MonsterAttackPhase::getNext()
 {
+	if(!buttonPressed)
+		return NULL;
+
+	return new AdventurerSelectPhase(getBattle());
 }
 
 string MonsterAttackPhase::getMessage()
 {
 	std::ostringstream ss;
 
-	ss << adventurer->getName() << " was attacked by "
+	ss << monster->getName() << " did " << damage << " points of damage to " << adventurer->getName();
+
+	return ss.str();
 }

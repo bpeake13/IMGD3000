@@ -14,7 +14,7 @@
 class AttackEvent;
 
 class Creature: public SpriteObject {
-private:
+protected:
 	int health;
 	int maxhealth;
 	int attack;

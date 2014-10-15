@@ -6,6 +6,7 @@
  */
 
 #include "AdventurerSelectPhase.h"
+#include "TargetSelectPhase.h"
 #include "PartyManager.h"
 #include "EventKeyboard.h"
 
@@ -39,7 +40,7 @@ int AdventurerSelectPhase::eventHandler(Event* e)
 BattlePhase* AdventurerSelectPhase::getNext()
 {
 	if(selectedAdv)
-		return new TargetSelectPhase(selectedAdv);
+		return new TargetSelectPhase(selectedAdv, getBattle());
 
 	return NULL;
 }

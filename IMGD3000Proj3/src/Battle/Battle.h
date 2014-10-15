@@ -25,6 +25,8 @@
 #define ATTACK_MODE_PHYSICAL 0
 #define ATTACK_MODE_MAGIC 1
 
+class BattlePhase;
+
 /**
  * Is a battle scene and is in charge of managing the battle
  */

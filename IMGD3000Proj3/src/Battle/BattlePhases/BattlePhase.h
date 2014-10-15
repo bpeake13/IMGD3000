@@ -9,6 +9,9 @@
 #define BATTLEPHASE_H_
 
 #include "Event.h"
+#include "Battle.h"
+
+class Battle;
 
 /**
  * Represents a single phase of battle, blocking all actions until this phase finishes
