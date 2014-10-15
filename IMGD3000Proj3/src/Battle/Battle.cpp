@@ -2,12 +2,16 @@
 #include "BattlePhase.h"
 #include "EventStep.h"
 #include "SceneManager.h"
+#include "AdventurerSelectPhase.h"
 
 Battle::Battle()
 {
-	this->currentPhase = NULL;
+	this->currentPhase = new AdventurerSelectPhase(this);
 
 	this->enemyList = new DynamicPtrArray();
+
+	this->endReason = "";
+	this->endInfo = "";
 }
 
 Battle::~Battle()
@@ -57,7 +61,19 @@ int Battle::eventHandler(Event* e)
 	return r;
 }
 
+string Battle::getEndReason() const
+{
+	return endReason;
+}
+
+string Battle::getEndInfo() const
+{
+	return endInfo;
+}
+
 void Battle::endBattle(string reason, string info)
 {
-	SceneManager::popKill();
+	endReason = reason;
+	endInfo = info;
+	SceneManager::pop();
 }

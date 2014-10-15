@@ -68,6 +68,18 @@ public:
 	 */
 	int eventHandler(Event* e);
 
+	/**
+	 * Get the reason this battle ended
+	 * @return The reason this battle ended
+	 */
+	string getEndReason() const;
+
+	/**
+	 * The end info for this battle
+	 * @return The end info as a string
+	 */
+	string getEndInfo() const;
+
 protected:
 
 	/**
@@ -79,6 +91,10 @@ private:
 	BattlePhase* currentPhase;
 
 	DynamicPtrArray* enemyList;
+
+	string endReason;
+
+	string endInfo;
 };
 
 #endif /* BATTLE_H_ */
