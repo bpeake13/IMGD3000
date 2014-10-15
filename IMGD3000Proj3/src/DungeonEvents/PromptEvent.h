@@ -24,7 +24,7 @@ private:
 	int goldlost;
 	TextObject rejectText;
 	TextObject acceptText;
-	Adventurer* adv;
+	int advnum;
 	void hasAccepted();
 	void hasRejected();
 

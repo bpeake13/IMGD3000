@@ -18,13 +18,13 @@ PromptEvent::PromptEvent() : DungeonEvent(0.1){
 	promptnumber = 0;
 	madechoice =false;
 	goldlost = 0;
-	adv = NULL;
+	advnum = 0;
 }
 
 void PromptEvent::start(){
 	DungeonEvent::start();
 
-
+	PartyManager &pm = PartyManager::getInstance();
 	goldlost = Math::randomRange(1,100);
 	int partymember = Math::randomRange(0, MAXPARTYSIZE);
 	promptnumber = Math::randomRange(1,5);
@@ -40,8 +40,8 @@ void PromptEvent::start(){
 		reject = "2) Ignore the thing";
 		break;
 	case 3:
-		adv = PartyManager::getInstance().getPartyMember("rogue");
-		prompt = adv->getName() + " has become lost in the dungeon, do you go back to search for them?";
+		advnum = Math::randomRange(0,4);
+		prompt = pm.getPartyMember(advnum)->getName() + " has become lost in the dungeon, do you go back to search for them?";
 		accept = "1) Search for them";
 		reject = "2) Leave them behind";
 		break;
@@ -105,7 +105,7 @@ int PromptEvent::eventHandler(Event* e)
 }
 
 void PromptEvent::hasAccepted(){
-
+	PartyManager &pm = PartyManager::getInstance();
 	string response;
 	int randchance = Math::randomRange(1,100);
 	switch(promptnumber){
@@ -113,9 +113,11 @@ void PromptEvent::hasAccepted(){
 
 		if(randchance <= 10){
 			PartyManager &pm = PartyManager::getInstance();
-			Adventurer* lost = pm.getPartyMember("rogue");
-			response = lost->getName() + " has fallen into the chasm in your jump across";
-			pm.removePartyMember(lost);
+
+			int pnum = Math::randomRange(0,4);
+
+			response = pm.getPartyMember(pnum)->getName() + " has fallen into the chasm in your jump across";
+			pm.removePartyMember(pm.getPartyMember(pnum));
 		}else{
 			response = "You successfully jumped the chasm";
 		}
@@ -139,14 +141,14 @@ void PromptEvent::hasAccepted(){
 			response = "You find them having tea with a delightful fairy.";
 		}else if(randchance <=40){
 			response = "You find them, only a little bruised";
-			adv->setHealth((int)(adv->getHealth() * .75));
+			pm.getPartyMember(advnum)->setHealth((int)(pm.getPartyMember(advnum)->getHealth() * .75));
 		}else if(randchance <=60){
 			response = "You find them, hurt and confused.";
-			adv->setHealth((int)(adv->getHealth() * .5));
+			pm.getPartyMember(advnum)->setHealth((int)(pm.getPartyMember(advnum)->getHealth() * .50));
 		}else if(randchance <= 70){
 			response = "You find them dead.";
 			PartyManager &pm = PartyManager::getInstance();
-			pm.removePartyMember(adv);
+			pm.removePartyMember(pm.getPartyMember(advnum));
 		}else if(randchance <=80){
 			response = "The entire party falls into a trap, where you find your companion hurt.";
 			PartyManager &pm = PartyManager::getInstance();
@@ -218,6 +220,8 @@ void PromptEvent::hasAccepted(){
 void PromptEvent::hasRejected(){
 	string response;
 
+	PartyManager &pm = PartyManager::getInstance();
+
 	switch(promptnumber){
 	case 1: {
 		int monsterchance = Math::randomRange(1,100);
@@ -241,7 +245,7 @@ void PromptEvent::hasRejected(){
 		break;
 	case 3:
 		response = "You leave them behind";
-		PartyManager::getInstance().removePartyMember(adv);
+		pm.removePartyMember(pm.getPartyMember(advnum));
 		break;
 	case 4:
 		response = "You forget about the gold and continue on.";

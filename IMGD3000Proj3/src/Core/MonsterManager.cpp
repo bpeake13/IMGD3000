@@ -129,8 +129,6 @@ bool MonsterManager::loadMonster(string file, string sprite, string label, int c
 
 	LogManager& log = LogManager::getInstance();
 
-	log.writeLog("Color attempt:%d, default is %d", color, DF_DEFAULT_COLOR);
-
 	string name = readLineString(&fileStream, &line, "name", &error);
 	if(error)
 	{
