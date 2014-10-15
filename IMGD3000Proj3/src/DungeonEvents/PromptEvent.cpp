@@ -20,6 +20,10 @@ PromptEvent::PromptEvent() : DungeonEvent(0.4){
 	madechoice =false;
 	goldlost = 0;
 	advnum = 0;
+
+	IVector npos(50, 50);
+	acceptText.setPosition(npos);
+	rejectText.setPosition(npos);
 }
 
 PromptEvent::~PromptEvent(){
@@ -79,9 +83,9 @@ void PromptEvent::start(){
 	acceptText.setPosition(rejpos);
 
 	IVector promptPos = this->getPosition();
-	IVector acceptPos(promptPos.getX(), promptPos.getY() +3);
+	IVector acceptPos(promptPos.getX(), promptPos.getY() +28);
 	acceptText.setPosition(acceptPos);
-	IVector rejectPos(acceptPos.getX(), acceptPos.getY()+1);
+	IVector rejectPos(acceptPos.getX(), acceptPos.getY()+10);
 	rejectText.setPosition(rejectPos);
 }
 
