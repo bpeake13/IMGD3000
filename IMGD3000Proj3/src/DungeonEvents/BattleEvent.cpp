@@ -15,7 +15,7 @@
 #include "BattleOverEvent.h"
 #include "MathExt.h"
 
-BattleEvent::BattleEvent() : DungeonEvent(BATTLEPROBABILITY){
+BattleEvent::BattleEvent() : DungeonEvent(0.4){
 }
 
 void BattleEvent::start() {

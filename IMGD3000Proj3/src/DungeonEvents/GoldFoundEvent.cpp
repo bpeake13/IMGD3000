@@ -10,7 +10,7 @@
 #include "PartyManager.h"
 #include "MathExt.h"
 
-GoldFoundEvent::GoldFoundEvent() : DungeonEvent(PROBABILITY){
+GoldFoundEvent::GoldFoundEvent() : DungeonEvent(0.3){
 	this->treasure=0;
 }
 

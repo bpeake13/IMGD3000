@@ -14,7 +14,7 @@
 #include "Battle.h"
 #include "ObjectListIterator.h"
 
-PromptEvent::PromptEvent() : DungeonEvent(PROBABILITY){
+PromptEvent::PromptEvent() : DungeonEvent(0.1){
 	promptnumber = 0;
 	madechoice =false;
 	goldlost = 0;

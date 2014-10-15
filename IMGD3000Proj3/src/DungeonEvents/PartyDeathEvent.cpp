@@ -10,7 +10,7 @@
 #include "Adventurer.h"
 #include "MathExt.h"
 
-PartyDeathEvent::PartyDeathEvent() : DungeonEvent(PROBABILITY){
+PartyDeathEvent::PartyDeathEvent() : DungeonEvent(0.01){
 
 }
 

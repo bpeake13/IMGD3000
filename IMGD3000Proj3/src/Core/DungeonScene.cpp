@@ -15,13 +15,17 @@
 #include "BattleEvent.h"
 #include "PartyDeathEvent.h"
 #include "SceneManager.h"
+#include "PromptEvent.h"
 
-#define EVENT_COUNT 1
+#define EVENT_COUNT 4
 
 DungeonScene::DungeonScene(int stepCount)
 {
 	events = new DungeonEvent*[EVENT_COUNT];
 	events[0] = new PartyDeathEvent;
+	events[1] = new GoldFoundEvent;
+	events[2] = new BattleEvent;
+	events[4] = new PromptEvent;
 
 	stepCounter = 30;
 	isSteping = true;
