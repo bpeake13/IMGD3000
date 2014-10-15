@@ -41,14 +41,14 @@ public:
 	 * Gets the message to display during this phase
 	 * @return The message to display
 	 */
-	string getMessage();
+	virtual string getMessage();
 
 	/**
 	 * Called once per frame to get the next phase, if NULL this phase will resume
 	 * @return The next battle phase to activate, or NULL to keep the current battle phase
 	 * @remark Returning anything that is not NULL will result in this phase being deleted
 	 */
-	BattlePhase* getNext();
+	virtual BattlePhase* getNext();
 
 	/**
 	 * Checks to see if the battle should end
@@ -57,7 +57,7 @@ public:
 	 * @return True if the battle should end, false otherwise
 	 * @remarks This is called once per frame after getNext
 	 */
-	bool endBattle(string* reason, string* info);
+	virtual bool endBattle(string* reason, string* info);
 
 	/**
 	 * Gets the battle this phase belongs to

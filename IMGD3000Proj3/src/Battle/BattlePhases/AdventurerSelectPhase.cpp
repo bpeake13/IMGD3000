@@ -9,6 +9,7 @@
 #include "TargetSelectPhase.h"
 #include "PartyManager.h"
 #include "EventKeyboard.h"
+#include "LogManager.h"
 
 AdventurerSelectPhase::AdventurerSelectPhase(Battle* battle) : BattlePhase(battle)
 {
@@ -48,5 +49,7 @@ BattlePhase* AdventurerSelectPhase::getNext()
 string AdventurerSelectPhase::getMessage()
 {
 	string l1 = "Who is going to attack?";
+	LogManager& l = LogManager::getInstance();
+	l.writeLog("TEST %s", l1.c_str());
 	return l1;
 }

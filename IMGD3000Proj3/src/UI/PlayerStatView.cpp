@@ -7,17 +7,15 @@
 
 #include "PlayerStatView.h"
 
-PlayerStatView::PlayerStatView() : StatusBar(0){
+PlayerStatView::PlayerStatView(){
 }
 
-PlayerStatView::PlayerStatView(int maxhealth) : StatusBar(maxhealth){
-	setMaxValue(maxhealth);
+PlayerStatView::PlayerStatView(int maxhealth){
 	setValue(maxhealth);
 	setViewString("HP");
 }
 
-PlayerStatView::PlayerStatView(Adventurer* adv) : StatusBar(0){
-	setMaxValue(adv->getMaxHealth());
+PlayerStatView::PlayerStatView(Adventurer* adv){
 	setValue(adv->getHealth());
 	setViewString("HP");
 }

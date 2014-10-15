@@ -14,11 +14,6 @@ int main(int argc, char *argv[])
 	log.startUp();
 	log.setFlush();
 
-	MonsterManager &mm = MonsterManager::getInstance();
-	mm.startUp();
-	mm.loadMonster("monsters\\stat-centaur.txt", "sprites\\mon-centaur-spr.txt", "centaur");
-	Monster* mon = mm.getMonster("centaur");
-
 
 	GameManager& gm = GameManager::getInstance();
 
@@ -34,6 +29,11 @@ int main(int argc, char *argv[])
 
 	DungeonScene* mainScene = new DungeonScene(15);
 	SceneManager::push(mainScene);
+
+	MonsterManager &mm = MonsterManager::getInstance();
+	mm.startUp();
+	mm.loadMonster("monsters\\stat-centaur.txt", "sprites\\mon-centaur-spr.txt", "centaur");
+	//Monster* mon = mm.getMonster("centaur");
 
 	gm.run(30);
 

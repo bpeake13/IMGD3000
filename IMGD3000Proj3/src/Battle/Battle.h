@@ -92,6 +92,8 @@ private:
 
 	DynamicPtrArray* enemyList;
 
+	TextObject* message;
+
 	string endReason;
 
 	string endInfo;

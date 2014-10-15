@@ -11,7 +11,7 @@
 #include "StatusBar.h"
 #include "Adventurer.h"
 
-class PlayerStatView: public StatusBar {
+class PlayerStatView: public ViewObject {
 public:
 	PlayerStatView();
 	PlayerStatView(int maxhealth);

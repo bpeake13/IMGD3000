@@ -12,13 +12,15 @@
 #include "LogManager.h"
 #include "PartyManager.h"
 #include "GoldFoundEvent.h"
+#include "BattleEvent.h"
 
-#define EVENT_COUNT 1
+#define EVENT_COUNT 2
 
 DungeonScene::DungeonScene(int stepCount)
 {
 	events = new DungeonEvent*[EVENT_COUNT];
 	events[0] = new GoldFoundEvent;
+	events[1] = new BattleEvent;
 
 	stepCounter = 30;
 	isSteping = true;
@@ -49,7 +51,7 @@ DungeonScene::DungeonScene(int stepCount)
 	}
 
 	money = new ViewObject;
-	money->setViewString("Gold");
+	money->setViewString("Gold: ");
 	money->setValue(0);
 	money->setViewObjectLocation(BOTTOM_RIGHT);
 	money->setColor(COLOR_YELLOW);
@@ -63,6 +65,9 @@ int DungeonScene::eventHandler(Event* e)
 	string eventType = e->getType();
 	if(eventType == DF_EVENT_STEP)
 	{
+		PartyManager& pm = PartyManager::getInstance();
+		money->setValue(pm.getTreasure());
+
 		if(!currentEvent && isSteping)
 		{
 			stepCounter--;
