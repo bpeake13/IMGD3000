@@ -196,7 +196,10 @@ Monster* MonsterManager::getMonster(string label) const {
 		return false;
 
 	Monster* mon = static_cast<Monster*>(data);
-	return mon;
+
+	Monster* returnmon  = new Monster(mon->getName(), mon->getHealth(), mon->getAttack(), mon->getReward(), mon->getDesc());
+	returnmon->setSprite(mon->getSprite());
+	return returnmon;
 }
 
 MonsterManager::MonsterManager() {
