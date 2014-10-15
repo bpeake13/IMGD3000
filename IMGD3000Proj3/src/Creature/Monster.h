@@ -47,6 +47,11 @@ public:
 	 * @param filename The file to get the sprite from
 	 */
 	void setSpr(string filename);
+
+	/**
+	 * Override of SpriteObject draw, to add a health bar
+	 */
+	void draw();
 };
 
 #endif /* MONSTER_H_ */

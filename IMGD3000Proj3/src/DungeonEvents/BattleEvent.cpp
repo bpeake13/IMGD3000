@@ -11,7 +11,7 @@
 #include "Battle.h"
 #include "SceneManager.h"
 
-BattleEvent::BattleEvent() : DungeonEvent(PROBABILITY){
+BattleEvent::BattleEvent() : DungeonEvent(BATTLEPROBABILITY){
 }
 
 void BattleEvent::start() {

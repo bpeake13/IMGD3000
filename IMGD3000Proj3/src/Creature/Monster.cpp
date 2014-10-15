@@ -5,6 +5,7 @@
  *      Author: Eric
  */
 
+#include "GraphicsManager.h"
 #include "ResourceManager.h"
 #include "Monster.h"
 
@@ -34,4 +35,15 @@ void Monster::setSpr(string name){
 
 	//Load the sprite
 	ResourceManager::getInstance().loadSprite(filename, name);
+}
+
+void Monster::draw(){
+	SpriteObject::draw();
+	GraphicsManager &gm = GraphicsManager::getInstance();
+	IVector thispos = IVector(this->getPosition().getX(), this->getPosition().getY() -2);
+
+	std::stringstream sstm;
+	sstm << "HP " << this->getHealth();
+	string hp = sstm.str();
+	gm.drawString(thispos, LEFT_JUSTIFIED, hp, COLOR_RED);
 }

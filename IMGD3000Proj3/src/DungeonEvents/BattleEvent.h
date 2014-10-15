@@ -10,7 +10,7 @@
 
 #include "DungeonEvent.h"
 
-#define PROBABILITY .8
+#define BATTLEPROBABILITY .8
 
 class BattleEvent: public DungeonEvent {
 public:
