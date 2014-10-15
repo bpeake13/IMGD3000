@@ -49,6 +49,12 @@ public:
 	void addMonster(Monster* monster);
 
 	/**
+	 * Removes a monster from the battle
+	 * @param monster The monster to remove
+	 */
+	void removeMonster(Monster* monster);
+
+	/**
 	 * Gets a monster at the ith index
 	 * @param i The index of the monster to get
 	 * @return The ith monster, or NULL if that monster does not exist

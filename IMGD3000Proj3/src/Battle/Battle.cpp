@@ -57,6 +57,11 @@ void Battle::addMonster(Monster* monster)
 	}
 }
 
+void Battle::removeMonster(Monster* monster)
+{
+	enemyList->remove(monster);
+}
+
 Monster* Battle::getMonster(int i)
 {
 	return (Monster *) enemyList->get(i);

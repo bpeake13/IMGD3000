@@ -6,6 +6,7 @@
  */
 
 #include "PlayerStatView.h"
+#include "EventStep.h"
 
 PlayerStatView::PlayerStatView(){
 }
@@ -18,4 +19,17 @@ PlayerStatView::PlayerStatView(int maxhealth){
 PlayerStatView::PlayerStatView(Adventurer* adv){
 	setValue(adv->getHealth());
 	setViewString("HP");
+	this->adventurer = adv;
+	this->setViewString(adv->getName() + ": ");
+}
+
+int PlayerStatView::eventHandler(Event* e)
+{
+	string eventType = e->getType();
+
+	if(eventType == DF_EVENT_STEP)
+	{
+		this->setValue(adventurer->getHealth());
+		return 1;
+	}
 }

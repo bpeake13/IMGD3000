@@ -6,6 +6,8 @@
  */
 
 #include "AdventurerAttackPhase.h"
+#include "BattleWinPhase.h"
+#include "MonsterAttackPhase.h"
 #include "EventKeyboard.h"
 
 #include <stdlib.h>
@@ -47,13 +49,16 @@ BattlePhase* AdventurerAttackPhase::getNext()
 
 	Battle* battle = getBattle();
 
+	if(selectedMonster->isDead())
+		battle->removeMonster(selectedMonster);
+
 	if(battle->getMonsterCount() <= 0)
 	{
-
+		return new BattleWinPhase(getBattle());
 	}
 	else
 	{
-
+		return new MonsterAttackPhase(getBattle());
 	}
 }
 
@@ -61,7 +66,10 @@ string AdventurerAttackPhase::getMessage()
 {
 	std::ostringstream stringStream;
 
-	stringStream << selectedAdv->getName() << " did " << damage << " points of damage to " << selectedMonster->getName();
+	if(selectedMonster->isDead())
+		stringStream << selectedAdv->getName() << " killed " << selectedMonster->getName();
+	else
+		stringStream << selectedAdv->getName() << " did " << damage << " points of damage to " << selectedMonster->getName();
 
 	return stringStream.str();
 }

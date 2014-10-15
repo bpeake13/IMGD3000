@@ -10,6 +10,7 @@
 
 #include "StatusBar.h"
 #include "Adventurer.h"
+#include "Event.h"
 
 class PlayerStatView: public ViewObject {
 public:
@@ -21,6 +22,11 @@ public:
 	 * @param adv The adventurer to display for
 	 */
 	PlayerStatView(Adventurer* adv);
+
+	int eventHandler(Event* e);
+
+private:
+	Adventurer* adventurer;
 };
 
 #endif /* PLAYERSTATVIEW_H_ */

@@ -6,6 +6,7 @@
  */
 
 #include "Adventurer.h"
+#include "PartyManager.h"
 #include "MathExt.h"
 
 Adventurer::Adventurer() {
@@ -45,4 +46,15 @@ int Adventurer::doAttack()
 		damage(health / 10);
 
 	return v;
+}
+
+void Adventurer::damage(int amount)
+{
+	Creature::damage(amount);
+
+	if(health <= 0)
+	{
+		PartyManager& pm = PartyManager::getInstance();
+		pm.removePartyMember(this);
+	}
 }

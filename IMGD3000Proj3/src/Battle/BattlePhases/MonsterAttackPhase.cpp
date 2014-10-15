@@ -70,6 +70,8 @@ BattlePhase* MonsterAttackPhase::getNext()
 	if(!buttonPressed)
 		return NULL;
 
+
+
 	return new AdventurerSelectPhase(getBattle());
 }
 
@@ -77,7 +79,10 @@ string MonsterAttackPhase::getMessage()
 {
 	std::ostringstream ss;
 
-	ss << monster->getName() << " did " << damage << " points of damage to " << adventurer->getName();
+	if(adventurer->isDead())
+		ss << monster->getName() << " killed " << adventurer->getName();
+	else
+		ss << monster->getName() << " did " << damage << " points of damage to " << adventurer->getName();
 
 	return ss.str();
 }

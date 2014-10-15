@@ -6,8 +6,8 @@
  */
 
 #include "TargetSelectPhase.h"
+#include "AdventurerAttackPhase.h"
 #include "EventKeyboard.h"
-
 
 TargetSelectPhase::TargetSelectPhase(Adventurer* selectedAdv, Battle* battle) : BattlePhase(battle)
 {
@@ -42,7 +42,10 @@ int TargetSelectPhase::eventHandler(Event* e)
 
 BattlePhase* TargetSelectPhase::getNext()
 {
+	if(selectedMonster)
+		return new AdventurerAttackPhase(selectedAdv, selectedMonster, getBattle());
 
+	return NULL;
 }
 
 string TargetSelectPhase::getMessage()

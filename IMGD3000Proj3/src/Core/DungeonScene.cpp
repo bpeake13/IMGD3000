@@ -39,7 +39,7 @@ DungeonScene::DungeonScene(int stepCount)
 	statViews = new PlayerStatView*[partySize];
 	for(int i = 0; i < partySize; i++)
 	{
-		Adventurer* a = pm.getPartyMember(0);
+		Adventurer* a = pm.getPartyMember(i);
 		PlayerStatView* psv = new PlayerStatView(a);
 		psv->setViewObjectLocation(BOTTOM_LEFT);
 		psv->setPosition(offset);

@@ -39,10 +39,10 @@ int PartyManager::startUp(){
 	treasure =0;
 
 	//Create the adventurers and put them in a rad party.
-	party.add(new Adventurer("paladin", 15, 100, 100, "A mighty paladin"));
-	party.add(new Adventurer("cleric", 15, 50, 75, "A worldly cleric"));
-	party.add(new Adventurer("wizard", 15, 25, 225, "A wise wizard"));
-	party.add(new Adventurer("rogue", 15, 0, 200, "A sneaky rogue"));
+	party.add(new Adventurer("Paladin", 100, 100, 100, "A mighty paladin"));
+	party.add(new Adventurer("Cleric", 100, 50, 75, "A worldly cleric"));
+	party.add(new Adventurer("Wizard", 100, 25, 225, "A wise wizard"));
+	party.add(new Adventurer("Rogue", 100, 0, 200, "A sneaky rogue"));
 	//Adventurers are ready to take on the world
 
 	return 1;

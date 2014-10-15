@@ -54,7 +54,13 @@ public:
 	 */
 	void setMagic(int magic);
 
+	/**
+	 * Called when the adventurer does an attack
+	 * @return The amount of damage the adventurer does
+	 */
 	int doAttack();
+
+	void damage(int amount);
 };
 
 #endif /* ADVENTURER_H_ */
