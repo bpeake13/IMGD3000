@@ -22,10 +22,6 @@ protected:
 	string desc;
 
 public:
-	/**
-	 * Constructor for creature
-	 */
-	Creature();
 
 	/**
 	 * Whether or not to add the creature to the world

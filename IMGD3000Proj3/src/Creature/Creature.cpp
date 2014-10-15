@@ -8,14 +8,6 @@
 #include "Creature.h"
 #include "MathExt.h"
 
-Creature::Creature() {
-	//Default values, always remember to set them
-	this->name = "Error";
-	this->desc = "A confusing, blurry creature with no real definition.";
-	this->health = 1;
-	this->attack = 1;
-	this->maxhealth = 1;
-}
 
 Creature::Creature(bool addToWorld) : SpriteObject(addToWorld) {
 	//Default values, always remember to set them
