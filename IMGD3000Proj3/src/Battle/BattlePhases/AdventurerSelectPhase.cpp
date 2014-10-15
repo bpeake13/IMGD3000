@@ -50,6 +50,5 @@ string AdventurerSelectPhase::getMessage()
 {
 	string l1 = "Who is going to attack?";
 	LogManager& l = LogManager::getInstance();
-	l.writeLog("TEST %s", l1.c_str());
 	return l1;
 }

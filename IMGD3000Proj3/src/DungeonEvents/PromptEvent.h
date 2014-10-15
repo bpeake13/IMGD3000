@@ -30,6 +30,7 @@ private:
 
 public:
 	PromptEvent();
+	~PromptEvent();
 	void start();
 	int eventHandler(Event* e);
 

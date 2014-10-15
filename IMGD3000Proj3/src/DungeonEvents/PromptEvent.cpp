@@ -5,6 +5,7 @@
  *      Author: Eric
  */
 
+#include "LogManager.h"
 #include "MonsterManager.h"
 #include "PromptEvent.h"
 #include "PartyManager.h"
@@ -14,11 +15,16 @@
 #include "Battle.h"
 #include "ObjectListIterator.h"
 
-PromptEvent::PromptEvent() : DungeonEvent(0.1){
+PromptEvent::PromptEvent() : DungeonEvent(0.4){
 	promptnumber = 0;
 	madechoice =false;
 	goldlost = 0;
 	advnum = 0;
+}
+
+PromptEvent::~PromptEvent(){
+	delete &rejectText;
+	delete &acceptText;
 }
 
 void PromptEvent::start(){
@@ -65,7 +71,12 @@ void PromptEvent::start(){
 
 	setViewString(prompt);
 	acceptText.setViewString(accept);
+	IVector accpos(getPosition().getX(), getPosition().getY()+3);
+	acceptText.setPosition(accpos);
+
 	rejectText.setViewString(reject);
+	IVector rejpos(accpos.getX(), accpos.getY()+3);
+	acceptText.setPosition(rejpos);
 
 	IVector promptPos = this->getPosition();
 	IVector acceptPos(promptPos.getX(), promptPos.getY() +3);
@@ -74,8 +85,12 @@ void PromptEvent::start(){
 	rejectText.setPosition(rejectPos);
 }
 
+
+
 int PromptEvent::eventHandler(Event* e)
 {
+	DungeonEvent::eventHandler(e);
+
 	string typeName = e->getType();
 	if(typeName == DF_EVENT_KEYBOARD)
 	{
