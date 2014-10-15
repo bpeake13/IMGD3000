@@ -18,8 +18,9 @@ class SpriteObject : public Object
 public:
 	/**
 	 * Creates a default sprite object
+	 * @param addToWorld When true this object will be added to the world
 	 */
-	SpriteObject();
+	SpriteObject(bool addToWorld = true);
 
 	virtual void draw();
 

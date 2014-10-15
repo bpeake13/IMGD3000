@@ -9,7 +9,7 @@
 #include "GraphicsManager.h"
 #include "Box.h"
 
-SpriteObject::SpriteObject()
+SpriteObject::SpriteObject(bool addToWorld) : Object(addToWorld)
 {
 	spr = NULL;
 	drawCentered = false;
