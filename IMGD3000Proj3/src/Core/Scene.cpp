@@ -18,12 +18,14 @@ Scene::Scene()
 
 Scene::~Scene()
 {
+
+	WorldManager& world = WorldManager::getInstance();
 	//delete all children of this scene
 
 	size_t objCount = objectList->getSize();
 	for(int i = 0; i < objCount; i++)
 	{
-		delete static_cast<Object*>(objectList->get(i));
+		world.markForDelete(static_cast<Object*>(objectList->get(i)));
 	}
 
 	objectList->clear();

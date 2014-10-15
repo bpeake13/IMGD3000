@@ -4,6 +4,7 @@
 #include "SceneManager.h"
 #include "AdventurerSelectPhase.h"
 #include "GraphicsManager.h"
+#include "WorldManager.h"
 
 Battle::Battle()
 {
@@ -60,6 +61,8 @@ void Battle::addMonster(Monster* monster)
 void Battle::removeMonster(Monster* monster)
 {
 	enemyList->remove(monster);
+
+	WorldManager::getInstance().markForDelete(monster);
 }
 
 Monster* Battle::getMonster(int i)
@@ -119,5 +122,6 @@ void Battle::endBattle(string reason, string info)
 {
 	endReason = reason;
 	endInfo = info;
-	SceneManager::pop();
+	delete currentPhase;
+	SceneManager::popKill();
 }
