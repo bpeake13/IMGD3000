@@ -6,6 +6,8 @@
  */
 
 #include "BattleEvent.h"
+#include "MonsterManager.h"
+#include "Monster.h"
 #include "Battle.h"
 #include "SceneManager.h"
 
@@ -15,6 +17,9 @@ BattleEvent::BattleEvent() : DungeonEvent(PROBABILITY){
 void BattleEvent::start() {
 	setViewString("A monster has appeared!");
 	Battle *nb = new Battle();
-	Monster *nm = new Monster("default", 1,1,1, "fix this");
+	MonsterManager &mm = MonsterManager::getInstance();
+	Monster *mon = mm.getMonster("centaur");
+
+	nb->addMonster(mon);
 	SceneManager::getInstance().push(nb);
 }
