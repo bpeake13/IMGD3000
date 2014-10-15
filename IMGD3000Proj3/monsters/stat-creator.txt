@@ -1,0 +1,6 @@
+name Creator
+health 10
+attack 2000
+reward 1500
+description The creature claims to have created this entire world. It looks tired.
+eof

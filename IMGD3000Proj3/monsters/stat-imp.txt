@@ -1,0 +1,6 @@
+name Imp
+health 20
+attack 15
+reward 20
+description A short, red creature with a pointed tail
+eof

@@ -1,0 +1,6 @@
+name Slime
+health 30
+attack 10
+reward 10
+description A small blob of transparent teal goo. It jiggles menacingly.
+eof

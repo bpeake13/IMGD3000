@@ -1,0 +1,6 @@
+name Air Elemental
+health 120
+attack 125
+reward 500
+description A swirling form of wind and dust.
+eof

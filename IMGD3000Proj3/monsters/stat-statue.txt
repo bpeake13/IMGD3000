@@ -1,0 +1,6 @@
+name Statue
+health 250
+attack 75
+reward 500
+description A statue of an angel, it seems to move every time you look away.
+eof

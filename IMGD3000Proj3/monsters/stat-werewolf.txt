@@ -1,0 +1,6 @@
+name Werewolf
+health 100
+attack 75
+reward 300
+description A humanoid creature covered in fur, with the face of a wolf.
+eof

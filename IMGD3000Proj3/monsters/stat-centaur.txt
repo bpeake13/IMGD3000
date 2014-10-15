@@ -1,6 +1,6 @@
 name Centaur
 health 100
-attack 5
+attack 50
 reward 300
 description A man with the lower body of a horse.
 eof
