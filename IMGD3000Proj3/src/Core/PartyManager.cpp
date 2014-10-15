@@ -103,4 +103,5 @@ size_t PartyManager::getPartySize() const
 
 void PartyManager::addTreasure(int reward)
 {
+	this->treasure = this->treasure+reward;
 }
