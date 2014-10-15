@@ -25,7 +25,7 @@ DungeonScene::DungeonScene(int stepCount)
 	events[0] = new PartyDeathEvent;
 	events[1] = new GoldFoundEvent;
 	events[2] = new BattleEvent;
-	events[4] = new PromptEvent;
+	events[3] = new PromptEvent;
 
 	stepCounter = 30;
 	isSteping = true;
