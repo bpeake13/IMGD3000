@@ -11,6 +11,8 @@
 #include "LogManager.h"
 #include "Utility.h"
 
+#include "MathExt.h"
+
 #include <iostream>
 #include <fstream>
 #include <typeinfo.h>
@@ -88,6 +90,14 @@ int MonsterManager::startUp(){
 	keycount=0;
 	Manager::startUp();
 	this->resourceTable = new HashTable(BUCKET_COUNT);
+
+	loadMonster("monsters/stat-centaur.txt", "sprites/mon-centaur-spr.txt", "centaur");
+	loadMonster("monsters/stat-centaur.txt", "sprites/mon-centaur-spr.txt", "centaur");
+	loadMonster("monsters/stat-statue.txt", "sprites/mon-statue-spr.txt", "statue");
+	loadMonster("monsters/stat-werewolf.txt", "sprites/mon-werewolf-spr.txt", "werewolf");
+	//mm.loadMonster("monsters/stat-imp.txt", "sprites/mon-imp-spr.txt", "imp");
+	loadMonster("monsters/stat-slime.txt", "sprites/mon-slime-spr.txt", "slime");
+
 	return 0;
 }
 
@@ -155,14 +165,28 @@ bool MonsterManager::loadMonster(string file, string sprite, string label) {
 		return false;
 	}
 
+	string eofLine;
+	getline(fileStream, eofLine);
+	eofLine = eofLine.substr(0, eofLine.length() - 1);
+	if(eofLine != "eof")
+	{
+		log.writeLog("ERROR: No eof in monster stat");
+		return false;
+	}
+
 	Monster *newMon = new Monster(name, health, attack, reward, desc);
 	ResourceManager &rm = ResourceManager::getInstance();
-	rm.loadSprite(sprite, label);
-	newMon->setSprite(rm.getSprite(label));
+	if(rm.loadSprite(sprite, label)){
+		newMon->setSprite(rm.getSprite(label));
+	}else{
+		return false;
+	}
 	resourceTable->set(label, newMon);
 
 	keys[keycount] = label;
 	keycount++;
+
+	LogManager::getInstance().writeLog("Loaded %s successfully", label.c_str());
 	return true;
 }
 
@@ -178,9 +202,9 @@ bool MonsterManager::unloadMonster(string label) {
 	delete mon;
 
 	//Remove the label from keys, and shift array
-	for(int i=0; i<=keycount; i++){
+	for(int i=0; i<keycount; i++){
 		if(keys[i] == label){
-			for(int j=i; j<=keycount-1; j++){
+			for(int j=i; j<keycount-1; j++){
 				keys[j] = keys[j+1];
 			}
 		}
@@ -191,7 +215,7 @@ bool MonsterManager::unloadMonster(string label) {
 	return true;
 }
 
-Monster* MonsterManager::getMonster(string label) const {
+Monster* MonsterManager::getMonster(string label){
 	void* data = resourceTable->get(label);
 	if(!data)//if this monster doesn't exist on our table then give an error
 		return false;
@@ -203,6 +227,15 @@ Monster* MonsterManager::getMonster(string label) const {
 	WorldManager &wm = WorldManager::getInstance();
 	wm.addObject(returnmon);
 	return returnmon;
+}
+
+Monster* MonsterManager::randomMonster(){
+	int r = Math::randomRange(0, keycount);
+
+	string key = keys[r];
+	LogManager &lm = LogManager::getInstance();
+	lm.writeLog("0-%d, chose %d -> %s", keycount, r, key.c_str());
+	return getMonster(key);
 }
 
 MonsterManager::MonsterManager() {

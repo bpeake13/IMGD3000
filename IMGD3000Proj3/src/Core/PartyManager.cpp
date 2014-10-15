@@ -14,8 +14,6 @@
 
 #include "WorldManager.h"
 
-const string MONSTERS[2] = {"centaur", "slime"};
-
 PartyManager::PartyManager() {
 	this->treasure =0;
 }
@@ -40,9 +38,9 @@ int PartyManager::startUp(){
 
 	//Create the adventurers and put them in a rad party.
 	party.add(new Adventurer("Paladin", 100, 100, 100, "A mighty paladin"));
-	party.add(new Adventurer("Cleric", 100, 50, 75, "A worldly cleric"));
-	party.add(new Adventurer("Wizard", 100, 25, 225, "A wise wizard"));
-	party.add(new Adventurer("Rogue", 100, 0, 200, "A sneaky rogue"));
+	party.add(new Adventurer("Cleric", 150, 50, 100, "A worldly cleric"));
+	party.add(new Adventurer("Wizard", 50, 100, 150, "A wise wizard"));
+	party.add(new Adventurer("Rogue", 100, 50, 150, "A sneaky rogue"));
 	//Adventurers are ready to take on the world
 
 	return 1;
