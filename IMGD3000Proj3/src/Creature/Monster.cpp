@@ -46,4 +46,9 @@ void Monster::draw(){
 	sstm << "HP " << this->getHealth();
 	string hp = sstm.str();
 	gm.drawString(thispos, LEFT_JUSTIFIED, hp, COLOR_RED);
+
+	IVector nvector(gm.getHorizontal()/2, 5);
+	gm.drawString(nvector, CENTER_JUSTIFIED, name, COLOR_WHITE);
+	IVector dvector(gm.getHorizontal()/2, 7);
+	gm.drawString(dvector, CENTER_JUSTIFIED, desc, COLOR_WHITE);
 }

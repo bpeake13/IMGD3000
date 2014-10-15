@@ -8,7 +8,7 @@
 #ifndef MONSTERMANAGER_H_
 #define MONSTERMANAGER_H_
 
-#include "Manager.h"
+#include "GraphicsManager.h"
 #include "HashTable.h"
 #include "Monster.h"
 
@@ -23,7 +23,7 @@ public:
 	static MonsterManager& getInstance();
 	int startUp();
 	void shutDown();
-	bool loadMonster(string file, string sprite, string label);
+	bool loadMonster(string file, string sprite, string label, int color=DF_DEFAULT_COLOR);
 	bool unloadMonster(string label);
 	Monster* getMonster(string label);
 	Monster* randomMonster();

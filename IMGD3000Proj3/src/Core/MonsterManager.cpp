@@ -5,6 +5,7 @@
  *      Author: Eric
  */
 
+#include "GraphicsManager.h"
 #include "MonsterManager.h"
 #include "WorldManager.h"
 #include "ResourceManager.h"
@@ -91,12 +92,15 @@ int MonsterManager::startUp(){
 	Manager::startUp();
 	this->resourceTable = new HashTable(BUCKET_COUNT);
 
-	loadMonster("monsters/stat-centaur.txt", "sprites/mon-centaur-spr.txt", "centaur");
-	loadMonster("monsters/stat-centaur.txt", "sprites/mon-centaur-spr.txt", "centaur");
-	loadMonster("monsters/stat-statue.txt", "sprites/mon-statue-spr.txt", "statue");
-	loadMonster("monsters/stat-werewolf.txt", "sprites/mon-werewolf-spr.txt", "werewolf");
-	//mm.loadMonster("monsters/stat-imp.txt", "sprites/mon-imp-spr.txt", "imp");
-	loadMonster("monsters/stat-slime.txt", "sprites/mon-slime-spr.txt", "slime");
+
+	//loadMonster("monsters/stat-centaur.txt", "sprites/mon-centaur-spr.txt", "centaur", COLOR_YELLOW);
+	//loadMonster("monsters/stat-statue.txt", "sprites/mon-statue-spr.txt", "statue");
+	//loadMonster("monsters/stat-werewolf.txt", "sprites/mon-werewolf-spr.txt", "werewolf");
+	loadMonster("monsters/stat-imp.txt", "sprites/mon-imp-spr.txt", "imp", COLOR_RED);
+	//loadMonster("monsters/stat-slime.txt", "sprites/mon-slime-spr.txt", "slime", COLOR_BLUE);
+	//loadMonster("monsters/stat-advslime.txt", "sprites/mon-slime-spr.txt", "advslime", COLOR_MAGENTA);
+	//loadMonster("monsters/stat-satyr.txt", "sprites/mon-satyr-spr.txt", "satyr", COLOR_YELLOW);
+	//loadMonster("monsters/stat-dragon.txt", "sprites/mon-dragon-spr.txt", "dragon", COLOR_GREEN);
 
 	return 0;
 }
@@ -109,7 +113,7 @@ void MonsterManager::shutDown() {
 	delete resourceTable;
 }
 
-bool MonsterManager::loadMonster(string file, string sprite, string label) {
+bool MonsterManager::loadMonster(string file, string sprite, string label, int color) {
 	if(resourceTable->contains(label))
 		return false;
 
@@ -124,6 +128,8 @@ bool MonsterManager::loadMonster(string file, string sprite, string label) {
 	int line = 0;
 
 	LogManager& log = LogManager::getInstance();
+
+	log.writeLog("Color attempt:%d, default is %d", color, DF_DEFAULT_COLOR);
 
 	string name = readLineString(&fileStream, &line, "name", &error);
 	if(error)
@@ -176,7 +182,9 @@ bool MonsterManager::loadMonster(string file, string sprite, string label) {
 
 	Monster *newMon = new Monster(name, health, attack, reward, desc);
 	ResourceManager &rm = ResourceManager::getInstance();
+	newMon->setColor(color);
 	if(rm.loadSprite(sprite, label)){
+
 		newMon->setSprite(rm.getSprite(label));
 	}else{
 		return false;
@@ -223,6 +231,7 @@ Monster* MonsterManager::getMonster(string label){
 	Monster* mon = static_cast<Monster*>(data);
 
 	Monster* returnmon  = new Monster(mon->getName(), mon->getHealth(), mon->getAttack(), mon->getReward(), mon->getDesc());
+	returnmon->setColor(mon->getColor());
 	returnmon->setSprite(mon->getSprite());
 	WorldManager &wm = WorldManager::getInstance();
 	wm.addObject(returnmon);

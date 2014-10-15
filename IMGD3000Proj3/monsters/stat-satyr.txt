@@ -1,0 +1,6 @@
+name Satyr
+health 40
+attack 30
+reward 60
+description A short man with the horns and legs of a goat.
+eof
