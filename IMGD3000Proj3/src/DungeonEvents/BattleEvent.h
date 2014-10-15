@@ -9,6 +9,7 @@
 #define BATTLEEVENT_H_
 
 #include "DungeonEvent.h"
+#include "Event.h"
 
 #define BATTLEPROBABILITY .8
 
@@ -18,6 +19,9 @@ public:
 	void start();
 
 	int eventHandler(Event* e);
+
+private:
+	int rewardval;
 };
 
 #endif /* BATTLEEVENT_H_ */

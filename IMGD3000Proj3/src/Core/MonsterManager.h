@@ -25,8 +25,8 @@ public:
 	void shutDown();
 	bool loadMonster(string file, string sprite, string label);
 	bool unloadMonster(string label);
-	Monster* getMonster(string label) const;
-	Monster* randomMonster() const;
+	Monster* getMonster(string label);
+	Monster* randomMonster();
 
 private:
 	HashTable* resourceTable;
