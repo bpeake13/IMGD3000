@@ -11,11 +11,14 @@
 #include "DungeonEvent.h"
 #include "Event.h"
 #include "Adventurer.h"
+#include "IVector.h"
 
 #define PROBABILITY .25
 
 class PromptEvent: public DungeonEvent {
 private:
+	int originalx;
+	int originaly;
 	string prompt;
 	string accept;
 	string reject;

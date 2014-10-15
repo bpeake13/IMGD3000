@@ -7,6 +7,7 @@
 
 #include "GraphicsManager.h"
 #include "ResourceManager.h"
+#include "PartyManager.h"
 #include "Monster.h"
 
 Monster::Monster() : Creature(false) {
@@ -51,4 +52,13 @@ void Monster::draw(){
 	gm.drawString(nvector, CENTER_JUSTIFIED, name, COLOR_WHITE);
 	IVector dvector(gm.getHorizontal()/2, 7);
 	gm.drawString(dvector, CENTER_JUSTIFIED, desc, COLOR_WHITE);
+}
+
+void Monster::damage(int d){
+	if(getHealth() -d <=0){
+		setHealth(0);
+		PartyManager::getInstance().addTreasure(reward);
+	}else{
+		Creature::damage(d);
+	}
 }

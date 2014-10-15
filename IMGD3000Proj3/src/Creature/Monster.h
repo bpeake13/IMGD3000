@@ -52,6 +52,12 @@ public:
 	 * Override of SpriteObject draw, to add a health bar
 	 */
 	void draw();
+
+	/**
+	 * Override of damage, to add treasure if killed
+	 * @param amount The amount of damage to deal
+	 */
+	void damage(int amount);
 };
 
 #endif /* MONSTER_H_ */

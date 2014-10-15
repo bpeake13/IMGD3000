@@ -32,7 +32,9 @@ MonsterAttackPhase::MonsterAttackPhase(Battle* battle) : BattlePhase(battle)
 	{
 		Adventurer* a = party.getPartyMember(i);
 		float ratio = (float)a->getAttack() / 100.f / (1.f - ((float)a->getHealth() / (float)a->getMaxHealth()));//get the ratio that determines how much we want to attack this party memeber. Attack high strength characters first
-
+		if(a->getHealth() ==0){
+			ratio = -1;
+		}
 		if(ratio > highestAttackRatio)
 		{
 			highestAttackRatio = ratio;

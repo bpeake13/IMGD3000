@@ -93,14 +93,14 @@ int MonsterManager::startUp(){
 	this->resourceTable = new HashTable(BUCKET_COUNT);
 
 
-	//loadMonster("monsters/stat-centaur.txt", "sprites/mon-centaur-spr.txt", "centaur", COLOR_YELLOW);
-	//loadMonster("monsters/stat-statue.txt", "sprites/mon-statue-spr.txt", "statue");
-	//loadMonster("monsters/stat-werewolf.txt", "sprites/mon-werewolf-spr.txt", "werewolf");
+	loadMonster("monsters/stat-centaur.txt", "sprites/mon-centaur-spr.txt", "centaur", COLOR_YELLOW);
+	loadMonster("monsters/stat-statue.txt", "sprites/mon-statue-spr.txt", "statue");
+	loadMonster("monsters/stat-werewolf.txt", "sprites/mon-werewolf-spr.txt", "werewolf");
 	loadMonster("monsters/stat-imp.txt", "sprites/mon-imp-spr.txt", "imp", COLOR_RED);
-	//loadMonster("monsters/stat-slime.txt", "sprites/mon-slime-spr.txt", "slime", COLOR_BLUE);
-	//loadMonster("monsters/stat-advslime.txt", "sprites/mon-slime-spr.txt", "advslime", COLOR_MAGENTA);
-	//loadMonster("monsters/stat-satyr.txt", "sprites/mon-satyr-spr.txt", "satyr", COLOR_YELLOW);
-	//loadMonster("monsters/stat-dragon.txt", "sprites/mon-dragon-spr.txt", "dragon", COLOR_GREEN);
+	loadMonster("monsters/stat-slime.txt", "sprites/mon-slime-spr.txt", "slime", COLOR_BLUE);
+	loadMonster("monsters/stat-advslime.txt", "sprites/mon-slime-spr.txt", "advslime", COLOR_MAGENTA);
+	loadMonster("monsters/stat-satyr.txt", "sprites/mon-satyr-spr.txt", "satyr", COLOR_YELLOW);
+	loadMonster("monsters/stat-dragon.txt", "sprites/mon-dragon-spr.txt", "dragon", COLOR_GREEN);
 
 	return 0;
 }

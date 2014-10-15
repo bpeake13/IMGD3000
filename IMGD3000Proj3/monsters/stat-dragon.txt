@@ -1,6 +1,6 @@
 name Dragon
-health 800
-attack 150
+health 400
+attack 70
 reward 2000
 description A huge scaled lizard, with dagger claws, and a breath of flame.
 eof

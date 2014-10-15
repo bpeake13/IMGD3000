@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	SceneManager& sm = SceneManager::getInstance();
 	sm.startUp();
 
-	DungeonScene* mainScene = new DungeonScene(80);
+	DungeonScene* mainScene = new DungeonScene(60);
 	SceneManager::push(mainScene);
 
 	MonsterManager &mm = MonsterManager::getInstance();

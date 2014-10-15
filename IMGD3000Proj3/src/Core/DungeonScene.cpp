@@ -16,6 +16,8 @@
 #include "PartyDeathEvent.h"
 #include "SceneManager.h"
 #include "PromptEvent.h"
+#include "GameOver.h"
+#include "GameWin.h"
 
 #define EVENT_COUNT 4
 
@@ -91,9 +93,10 @@ int DungeonScene::eventHandler(Event* e)
 				currentEvent->finish();
 				currentEvent = NULL;
 
-				if(pm.isTotalPartyKill())
-				{
+				if(pm.isTotalPartyKill()) {
 					SceneManager::popKill();
+					GameOver *game = new GameOver();
+					SceneManager::push(game);
 				}
 			}
 		}
@@ -113,6 +116,13 @@ void DungeonScene::step()
 {
 	stepCounter = 30;
 	steps++;
+
+	if(steps == maxSteps){
+		LogManager::getInstance().writeLog("Pushing game win");
+		GameWin *game = new GameWin();
+		SceneManager::push(game);
+		return;
+	}
 
 	int eventIndex = Math::randomRange(0, EVENT_COUNT);
 	DungeonEvent* e = events[eventIndex];

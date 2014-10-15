@@ -12,7 +12,8 @@
 TargetSelectPhase::TargetSelectPhase(Adventurer* selectedAdv, Battle* battle) : BattlePhase(battle)
 {
 	this->selectedAdv = selectedAdv;
-	this->selectedMonster = NULL;
+	this->selectedMonster = battle->getMonster(0);
+	getNext();
 }
 
 int TargetSelectPhase::eventHandler(Event* e)
