@@ -111,6 +111,12 @@ public:
 	 * @param damage The amount of damage to cause
 	 */
 	virtual void damage(int damage);
+
+	/**
+	 * Returns whether the creature is dead or not
+	 * @return True if dead, false otherwise
+	 */
+	bool isDead();
 };
 
 #endif /* CREATURE_H_ */
