@@ -47,14 +47,26 @@ void PromptEvent::start(){
 		PartyManager::getInstance().addTreasure(-goldlost);
 		break;
 	case 5:
-		prompt = "Do you want to do a thing?";
+		prompt = "You're bored, do you want to do a thing?";
 		accept = "1) Do a thing!";
 		reject = "2) Don't do a thing.";
 		break;
 	default:
 		prompt = "Oh no!";
+		accept = "1) OH NO!";
+		reject = "2) OH YEAAAAH!";
 		break;
 	}
+
+	setViewString(prompt);
+	acceptText.setViewString(accept);
+	rejectText.setViewString(reject);
+
+	IVector promptPos = this->getPosition();
+	IVector acceptPos(promptPos.getX(), promptPos.getY() +3);
+	acceptText.setPosition(acceptPos);
+	IVector rejectPos(acceptPos.getX(), acceptPos.getY()+1);
+	rejectText.setPosition(rejectPos);
 }
 
 int PromptEvent::eventHandler(Event* e)
@@ -67,10 +79,16 @@ int PromptEvent::eventHandler(Event* e)
 		if(ek->getKey() == '1' && !madechoice)
 		{
 			madechoice =true;
+			rejectText.setViewString("");
+			acceptText.setViewString("");
+
 			hasAccepted();
 			return 1;
 		}else if(ek->getKey() == '2' && !madechoice){
 			madechoice =true;
+			rejectText.setViewString("");
+			acceptText.setViewString("");
+
 			hasRejected();
 			return 1;
 		}else if(ek->getKey() == ' ' && madechoice){
@@ -130,7 +148,7 @@ void PromptEvent::hasAccepted(){
 			PartyManager &pm = PartyManager::getInstance();
 			ObjectListIterator oli(pm.getParty());
 
-			for(oli.first(); oli.isDone(); oli.next()){
+			for(oli.first(); !oli.isDone(); oli.next()){
 				Adventurer* tadv = (Adventurer *)oli.getCurrent();
 				tadv->setHealth((int)(tadv->getHealth()*.7));
 			}
@@ -147,7 +165,47 @@ void PromptEvent::hasAccepted(){
 			SceneManager::getInstance().push(nb);
 		}
 		break;
+	case 5:
+		if(randchance <=20){
+			response = "You whistle a nice tune. A monster hears! Its so impressed, it gives you some gold.";
+			PartyManager::getInstance().addTreasure(Math::randomRange(1, 100));
+		}else if(randchance <= 40){
+			response = "You shout out of boredom, waking up a monster.";
+			Battle *nb = new Battle();
+			Monster *nm = new Monster("default",1,1,1, "fix this");
+			SceneManager::getInstance().push(nb);
+		}else if(randchance <= 70){
+			response = "You sit down and have a nice stew. Morale increases.";
+			ObjectListIterator oli(PartyManager::getInstance().getParty());
+
+			for(oli.first(); !oli.isDone(); oli.next()){
+				Adventurer *tadv = ((Adventurer*)oli.getCurrent());
+				int temp = tadv->getHealth() + (tadv->getMaxHealth()*.25);
+				if(temp <= tadv->getMaxHealth()){
+					tadv->setHealth(temp);
+				}else{
+					tadv->setHealth(tadv->getMaxHealth());
+				}
+			}
+		}else if(randchance <= 71){
+			response = "You wonder if life is just some game to amuse a greater being. You dismiss the notion";
+		}else{
+			response = "You have a nice conversation with your party";
+			ObjectListIterator oli(PartyManager::getInstance().getParty());
+
+			for(oli.first(); !oli.isDone(); oli.next()){
+				Adventurer *tadv = ((Adventurer*)oli.getCurrent());
+				int temp = tadv->getHealth() + (tadv->getMaxHealth()*.1);
+				if(temp <= tadv->getMaxHealth()){
+					tadv->setHealth(temp);
+				}else{
+					tadv->setHealth(tadv->getMaxHealth());
+				}
+			}
+		}
 	}
+
+	this->setViewString(response);
 }
 
 void PromptEvent::hasRejected(){
@@ -175,7 +233,7 @@ void PromptEvent::hasRejected(){
 			nb->addMonster(nm);
 			SceneManager::getInstance().push(nb);
 		}
-			break;
+		break;
 	case 3:
 		response = "You leave them behind";
 		PartyManager::getInstance().removePartyMember(adv);
@@ -183,5 +241,19 @@ void PromptEvent::hasRejected(){
 	case 4:
 		response = "You forget about the gold and continue on.";
 		break;
+	case 5:
+		response = "You continue on. Morale decreases.";
+		ObjectListIterator oli(PartyManager::getInstance().getParty());
+		for(oli.first(); !oli.isDone(); oli.next()){
+			Adventurer *tadv = ((Adventurer*)oli.getCurrent());
+			int temp = tadv->getHealth() - (tadv->getMaxHealth()*.15);
+			if(temp <= 0){
+				PartyManager::getInstance().removePartyMember(tadv);
+			}else{
+				tadv->setHealth(temp);
+			}
+		}
 	}
+
+	this->setViewString(response);
 }

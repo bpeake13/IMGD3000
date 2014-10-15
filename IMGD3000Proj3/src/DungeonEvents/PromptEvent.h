@@ -22,6 +22,8 @@ private:
 	bool madechoice;
 	int promptnumber;
 	int goldlost;
+	TextObject rejectText;
+	TextObject acceptText;
 	Adventurer* adv;
 	void hasAccepted();
 	void hasRejected();
