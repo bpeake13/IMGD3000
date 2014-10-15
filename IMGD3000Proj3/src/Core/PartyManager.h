@@ -59,7 +59,7 @@ public:
 	 * @param i The index of the party member to get
 	 * @return The party member at i, or NULL
 	 */
-	Adventurer* getPartyMember(int i);
+	Adventurer* getPartyMember(int i) const;
 
 	void removePartyMember(Adventurer *adv);
 
@@ -94,6 +94,12 @@ public:
 	 * @param reward The amount of treasure to add
 	 */
 	void addTreasure(int reward);
+
+	/**
+	 * Checks to see if all characters are dead
+	 * @return If all characters are dead, returns true, otherwise false
+	 */
+	bool isTotalPartyKill() const;
 
 };
 

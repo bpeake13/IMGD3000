@@ -51,10 +51,4 @@ int Adventurer::doAttack()
 void Adventurer::damage(int amount)
 {
 	Creature::damage(amount);
-
-	if(health <= 0)
-	{
-		PartyManager& pm = PartyManager::getInstance();
-		pm.removePartyMember(this);
-	}
 }

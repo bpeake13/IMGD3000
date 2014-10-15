@@ -9,6 +9,7 @@
 #include "AdventurerSelectPhase.h"
 #include "PartyManager.h"
 #include "EventKeyboard.h"
+#include "BattleLosePhase.h"
 
 #include <ostream>
 
@@ -70,7 +71,9 @@ BattlePhase* MonsterAttackPhase::getNext()
 	if(!buttonPressed)
 		return NULL;
 
-
+	PartyManager& pm = PartyManager::getInstance();
+	if(pm.isTotalPartyKill())
+		return new BattleLosePhase(getBattle(), adventurer);
 
 	return new AdventurerSelectPhase(getBattle());
 }

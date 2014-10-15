@@ -1,6 +1,7 @@
 #include "Battle.h"
 #include "BattlePhase.h"
 #include "EventStep.h"
+#include "BattleOverEvent.h"
 #include "SceneManager.h"
 #include "AdventurerSelectPhase.h"
 #include "GraphicsManager.h"
@@ -124,4 +125,8 @@ void Battle::endBattle(string reason, string info)
 	endInfo = info;
 	delete currentPhase;
 	SceneManager::popKill();
+
+	BattleOverEvent boe = BattleOverEvent(endReason, endInfo);
+	WorldManager& world = WorldManager::getInstance();
+	world.onEvent(&boe);
 }

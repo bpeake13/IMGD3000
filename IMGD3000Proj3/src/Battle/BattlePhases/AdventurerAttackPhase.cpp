@@ -8,6 +8,7 @@
 #include "AdventurerAttackPhase.h"
 #include "BattleWinPhase.h"
 #include "MonsterAttackPhase.h"
+#include "AdventurerSelectPhase.h"
 #include "EventKeyboard.h"
 
 #include <stdlib.h>
@@ -16,8 +17,11 @@
 AdventurerAttackPhase::AdventurerAttackPhase(Adventurer* selectedAdv,
 		Monster* selectedMonster, Battle* battle) : BattlePhase(battle)
 {
-	damage = selectedAdv->doAttack();
-	selectedMonster->damage(damage);
+	if(!selectedAdv->isDead())
+	{
+		damage = selectedAdv->doAttack();
+		selectedMonster->damage(damage);
+	}
 
 	this->selectedAdv = selectedAdv;
 	this->selectedMonster = selectedMonster;
@@ -47,6 +51,9 @@ BattlePhase* AdventurerAttackPhase::getNext()
 	if(!buttonPressed)
 		return NULL;
 
+	if(selectedAdv->isDead())
+		return new AdventurerSelectPhase(getBattle());
+
 	Battle* battle = getBattle();
 
 	if(selectedMonster->isDead())
@@ -66,7 +73,9 @@ string AdventurerAttackPhase::getMessage()
 {
 	std::ostringstream stringStream;
 
-	if(selectedMonster->isDead())
+	if(selectedAdv->isDead())
+		stringStream << selectedAdv->getName() << " cannot attack because he is dead";
+	else if(selectedMonster->isDead())
 		stringStream << selectedAdv->getName() << " killed " << selectedMonster->getName();
 	else
 		stringStream << selectedAdv->getName() << " did " << damage << " points of damage to " << selectedMonster->getName();

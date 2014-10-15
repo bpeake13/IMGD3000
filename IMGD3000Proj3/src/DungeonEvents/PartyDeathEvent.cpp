@@ -15,10 +15,12 @@ PartyDeathEvent::PartyDeathEvent() : DungeonEvent(PROBABILITY){
 }
 
 void PartyDeathEvent::start(){
+	DungeonEvent::start();
+
 	int deathnum = Math::randomRange(1,10);
 	string death;
 	switch(deathnum){
-	case 1:
+	case 1://
 		death = " was impaled by a spike trap.";
 		break;
 	case 2:
@@ -49,12 +51,18 @@ void PartyDeathEvent::start(){
 		death = " has died.";
 		break;
 	}
+	PartyManager& pm = PartyManager::getInstance();
+	size_t partySize = pm.getPartySize();
 
-	int partymember = Math::randomRange(0,MAXPARTYSIZE+1);
-	PartyManager &pm = PartyManager::getInstance();
-	Adventurer* adv = pm.getPartyMember(partymember);
+	Adventurer* a = NULL;
+	while(!a || a->isDead())
+	{
+		a = pm.getPartyMember(Math::randomRange(0, partySize));
+	}
 
-	string fullmessage = adv->getName() + death;
-	setViewString(fullmessage);
-	pm.removePartyMember(adv);
+	string fullMessage = a->getName() + " " + death;
+
+	setViewString(fullMessage);
+
+	a->damage(a->getHealth());
 }

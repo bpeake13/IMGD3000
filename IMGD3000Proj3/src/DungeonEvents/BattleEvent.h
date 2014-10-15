@@ -16,6 +16,8 @@ class BattleEvent: public DungeonEvent {
 public:
 	BattleEvent();
 	void start();
+
+	int eventHandler(Event* e);
 };
 
 #endif /* BATTLEEVENT_H_ */

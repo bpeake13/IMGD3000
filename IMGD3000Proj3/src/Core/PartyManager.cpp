@@ -83,7 +83,7 @@ ObjectList* PartyManager::getParty(){
 	return &party;
 }
 
-Adventurer* PartyManager::getPartyMember(int i)
+Adventurer* PartyManager::getPartyMember(int i) const
 {
 	return dynamic_cast<Adventurer*>(party[i]);
 }
@@ -104,4 +104,17 @@ size_t PartyManager::getPartySize() const
 void PartyManager::addTreasure(int reward)
 {
 	this->treasure = this->treasure+reward;
+}
+
+bool PartyManager::isTotalPartyKill() const
+{
+	size_t count = party.getCount();
+	for(size_t i = 0; i < count; i++)
+	{
+		Adventurer* a = this->getPartyMember((int)i);
+		if(!a->isDead())
+			return false;
+	}
+
+	return true;
 }

@@ -10,7 +10,7 @@
 
 #include "DungeonEvent.h"
 
-#define PROBABILITY .10
+#define PROBABILITY 1
 
 class PartyDeathEvent: public DungeonEvent {
 public:

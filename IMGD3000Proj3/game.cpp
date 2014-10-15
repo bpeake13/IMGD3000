@@ -8,8 +8,12 @@
 #include "DungeonScene.h"
 #include "MonsterManager.h"
 
+#include <stdlib.h>
+
 int main(int argc, char *argv[])
 {
+	srand(time(NULL));
+
 	LogManager& log = LogManager::getInstance();
 	log.startUp();
 	log.setFlush();
@@ -27,7 +31,7 @@ int main(int argc, char *argv[])
 	SceneManager& sm = SceneManager::getInstance();
 	sm.startUp();
 
-	DungeonScene* mainScene = new DungeonScene(15);
+	DungeonScene* mainScene = new DungeonScene(80);
 	SceneManager::push(mainScene);
 
 	MonsterManager &mm = MonsterManager::getInstance();

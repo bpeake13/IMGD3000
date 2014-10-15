@@ -27,6 +27,7 @@ bool DungeonEvent::isDone() const
 void DungeonEvent::start()
 {
 	isActive = true;
+	hasPressedKey = false;
 }
 
 void DungeonEvent::finish()

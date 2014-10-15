@@ -13,14 +13,15 @@
 #include "PartyManager.h"
 #include "GoldFoundEvent.h"
 #include "BattleEvent.h"
+#include "PartyDeathEvent.h"
+#include "SceneManager.h"
 
-#define EVENT_COUNT 2
+#define EVENT_COUNT 1
 
 DungeonScene::DungeonScene(int stepCount)
 {
 	events = new DungeonEvent*[EVENT_COUNT];
-	events[0] = new GoldFoundEvent;
-	events[1] = new BattleEvent;
+	events[0] = new PartyDeathEvent;
 
 	stepCounter = 30;
 	isSteping = true;
@@ -39,7 +40,7 @@ DungeonScene::DungeonScene(int stepCount)
 	statViews = new PlayerStatView*[partySize];
 	for(int i = 0; i < partySize; i++)
 	{
-		Adventurer* a = pm.getPartyMember(i);
+		Adventurer* a = pm.getPartyMember(partySize - i - 1);
 		PlayerStatView* psv = new PlayerStatView(a);
 		psv->setViewObjectLocation(BOTTOM_LEFT);
 		psv->setPosition(offset);
@@ -48,6 +49,7 @@ DungeonScene::DungeonScene(int stepCount)
 		offset = offset + IVector(0, -5);
 
 		statViews[i] = psv;
+		addObject(statViews[i]);
 	}
 
 	money = new ViewObject;
@@ -55,6 +57,8 @@ DungeonScene::DungeonScene(int stepCount)
 	money->setValue(0);
 	money->setViewObjectLocation(BOTTOM_RIGHT);
 	money->setColor(COLOR_YELLOW);
+
+	addObject(money);
 }
 
 int DungeonScene::eventHandler(Event* e)
@@ -82,6 +86,11 @@ int DungeonScene::eventHandler(Event* e)
 			{
 				currentEvent->finish();
 				currentEvent = NULL;
+
+				if(pm.isTotalPartyKill())
+				{
+					SceneManager::popKill();
+				}
 			}
 		}
 	}
