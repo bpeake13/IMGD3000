@@ -58,7 +58,8 @@ int GraphicsManager::startUp()
 	if(hasStarted())
 		return 0;
 
-	frontBuffer = initscr();//start curses and make the default window the front buffer
+	initscr();//start curses and make the default window the front buffer
+	frontBuffer = newwin(0, 0, 0, 0);
 	if(!frontBuffer)//if we don't have a front buffer, return an error
 		return -1;
 
@@ -109,13 +110,17 @@ int GraphicsManager::swapBuffer(bool clearScreen)
 
 	werase(backBuffer);
 
-	if(clearok(frontBuffer, TRUE) == OK)
+	wrefresh(frontBuffer);
+
+	return 1;
+
+	/*if(clearok(frontBuffer, TRUE) == OK)
 	{
 		wrefresh(frontBuffer);
 		return 1;
 	}
 	else
-		return 0;
+		return 0;*/
 }
 
 int GraphicsManager::getHorizontal() const
