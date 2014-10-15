@@ -11,6 +11,7 @@
 #include "MathExt.h"
 
 GoldFoundEvent::GoldFoundEvent() : DungeonEvent(PROBABILITY){
+	this->treasure=0;
 }
 
 void GoldFoundEvent::start(){

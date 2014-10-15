@@ -16,8 +16,12 @@
 
 const string MONSTERS[2] = {"centaur", "slime"};
 
-PartyManager::PartyManager() {}
-PartyManager::PartyManager(const PartyManager& other) {}
+PartyManager::PartyManager() {
+	this->treasure =0;
+}
+PartyManager::PartyManager(const PartyManager& other) {
+	this->treasure =0;
+}
 PartyManager& PartyManager::operator=(const PartyManager& other) {}
 
 /**
@@ -40,6 +44,8 @@ int PartyManager::startUp(){
 	party.add(new Adventurer("wizard", 15, 25, 225, "A wise wizard"));
 	party.add(new Adventurer("rogue", 15, 0, 200, "A sneaky rogue"));
 	//Adventurers are ready to take on the world
+
+	return 1;
 }
 
 void PartyManager::shutDown(){

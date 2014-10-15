@@ -8,9 +8,14 @@
 #include "AttackEvent.h"
 
 AttackEvent::AttackEvent(){
+	this->damage =0;
+	this->sender = NULL;
+	this->receiver = NULL;
 	setType(DF_ATTACK_EVENT);
 }
 AttackEvent::AttackEvent(Creature* receiver){
+	this->damage=0;
+	this->sender = NULL;
 	this->receiver = receiver;
 	setType(DF_ATTACK_EVENT);
 }

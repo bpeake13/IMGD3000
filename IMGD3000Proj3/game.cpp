@@ -6,12 +6,18 @@
 #include "GameManager.h"
 #include "SceneManager.h"
 #include "DungeonScene.h"
+#include "MonsterManager.h"
 
 int main(int argc, char *argv[])
 {
 	LogManager& log = LogManager::getInstance();
 	log.startUp();
 	log.setFlush();
+
+	MonsterManager &mm = MonsterManager::getInstance();
+	mm.startUp();
+	mm.loadMonster("monsters\\stat-centaur.txt", "centaur")
+	Monster* mon = mm.getMonster("centaur");
 
 	GameManager& gm = GameManager::getInstance();
 

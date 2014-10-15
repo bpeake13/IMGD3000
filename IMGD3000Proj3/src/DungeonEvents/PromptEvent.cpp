@@ -14,6 +14,10 @@
 #include "ObjectListIterator.h"
 
 PromptEvent::PromptEvent() : DungeonEvent(PROBABILITY){
+	promptnumber = 0;
+	madechoice =false;
+	goldlost = 0;
+	adv = NULL;
 }
 
 void PromptEvent::start(){
