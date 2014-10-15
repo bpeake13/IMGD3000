@@ -5,6 +5,7 @@
  *      Author: Eric
  */
 
+#include "MonsterManager.h"
 #include "PromptEvent.h"
 #include "PartyManager.h"
 #include "EventKeyboard.h"
@@ -34,9 +35,9 @@ void PromptEvent::start(){
 		reject = "2) Find a way around";
 		break;
 	case 2:
-		prompt = "You come across an old beggar. Do you give him a gold?";
+		prompt = "You come across an old beggar that politely asks for some gold. Do you give him a gold?";
 		accept = "1) Give a gold";
-		reject = "2) Ignore the beggar";
+		reject = "2) Ignore the thing";
 		break;
 	case 3:
 		adv = PartyManager::getInstance().getPartyMember("rogue");
@@ -123,10 +124,9 @@ void PromptEvent::hasAccepted(){
 	}
 	case 2:{
 		if(randchance <= 10){
-			response = "He sees that you have more gold, and attacks!";
+			response = "He sees that you have more gold, and transforms into a monster!";
 			Battle* nb = new Battle();
-			Monster* nm = new Monster("Old Man", 1,1,1,"A haggard old man, with worn clothes");
-			nb->addMonster(nm);
+			nb->addMonster(MonsterManager::getInstance().randomMonster());
 			SceneManager::getInstance().push(nb);
 		}else{
 			response = "He thanks you and walks off";
@@ -164,7 +164,10 @@ void PromptEvent::hasAccepted(){
 		}else if(randchance <=60){
 			response = "You find the imp but he wont give up the gold!";
 			Battle *nb = new Battle();
-			Monster *nm = new Monster("Greedy Imp", 50,50,goldlost+10, "A greedy little imp that holds your bag of gold!");
+			Monster *nm = MonsterManager::getInstance().getMonster("imp");
+			nm->setName("Greedy Imp");
+			nm->setReward(goldlost+30);
+			nm->setDesc("A greedy little imp that holds your bag of gold!");
 			nb->addMonster(nm);
 			SceneManager::getInstance().push(nb);
 		}
@@ -176,7 +179,7 @@ void PromptEvent::hasAccepted(){
 		}else if(randchance <= 40){
 			response = "You shout out of boredom, waking up a monster.";
 			Battle *nb = new Battle();
-			Monster *nm = new Monster("default",1,1,1, "fix this");
+			nb->addMonster(MonsterManager::getInstance().randomMonster());
 			SceneManager::getInstance().push(nb);
 		}else if(randchance <= 70){
 			response = "You sit down and have a nice stew. Morale increases.";
@@ -221,8 +224,7 @@ void PromptEvent::hasRejected(){
 		if(monsterchance <= 20){
 			response = "In your searching, you came across a monster blocking the exit!";
 			Battle* nb = new Battle();
-			Monster* nm = new Monster("centaur", 100,100,100,"A smelly centaur");
-			nb->addMonster(nm);
+			nb->addMonster(MonsterManager::getInstance().randomMonster());
 			SceneManager::getInstance().push(nb);
 		}else{
 			response = "You found a way around the chasm.";
@@ -231,10 +233,9 @@ void PromptEvent::hasRejected(){
 	}
 	case 2:
 		if(Math::randomRange(1,100) <= 30){
-			response = "He shouts that you are lying, and attacks!";
+			response = "He shouts that you are lying, and transforms into a monster!";
 			Battle* nb = new Battle();
-			Monster* nm = new Monster("Old Man", 100,100,100, "A haggard looking old man");
-			nb->addMonster(nm);
+			nb->addMonster(MonsterManager::getInstance().randomMonster());
 			SceneManager::getInstance().push(nb);
 		}
 		break;
