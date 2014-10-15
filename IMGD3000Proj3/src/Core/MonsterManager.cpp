@@ -6,6 +6,7 @@
  */
 
 #include "MonsterManager.h"
+#include "WorldManager.h"
 #include "ResourceManager.h"
 #include "LogManager.h"
 #include "Utility.h"
@@ -199,6 +200,8 @@ Monster* MonsterManager::getMonster(string label) const {
 
 	Monster* returnmon  = new Monster(mon->getName(), mon->getHealth(), mon->getAttack(), mon->getReward(), mon->getDesc());
 	returnmon->setSprite(mon->getSprite());
+	WorldManager &wm = WorldManager::getInstance();
+	wm.addObject(returnmon);
 	return returnmon;
 }
 

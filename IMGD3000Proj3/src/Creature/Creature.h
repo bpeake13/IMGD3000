@@ -28,6 +28,11 @@ public:
 	Creature();
 
 	/**
+	 * Whether or not to add the creature to the world
+	 * @param addToWorld True or false whether to add to the world
+	 */
+	Creature(bool addToWorld=true);
+	/**
 	 * Constructor for creature
 	 * @param name The name of the creature, as a string
 	 * @param health The health of the creature, as an int

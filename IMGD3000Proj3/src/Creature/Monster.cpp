@@ -8,11 +8,11 @@
 #include "ResourceManager.h"
 #include "Monster.h"
 
-Monster::Monster() {
+Monster::Monster() : Creature(false) {
 	reward = 0;
 }
 
-Monster::Monster(string name, int health, int attack, int reward, string desc) {
+Monster::Monster(string name, int health, int attack, int reward, string desc) : Creature(false) {
 	setName(name);
 	setHealth(health);
 	setAttack(attack);
