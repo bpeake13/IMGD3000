@@ -32,8 +32,9 @@ class Object {
 public:
 	/**
 	 * Creates a new object in the world
+	 * @param addToWorld If true, then this object will be added to the world. By default true
 	 */
-	Object();
+	Object(bool addToWorld = true);
 
 	/**
 	 * DO NOT CALL THROUGH DELETE, CALL THROUGH MARK FOR DELETE

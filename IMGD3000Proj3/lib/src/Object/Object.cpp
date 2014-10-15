@@ -17,7 +17,7 @@ using namespace std;
 
 static int idCount = 0;
 
-Object::Object() : position(IVector(0, 0)), velocity(FVector(0, 0)), velocityCountDown(FVector(1, 1))
+Object::Object(bool addObjectToWorld) : position(IVector(0, 0)), velocity(FVector(0, 0)), velocityCountDown(FVector(1, 1))
 {
 	position = IVector(0, 0);
 	velocity = FVector(0, 0);
@@ -29,8 +29,10 @@ Object::Object() : position(IVector(0, 0)), velocity(FVector(0, 0)), velocityCou
 	idCount++;
 
 	WorldManager& world = WorldManager::getInstance();
-	world.addObject(this);
-	world.addToLayerPool(this);
+
+	if(addObjectToWorld)
+		world.addObject(this);
+	//world.addToLayerPool(this);
 
 	color = DF_DEFAULT_COLOR;
 

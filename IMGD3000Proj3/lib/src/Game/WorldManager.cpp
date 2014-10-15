@@ -125,6 +125,7 @@ void WorldManager::shutDown()
 
 int WorldManager::addObject(Object* obj)
 {
+	addToLayerPool(obj);
 	return objects.add(obj);
 }
 
